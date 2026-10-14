@@ -1,7 +1,7 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import { readFile } from 'node:fs/promises';
-import { analyzeBatch, readAnalysis } from '../scripts/analyze-batch.mjs';
+import { analyzeBatch, readAnalysis, renderMarkdown } from '../scripts/analyze-batch.mjs';
 
 const original = JSON.parse(await readFile(new URL('../docs/initial-batch.json', import.meta.url), 'utf8'));
 const clone = () => structuredClone(original);
@@ -75,4 +75,15 @@ test('analysis leaves the source data intact and records its exact SHA-256', asy
   const result = await readAnalysis();
   assert.equal(result.source.sha256, '5576ea15805262502465348b160ef4ff4c56e7cdf5de8122bd04f437e284ba18');
   assert.equal(result.sampleSize, 12);
+});
+
+test('human report distinguishes percentage points, counts, ties and missing values', async () => {
+  const report = await readAnalysis();
+  const markdown = renderMarkdown(report);
+  assert.match(markdown, /Share difference:.*percentage points/);
+  assert.match(markdown, /\| Çiy \| 26\.67 \| 4\.67 \| 17\.91% \| 33\.42% \| \+15\.51 \| 10\/12 \|/);
+  assert.match(markdown, /\| 4228 \| Yankı \| Yankı, Filiz \| Filiz \| partial-overlap/);
+  report.lineages[0].meanShareDeltaPercentagePoints = null;
+  assert.ok(!renderMarkdown(report).includes('NaN'));
+  assert.match(renderMarkdown(report), /\| Akım .* \| — \|/);
 });

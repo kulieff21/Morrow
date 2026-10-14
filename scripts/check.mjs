@@ -2,6 +2,7 @@ import { readFile, readdir } from 'node:fs/promises';
 import { spawnSync } from 'node:child_process';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { readAnalysis, renderMarkdown } from './analyze-batch.mjs';
 
 const root = path.dirname(path.dirname(fileURLToPath(import.meta.url)));
 const files = ['server.mjs'];
@@ -27,3 +28,13 @@ for (const match of html.matchAll(/(?:src|href)="\/(?!\/)([^"#]+)"/g)) {
 const engine = await readFile(path.join(root, 'src/engine.js'), 'utf8');
 if (/Math\.random\s*\(/.test(engine)) throw new Error('Unseeded randomness in engine');
 console.log(`Syntax checked ${files.length} JavaScript files; ${ids.length} unique DOM IDs and local asset links verified.`);
+const analysis = await readAnalysis();
+for (const [filename, expected] of [
+  ['paired-analysis.json', JSON.stringify(analysis, null, 2) + '\n'],
+  ['paired-analysis.md', renderMarkdown(analysis)],
+]) {
+  if (await readFile(path.join(root, 'docs', filename), 'utf8') !== expected) {
+    throw new Error(`Stale ${filename}; run npm run analyze -- --write`);
+  }
+}
+console.log('Paired analysis artifacts match the frozen input.');

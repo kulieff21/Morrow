@@ -1,0 +1,1412 @@
+{
+  "source": {
+    "path": "docs/initial-batch.json",
+    "sha256": "5576ea15805262502465348b160ef4ff4c56e7cdf5de8122bd04f437e284ba18"
+  },
+  "analysisVersion": 1,
+  "model": "morrow-0.1",
+  "protocol": {
+    "warmupDays": 8,
+    "branchDays": 8,
+    "controlResources": 1,
+    "droughtResources": 0.15,
+    "mutation": 0.08,
+    "seasons": false
+  },
+  "sampleSize": 12,
+  "seeds": [
+    4217,
+    4218,
+    4219,
+    4220,
+    4221,
+    4222,
+    4223,
+    4224,
+    4225,
+    4226,
+    4227,
+    4228
+  ],
+  "definitions": {
+    "leadership": "All lineages tied for the largest living descendant count. No leader at extinction.",
+    "retainedBaselineLead": "At least one checkpoint leader is an endpoint leader; ties are preserved.",
+    "shareDeltaPercentagePoints": "100 * (drought lineage count / drought population - control lineage count / control population).",
+    "means": "Each seed has equal weight. Share means exclude pairs with an extinct branch; denominators are reported.",
+    "populationDelta": "Drought minus control at the same day-16 endpoint."
+  },
+  "leadership": {
+    "control": {
+      "retained": 9,
+      "changed": 3,
+      "undefined": 0
+    },
+    "drought": {
+      "retained": 5,
+      "changed": 7,
+      "undefined": 0
+    },
+    "endpointSets": {
+      "identical": 2,
+      "partial-overlap": 1,
+      "disjoint": 9,
+      "undefined": 0
+    },
+    "transitions": {
+      "bothRetained": 2,
+      "controlOnlyRetained": 7,
+      "droughtOnlyRetained": 3,
+      "neitherRetained": 0,
+      "undefined": 0
+    }
+  },
+  "population": {
+    "meanControl": 147.33333333333334,
+    "meanDrought": 13.5,
+    "meanDelta": -133.83333333333334,
+    "meanReductionPercent": 90.826976054292,
+    "comparableReductionPairs": 12,
+    "lowerInDrought": 12
+  },
+  "lineages": [
+    {
+      "lineage": 0,
+      "name": "Akım",
+      "meanControlCount": 3.5,
+      "meanDroughtCount": 0,
+      "meanCountDelta": -3.5,
+      "comparableSharePairs": 12,
+      "meanControlShare": 0.024090111809773464,
+      "meanDroughtShare": 0,
+      "meanShareDeltaPercentagePoints": -2.409011180977346,
+      "shareDeltaRange": [
+        -9.090909090909092,
+        0
+      ],
+      "higherShareInDrought": 0,
+      "equalShareInDrought": 2,
+      "lowerShareInDrought": 10,
+      "higherCountInDrought": 0,
+      "extinctControl": 2,
+      "extinctDrought": 12
+    },
+    {
+      "lineage": 1,
+      "name": "Çiy",
+      "meanControlCount": 26.666666666666668,
+      "meanDroughtCount": 4.666666666666667,
+      "meanCountDelta": -22,
+      "comparableSharePairs": 12,
+      "meanControlShare": 0.17913139663304067,
+      "meanDroughtShare": 0.3341966695585117,
+      "meanShareDeltaPercentagePoints": 15.5065272925471,
+      "shareDeltaRange": [
+        -6.3725490196078445,
+        43.779039752194116
+      ],
+      "higherShareInDrought": 10,
+      "equalShareInDrought": 0,
+      "lowerShareInDrought": 2,
+      "higherCountInDrought": 0,
+      "extinctControl": 0,
+      "extinctDrought": 0
+    },
+    {
+      "lineage": 2,
+      "name": "Köz",
+      "meanControlCount": 17.5,
+      "meanDroughtCount": 0.9166666666666666,
+      "meanCountDelta": -16.583333333333332,
+      "comparableSharePairs": 12,
+      "meanControlShare": 0.12123389523313173,
+      "meanDroughtShare": 0.07857142857142857,
+      "meanShareDeltaPercentagePoints": -4.266246666170315,
+      "shareDeltaRange": [
+        -21.21212121212121,
+        23.52941176470588
+      ],
+      "higherShareInDrought": 3,
+      "equalShareInDrought": 0,
+      "lowerShareInDrought": 9,
+      "higherCountInDrought": 0,
+      "extinctControl": 0,
+      "extinctDrought": 8
+    },
+    {
+      "lineage": 3,
+      "name": "Sis",
+      "meanControlCount": 11.416666666666666,
+      "meanDroughtCount": 1,
+      "meanCountDelta": -10.416666666666666,
+      "comparableSharePairs": 12,
+      "meanControlShare": 0.0774696819553685,
+      "meanDroughtShare": 0.07233649026412185,
+      "meanShareDeltaPercentagePoints": -0.5133191691246659,
+      "shareDeltaRange": [
+        -9.090909090909092,
+        11.993243243243242
+      ],
+      "higherShareInDrought": 5,
+      "equalShareInDrought": 0,
+      "lowerShareInDrought": 7,
+      "higherCountInDrought": 0,
+      "extinctControl": 0,
+      "extinctDrought": 3
+    },
+    {
+      "lineage": 4,
+      "name": "Yankı",
+      "meanControlCount": 41.583333333333336,
+      "meanDroughtCount": 1.4166666666666667,
+      "meanCountDelta": -40.166666666666664,
+      "comparableSharePairs": 12,
+      "meanControlShare": 0.28321018523238456,
+      "meanDroughtShare": 0.11115689865689865,
+      "meanShareDeltaPercentagePoints": -17.20532865754859,
+      "shareDeltaRange": [
+        -32.89473684210527,
+        2.027027027027026
+      ],
+      "higherShareInDrought": 1,
+      "equalShareInDrought": 0,
+      "lowerShareInDrought": 11,
+      "higherCountInDrought": 0,
+      "extinctControl": 0,
+      "extinctDrought": 4
+    },
+    {
+      "lineage": 5,
+      "name": "Filiz",
+      "meanControlCount": 46.666666666666664,
+      "meanDroughtCount": 5.5,
+      "meanCountDelta": -41.166666666666664,
+      "comparableSharePairs": 12,
+      "meanControlShare": 0.31486472913630104,
+      "meanDroughtShare": 0.40373851294903923,
+      "meanShareDeltaPercentagePoints": 8.88737838127382,
+      "shareDeltaRange": [
+        -10.170366546205473,
+        35.08771929824561
+      ],
+      "higherShareInDrought": 8,
+      "equalShareInDrought": 0,
+      "lowerShareInDrought": 4,
+      "higherCountInDrought": 0,
+      "extinctControl": 0,
+      "extinctDrought": 0
+    }
+  ],
+  "limitations": [
+    "Post hoc descriptive analysis of the existing twelve seed reports; no new simulation runs.",
+    "No significance tests, confidence intervals, or claim about a general seed distribution.",
+    "Branch differences include the full modeled intervention path and diverging random draws.",
+    "A higher population share can coexist with fewer living descendants.",
+    "The data do not isolate a causal effect of speed, sense, or thrift.",
+    "Lineage endpoints do not separate birth rates, death rates, or within-lineage trait evolution."
+  ],
+  "runs": [
+    {
+      "seed": 4217,
+      "baseline": {
+        "population": 162,
+        "leaders": [
+          5
+        ]
+      },
+      "control": {
+        "population": 139,
+        "leaders": [
+          4
+        ],
+        "retainedBaselineLead": false
+      },
+      "drought": {
+        "population": 14,
+        "leaders": [
+          5
+        ],
+        "retainedBaselineLead": true
+      },
+      "endpointLeaderComparison": "disjoint",
+      "populationDelta": -125,
+      "populationReductionPercent": 89.92805755395683,
+      "lineages": [
+        {
+          "lineage": 0,
+          "name": "Akım",
+          "baselineCount": 13,
+          "controlCount": 1,
+          "droughtCount": 0,
+          "countDelta": -1,
+          "baselineShare": 0.08024691358024691,
+          "controlShare": 0.007194244604316547,
+          "droughtShare": 0,
+          "shareDeltaPercentagePoints": -0.7194244604316548
+        },
+        {
+          "lineage": 1,
+          "name": "Çiy",
+          "baselineCount": 17,
+          "controlCount": 8,
+          "droughtCount": 4,
+          "countDelta": -4,
+          "baselineShare": 0.10493827160493827,
+          "controlShare": 0.05755395683453238,
+          "droughtShare": 0.2857142857142857,
+          "shareDeltaPercentagePoints": 22.816032887975332
+        },
+        {
+          "lineage": 2,
+          "name": "Köz",
+          "baselineCount": 37,
+          "controlCount": 26,
+          "droughtCount": 2,
+          "countDelta": -24,
+          "baselineShare": 0.22839506172839505,
+          "controlShare": 0.18705035971223022,
+          "droughtShare": 0.14285714285714285,
+          "shareDeltaPercentagePoints": -4.419321685508737
+        },
+        {
+          "lineage": 3,
+          "name": "Sis",
+          "baselineCount": 24,
+          "controlCount": 10,
+          "droughtCount": 1,
+          "countDelta": -9,
+          "baselineShare": 0.14814814814814814,
+          "controlShare": 0.07194244604316546,
+          "droughtShare": 0.07142857142857142,
+          "shareDeltaPercentagePoints": -0.05138746145940398
+        },
+        {
+          "lineage": 4,
+          "name": "Yankı",
+          "baselineCount": 32,
+          "controlCount": 54,
+          "droughtCount": 2,
+          "countDelta": -52,
+          "baselineShare": 0.19753086419753085,
+          "controlShare": 0.38848920863309355,
+          "droughtShare": 0.14285714285714285,
+          "shareDeltaPercentagePoints": -24.56320657759507
+        },
+        {
+          "lineage": 5,
+          "name": "Filiz",
+          "baselineCount": 39,
+          "controlCount": 40,
+          "droughtCount": 5,
+          "countDelta": -35,
+          "baselineShare": 0.24074074074074073,
+          "controlShare": 0.28776978417266186,
+          "droughtShare": 0.35714285714285715,
+          "shareDeltaPercentagePoints": 6.9373072970195295
+        }
+      ]
+    },
+    {
+      "seed": 4218,
+      "baseline": {
+        "population": 150,
+        "leaders": [
+          4
+        ]
+      },
+      "control": {
+        "population": 149,
+        "leaders": [
+          4
+        ],
+        "retainedBaselineLead": true
+      },
+      "drought": {
+        "population": 13,
+        "leaders": [
+          1
+        ],
+        "retainedBaselineLead": false
+      },
+      "endpointLeaderComparison": "disjoint",
+      "populationDelta": -136,
+      "populationReductionPercent": 91.2751677852349,
+      "lineages": [
+        {
+          "lineage": 0,
+          "name": "Akım",
+          "baselineCount": 22,
+          "controlCount": 3,
+          "droughtCount": 0,
+          "countDelta": -3,
+          "baselineShare": 0.14666666666666667,
+          "controlShare": 0.020134228187919462,
+          "droughtShare": 0,
+          "shareDeltaPercentagePoints": -2.013422818791946
+        },
+        {
+          "lineage": 1,
+          "name": "Çiy",
+          "baselineCount": 16,
+          "controlCount": 15,
+          "droughtCount": 7,
+          "countDelta": -8,
+          "baselineShare": 0.10666666666666667,
+          "controlShare": 0.10067114093959731,
+          "droughtShare": 0.5384615384615384,
+          "shareDeltaPercentagePoints": 43.779039752194116
+        },
+        {
+          "lineage": 2,
+          "name": "Köz",
+          "baselineCount": 19,
+          "controlCount": 10,
+          "droughtCount": 0,
+          "countDelta": -10,
+          "baselineShare": 0.12666666666666668,
+          "controlShare": 0.06711409395973154,
+          "droughtShare": 0,
+          "shareDeltaPercentagePoints": -6.7114093959731544
+        },
+        {
+          "lineage": 3,
+          "name": "Sis",
+          "baselineCount": 25,
+          "controlCount": 17,
+          "droughtCount": 1,
+          "countDelta": -16,
+          "baselineShare": 0.16666666666666666,
+          "controlShare": 0.11409395973154363,
+          "droughtShare": 0.07692307692307693,
+          "shareDeltaPercentagePoints": -3.71708828084667
+        },
+        {
+          "lineage": 4,
+          "name": "Yankı",
+          "baselineCount": 40,
+          "controlCount": 61,
+          "droughtCount": 2,
+          "countDelta": -59,
+          "baselineShare": 0.26666666666666666,
+          "controlShare": 0.40939597315436244,
+          "droughtShare": 0.15384615384615385,
+          "shareDeltaPercentagePoints": -25.55498193082086
+        },
+        {
+          "lineage": 5,
+          "name": "Filiz",
+          "baselineCount": 28,
+          "controlCount": 43,
+          "droughtCount": 3,
+          "countDelta": -40,
+          "baselineShare": 0.18666666666666668,
+          "controlShare": 0.28859060402684567,
+          "droughtShare": 0.23076923076923078,
+          "shareDeltaPercentagePoints": -5.7821373257614885
+        }
+      ]
+    },
+    {
+      "seed": 4219,
+      "baseline": {
+        "population": 172,
+        "leaders": [
+          1
+        ]
+      },
+      "control": {
+        "population": 153,
+        "leaders": [
+          5
+        ],
+        "retainedBaselineLead": false
+      },
+      "drought": {
+        "population": 19,
+        "leaders": [
+          1
+        ],
+        "retainedBaselineLead": true
+      },
+      "endpointLeaderComparison": "disjoint",
+      "populationDelta": -134,
+      "populationReductionPercent": 87.58169934640523,
+      "lineages": [
+        {
+          "lineage": 0,
+          "name": "Akım",
+          "baselineCount": 19,
+          "controlCount": 12,
+          "droughtCount": 0,
+          "countDelta": -12,
+          "baselineShare": 0.11046511627906977,
+          "controlShare": 0.0784313725490196,
+          "droughtShare": 0,
+          "shareDeltaPercentagePoints": -7.8431372549019605
+        },
+        {
+          "lineage": 1,
+          "name": "Çiy",
+          "baselineCount": 43,
+          "controlCount": 47,
+          "droughtCount": 9,
+          "countDelta": -38,
+          "baselineShare": 0.25,
+          "controlShare": 0.30718954248366015,
+          "droughtShare": 0.47368421052631576,
+          "shareDeltaPercentagePoints": 16.64946680426556
+        },
+        {
+          "lineage": 2,
+          "name": "Köz",
+          "baselineCount": 18,
+          "controlCount": 9,
+          "droughtCount": 0,
+          "countDelta": -9,
+          "baselineShare": 0.10465116279069768,
+          "controlShare": 0.058823529411764705,
+          "droughtShare": 0,
+          "shareDeltaPercentagePoints": -5.88235294117647
+        },
+        {
+          "lineage": 3,
+          "name": "Sis",
+          "baselineCount": 28,
+          "controlCount": 9,
+          "droughtCount": 2,
+          "countDelta": -7,
+          "baselineShare": 0.16279069767441862,
+          "controlShare": 0.058823529411764705,
+          "droughtShare": 0.10526315789473684,
+          "shareDeltaPercentagePoints": 4.643962848297213
+        },
+        {
+          "lineage": 4,
+          "name": "Yankı",
+          "baselineCount": 27,
+          "controlCount": 27,
+          "droughtCount": 0,
+          "countDelta": -27,
+          "baselineShare": 0.1569767441860465,
+          "controlShare": 0.17647058823529413,
+          "droughtShare": 0,
+          "shareDeltaPercentagePoints": -17.647058823529413
+        },
+        {
+          "lineage": 5,
+          "name": "Filiz",
+          "baselineCount": 37,
+          "controlCount": 49,
+          "droughtCount": 8,
+          "countDelta": -41,
+          "baselineShare": 0.21511627906976744,
+          "controlShare": 0.3202614379084967,
+          "droughtShare": 0.42105263157894735,
+          "shareDeltaPercentagePoints": 10.079119367045063
+        }
+      ]
+    },
+    {
+      "seed": 4220,
+      "baseline": {
+        "population": 161,
+        "leaders": [
+          5
+        ]
+      },
+      "control": {
+        "population": 155,
+        "leaders": [
+          5
+        ],
+        "retainedBaselineLead": true
+      },
+      "drought": {
+        "population": 15,
+        "leaders": [
+          5
+        ],
+        "retainedBaselineLead": true
+      },
+      "endpointLeaderComparison": "identical",
+      "populationDelta": -140,
+      "populationReductionPercent": 90.3225806451613,
+      "lineages": [
+        {
+          "lineage": 0,
+          "name": "Akım",
+          "baselineCount": 7,
+          "controlCount": 1,
+          "droughtCount": 0,
+          "countDelta": -1,
+          "baselineShare": 0.043478260869565216,
+          "controlShare": 0.0064516129032258064,
+          "droughtShare": 0,
+          "shareDeltaPercentagePoints": -0.6451612903225806
+        },
+        {
+          "lineage": 1,
+          "name": "Çiy",
+          "baselineCount": 29,
+          "controlCount": 32,
+          "droughtCount": 4,
+          "countDelta": -28,
+          "baselineShare": 0.18012422360248448,
+          "controlShare": 0.2064516129032258,
+          "droughtShare": 0.26666666666666666,
+          "shareDeltaPercentagePoints": 6.021505376344086
+        },
+        {
+          "lineage": 2,
+          "name": "Köz",
+          "baselineCount": 29,
+          "controlCount": 25,
+          "droughtCount": 0,
+          "countDelta": -25,
+          "baselineShare": 0.18012422360248448,
+          "controlShare": 0.16129032258064516,
+          "droughtShare": 0,
+          "shareDeltaPercentagePoints": -16.129032258064516
+        },
+        {
+          "lineage": 3,
+          "name": "Sis",
+          "baselineCount": 14,
+          "controlCount": 10,
+          "droughtCount": 1,
+          "countDelta": -9,
+          "baselineShare": 0.08695652173913043,
+          "controlShare": 0.06451612903225806,
+          "droughtShare": 0.06666666666666667,
+          "shareDeltaPercentagePoints": 0.2150537634408603
+        },
+        {
+          "lineage": 4,
+          "name": "Yankı",
+          "baselineCount": 35,
+          "controlCount": 32,
+          "droughtCount": 0,
+          "countDelta": -32,
+          "baselineShare": 0.21739130434782608,
+          "controlShare": 0.2064516129032258,
+          "droughtShare": 0,
+          "shareDeltaPercentagePoints": -20.64516129032258
+        },
+        {
+          "lineage": 5,
+          "name": "Filiz",
+          "baselineCount": 47,
+          "controlCount": 55,
+          "droughtCount": 10,
+          "countDelta": -45,
+          "baselineShare": 0.2919254658385093,
+          "controlShare": 0.3548387096774194,
+          "droughtShare": 0.6666666666666666,
+          "shareDeltaPercentagePoints": 31.182795698924725
+        }
+      ]
+    },
+    {
+      "seed": 4221,
+      "baseline": {
+        "population": 163,
+        "leaders": [
+          2,
+          5
+        ]
+      },
+      "control": {
+        "population": 136,
+        "leaders": [
+          4
+        ],
+        "retainedBaselineLead": false
+      },
+      "drought": {
+        "population": 12,
+        "leaders": [
+          2
+        ],
+        "retainedBaselineLead": true
+      },
+      "endpointLeaderComparison": "disjoint",
+      "populationDelta": -124,
+      "populationReductionPercent": 91.17647058823529,
+      "lineages": [
+        {
+          "lineage": 0,
+          "name": "Akım",
+          "baselineCount": 10,
+          "controlCount": 0,
+          "droughtCount": 0,
+          "countDelta": 0,
+          "baselineShare": 0.06134969325153374,
+          "controlShare": 0,
+          "droughtShare": 0,
+          "shareDeltaPercentagePoints": 0
+        },
+        {
+          "lineage": 1,
+          "name": "Çiy",
+          "baselineCount": 22,
+          "controlCount": 20,
+          "droughtCount": 1,
+          "countDelta": -19,
+          "baselineShare": 0.13496932515337423,
+          "controlShare": 0.14705882352941177,
+          "droughtShare": 0.08333333333333333,
+          "shareDeltaPercentagePoints": -6.3725490196078445
+        },
+        {
+          "lineage": 2,
+          "name": "Köz",
+          "baselineCount": 40,
+          "controlCount": 36,
+          "droughtCount": 6,
+          "countDelta": -30,
+          "baselineShare": 0.24539877300613497,
+          "controlShare": 0.2647058823529412,
+          "droughtShare": 0.5,
+          "shareDeltaPercentagePoints": 23.52941176470588
+        },
+        {
+          "lineage": 3,
+          "name": "Sis",
+          "baselineCount": 18,
+          "controlCount": 8,
+          "droughtCount": 0,
+          "countDelta": -8,
+          "baselineShare": 0.11042944785276074,
+          "controlShare": 0.058823529411764705,
+          "droughtShare": 0,
+          "shareDeltaPercentagePoints": -5.88235294117647
+        },
+        {
+          "lineage": 4,
+          "name": "Yankı",
+          "baselineCount": 33,
+          "controlCount": 43,
+          "droughtCount": 2,
+          "countDelta": -41,
+          "baselineShare": 0.20245398773006135,
+          "controlShare": 0.3161764705882353,
+          "droughtShare": 0.16666666666666666,
+          "shareDeltaPercentagePoints": -14.950980392156863
+        },
+        {
+          "lineage": 5,
+          "name": "Filiz",
+          "baselineCount": 40,
+          "controlCount": 29,
+          "droughtCount": 3,
+          "countDelta": -26,
+          "baselineShare": 0.24539877300613497,
+          "controlShare": 0.21323529411764705,
+          "droughtShare": 0.25,
+          "shareDeltaPercentagePoints": 3.676470588235295
+        }
+      ]
+    },
+    {
+      "seed": 4222,
+      "baseline": {
+        "population": 177,
+        "leaders": [
+          5
+        ]
+      },
+      "control": {
+        "population": 149,
+        "leaders": [
+          5
+        ],
+        "retainedBaselineLead": true
+      },
+      "drought": {
+        "population": 13,
+        "leaders": [
+          1
+        ],
+        "retainedBaselineLead": false
+      },
+      "endpointLeaderComparison": "disjoint",
+      "populationDelta": -136,
+      "populationReductionPercent": 91.2751677852349,
+      "lineages": [
+        {
+          "lineage": 0,
+          "name": "Akım",
+          "baselineCount": 10,
+          "controlCount": 4,
+          "droughtCount": 0,
+          "countDelta": -4,
+          "baselineShare": 0.05649717514124294,
+          "controlShare": 0.026845637583892617,
+          "droughtShare": 0,
+          "shareDeltaPercentagePoints": -2.684563758389262
+        },
+        {
+          "lineage": 1,
+          "name": "Çiy",
+          "baselineCount": 39,
+          "controlCount": 39,
+          "droughtCount": 8,
+          "countDelta": -31,
+          "baselineShare": 0.22033898305084745,
+          "controlShare": 0.26174496644295303,
+          "droughtShare": 0.6153846153846154,
+          "shareDeltaPercentagePoints": 35.36396489416624
+        },
+        {
+          "lineage": 2,
+          "name": "Köz",
+          "baselineCount": 17,
+          "controlCount": 8,
+          "droughtCount": 0,
+          "countDelta": -8,
+          "baselineShare": 0.096045197740113,
+          "controlShare": 0.053691275167785234,
+          "droughtShare": 0,
+          "shareDeltaPercentagePoints": -5.369127516778524
+        },
+        {
+          "lineage": 3,
+          "name": "Sis",
+          "baselineCount": 35,
+          "controlCount": 18,
+          "droughtCount": 1,
+          "countDelta": -17,
+          "baselineShare": 0.1977401129943503,
+          "controlShare": 0.12080536912751678,
+          "droughtShare": 0.07692307692307693,
+          "shareDeltaPercentagePoints": -4.388229220443986
+        },
+        {
+          "lineage": 4,
+          "name": "Yankı",
+          "baselineCount": 29,
+          "controlCount": 19,
+          "droughtCount": 0,
+          "countDelta": -19,
+          "baselineShare": 0.1638418079096045,
+          "controlShare": 0.12751677852348994,
+          "droughtShare": 0,
+          "shareDeltaPercentagePoints": -12.751677852348994
+        },
+        {
+          "lineage": 5,
+          "name": "Filiz",
+          "baselineCount": 47,
+          "controlCount": 61,
+          "droughtCount": 4,
+          "countDelta": -57,
+          "baselineShare": 0.2655367231638418,
+          "controlShare": 0.40939597315436244,
+          "droughtShare": 0.3076923076923077,
+          "shareDeltaPercentagePoints": -10.170366546205473
+        }
+      ]
+    },
+    {
+      "seed": 4223,
+      "baseline": {
+        "population": 169,
+        "leaders": [
+          5
+        ]
+      },
+      "control": {
+        "population": 147,
+        "leaders": [
+          5
+        ],
+        "retainedBaselineLead": true
+      },
+      "drought": {
+        "population": 10,
+        "leaders": [
+          5
+        ],
+        "retainedBaselineLead": true
+      },
+      "endpointLeaderComparison": "identical",
+      "populationDelta": -137,
+      "populationReductionPercent": 93.19727891156462,
+      "lineages": [
+        {
+          "lineage": 0,
+          "name": "Akım",
+          "baselineCount": 11,
+          "controlCount": 1,
+          "droughtCount": 0,
+          "countDelta": -1,
+          "baselineShare": 0.0650887573964497,
+          "controlShare": 0.006802721088435374,
+          "droughtShare": 0,
+          "shareDeltaPercentagePoints": -0.6802721088435374
+        },
+        {
+          "lineage": 1,
+          "name": "Çiy",
+          "baselineCount": 16,
+          "controlCount": 20,
+          "droughtCount": 1,
+          "countDelta": -19,
+          "baselineShare": 0.09467455621301775,
+          "controlShare": 0.1360544217687075,
+          "droughtShare": 0.1,
+          "shareDeltaPercentagePoints": -3.605442176870749
+        },
+        {
+          "lineage": 2,
+          "name": "Köz",
+          "baselineCount": 25,
+          "controlCount": 5,
+          "droughtCount": 1,
+          "countDelta": -4,
+          "baselineShare": 0.14792899408284024,
+          "controlShare": 0.034013605442176874,
+          "droughtShare": 0.1,
+          "shareDeltaPercentagePoints": 6.598639455782313
+        },
+        {
+          "lineage": 3,
+          "name": "Sis",
+          "baselineCount": 16,
+          "controlCount": 8,
+          "droughtCount": 1,
+          "countDelta": -7,
+          "baselineShare": 0.09467455621301775,
+          "controlShare": 0.05442176870748299,
+          "droughtShare": 0.1,
+          "shareDeltaPercentagePoints": 4.557823129251702
+        },
+        {
+          "lineage": 4,
+          "name": "Yankı",
+          "baselineCount": 49,
+          "controlCount": 51,
+          "droughtCount": 2,
+          "countDelta": -49,
+          "baselineShare": 0.28994082840236685,
+          "controlShare": 0.3469387755102041,
+          "droughtShare": 0.2,
+          "shareDeltaPercentagePoints": -14.693877551020407
+        },
+        {
+          "lineage": 5,
+          "name": "Filiz",
+          "baselineCount": 52,
+          "controlCount": 62,
+          "droughtCount": 5,
+          "countDelta": -57,
+          "baselineShare": 0.3076923076923077,
+          "controlShare": 0.4217687074829932,
+          "droughtShare": 0.5,
+          "shareDeltaPercentagePoints": 7.823129251700678
+        }
+      ]
+    },
+    {
+      "seed": 4224,
+      "baseline": {
+        "population": 162,
+        "leaders": [
+          5
+        ]
+      },
+      "control": {
+        "population": 148,
+        "leaders": [
+          5
+        ],
+        "retainedBaselineLead": true
+      },
+      "drought": {
+        "population": 16,
+        "leaders": [
+          1
+        ],
+        "retainedBaselineLead": false
+      },
+      "endpointLeaderComparison": "disjoint",
+      "populationDelta": -132,
+      "populationReductionPercent": 89.1891891891892,
+      "lineages": [
+        {
+          "lineage": 0,
+          "name": "Akım",
+          "baselineCount": 9,
+          "controlCount": 2,
+          "droughtCount": 0,
+          "countDelta": -2,
+          "baselineShare": 0.05555555555555555,
+          "controlShare": 0.013513513513513514,
+          "droughtShare": 0,
+          "shareDeltaPercentagePoints": -1.3513513513513513
+        },
+        {
+          "lineage": 1,
+          "name": "Çiy",
+          "baselineCount": 22,
+          "controlCount": 31,
+          "droughtCount": 5,
+          "countDelta": -26,
+          "baselineShare": 0.13580246913580246,
+          "controlShare": 0.20945945945945946,
+          "droughtShare": 0.3125,
+          "shareDeltaPercentagePoints": 10.304054054054054
+        },
+        {
+          "lineage": 2,
+          "name": "Köz",
+          "baselineCount": 28,
+          "controlCount": 19,
+          "droughtCount": 0,
+          "countDelta": -19,
+          "baselineShare": 0.1728395061728395,
+          "controlShare": 0.12837837837837837,
+          "droughtShare": 0,
+          "shareDeltaPercentagePoints": -12.837837837837837
+        },
+        {
+          "lineage": 3,
+          "name": "Sis",
+          "baselineCount": 15,
+          "controlCount": 10,
+          "droughtCount": 3,
+          "countDelta": -7,
+          "baselineShare": 0.09259259259259259,
+          "controlShare": 0.06756756756756757,
+          "droughtShare": 0.1875,
+          "shareDeltaPercentagePoints": 11.993243243243242
+        },
+        {
+          "lineage": 4,
+          "name": "Yankı",
+          "baselineCount": 41,
+          "controlCount": 34,
+          "droughtCount": 4,
+          "countDelta": -30,
+          "baselineShare": 0.25308641975308643,
+          "controlShare": 0.22972972972972974,
+          "droughtShare": 0.25,
+          "shareDeltaPercentagePoints": 2.027027027027026
+        },
+        {
+          "lineage": 5,
+          "name": "Filiz",
+          "baselineCount": 47,
+          "controlCount": 52,
+          "droughtCount": 4,
+          "countDelta": -48,
+          "baselineShare": 0.29012345679012347,
+          "controlShare": 0.35135135135135137,
+          "droughtShare": 0.25,
+          "shareDeltaPercentagePoints": -10.135135135135137
+        }
+      ]
+    },
+    {
+      "seed": 4225,
+      "baseline": {
+        "population": 177,
+        "leaders": [
+          4
+        ]
+      },
+      "control": {
+        "population": 152,
+        "leaders": [
+          4
+        ],
+        "retainedBaselineLead": true
+      },
+      "drought": {
+        "population": 12,
+        "leaders": [
+          5
+        ],
+        "retainedBaselineLead": false
+      },
+      "endpointLeaderComparison": "disjoint",
+      "populationDelta": -140,
+      "populationReductionPercent": 92.10526315789474,
+      "lineages": [
+        {
+          "lineage": 0,
+          "name": "Akım",
+          "baselineCount": 7,
+          "controlCount": 0,
+          "droughtCount": 0,
+          "countDelta": 0,
+          "baselineShare": 0.03954802259887006,
+          "controlShare": 0,
+          "droughtShare": 0,
+          "shareDeltaPercentagePoints": 0
+        },
+        {
+          "lineage": 1,
+          "name": "Çiy",
+          "baselineCount": 19,
+          "controlCount": 22,
+          "droughtCount": 3,
+          "countDelta": -19,
+          "baselineShare": 0.10734463276836158,
+          "controlShare": 0.14473684210526316,
+          "droughtShare": 0.25,
+          "shareDeltaPercentagePoints": 10.526315789473683
+        },
+        {
+          "lineage": 2,
+          "name": "Köz",
+          "baselineCount": 34,
+          "controlCount": 19,
+          "droughtCount": 0,
+          "countDelta": -19,
+          "baselineShare": 0.192090395480226,
+          "controlShare": 0.125,
+          "droughtShare": 0,
+          "shareDeltaPercentagePoints": -12.5
+        },
+        {
+          "lineage": 3,
+          "name": "Sis",
+          "baselineCount": 16,
+          "controlCount": 13,
+          "droughtCount": 1,
+          "countDelta": -12,
+          "baselineShare": 0.0903954802259887,
+          "controlShare": 0.08552631578947369,
+          "droughtShare": 0.08333333333333333,
+          "shareDeltaPercentagePoints": -0.21929824561403577
+        },
+        {
+          "lineage": 4,
+          "name": "Yankı",
+          "baselineCount": 55,
+          "controlCount": 50,
+          "droughtCount": 0,
+          "countDelta": -50,
+          "baselineShare": 0.3107344632768362,
+          "controlShare": 0.32894736842105265,
+          "droughtShare": 0,
+          "shareDeltaPercentagePoints": -32.89473684210527
+        },
+        {
+          "lineage": 5,
+          "name": "Filiz",
+          "baselineCount": 46,
+          "controlCount": 48,
+          "droughtCount": 8,
+          "countDelta": -40,
+          "baselineShare": 0.2598870056497175,
+          "controlShare": 0.3157894736842105,
+          "droughtShare": 0.6666666666666666,
+          "shareDeltaPercentagePoints": 35.08771929824561
+        }
+      ]
+    },
+    {
+      "seed": 4226,
+      "baseline": {
+        "population": 166,
+        "leaders": [
+          4
+        ]
+      },
+      "control": {
+        "population": 156,
+        "leaders": [
+          4,
+          5
+        ],
+        "retainedBaselineLead": true
+      },
+      "drought": {
+        "population": 10,
+        "leaders": [
+          1
+        ],
+        "retainedBaselineLead": false
+      },
+      "endpointLeaderComparison": "disjoint",
+      "populationDelta": -146,
+      "populationReductionPercent": 93.58974358974359,
+      "lineages": [
+        {
+          "lineage": 0,
+          "name": "Akım",
+          "baselineCount": 12,
+          "controlCount": 4,
+          "droughtCount": 0,
+          "countDelta": -4,
+          "baselineShare": 0.07228915662650602,
+          "controlShare": 0.02564102564102564,
+          "droughtShare": 0,
+          "shareDeltaPercentagePoints": -2.564102564102564
+        },
+        {
+          "lineage": 1,
+          "name": "Çiy",
+          "baselineCount": 30,
+          "controlCount": 36,
+          "droughtCount": 3,
+          "countDelta": -33,
+          "baselineShare": 0.18072289156626506,
+          "controlShare": 0.23076923076923078,
+          "droughtShare": 0.3,
+          "shareDeltaPercentagePoints": 6.923076923076921
+        },
+        {
+          "lineage": 2,
+          "name": "Köz",
+          "baselineCount": 30,
+          "controlCount": 11,
+          "droughtCount": 2,
+          "countDelta": -9,
+          "baselineShare": 0.18072289156626506,
+          "controlShare": 0.07051282051282051,
+          "droughtShare": 0.2,
+          "shareDeltaPercentagePoints": 12.94871794871795
+        },
+        {
+          "lineage": 3,
+          "name": "Sis",
+          "baselineCount": 19,
+          "controlCount": 15,
+          "droughtCount": 1,
+          "countDelta": -14,
+          "baselineShare": 0.1144578313253012,
+          "controlShare": 0.09615384615384616,
+          "droughtShare": 0.1,
+          "shareDeltaPercentagePoints": 0.38461538461538464
+        },
+        {
+          "lineage": 4,
+          "name": "Yankı",
+          "baselineCount": 38,
+          "controlCount": 45,
+          "droughtCount": 2,
+          "countDelta": -43,
+          "baselineShare": 0.2289156626506024,
+          "controlShare": 0.28846153846153844,
+          "droughtShare": 0.2,
+          "shareDeltaPercentagePoints": -8.846153846153843
+        },
+        {
+          "lineage": 5,
+          "name": "Filiz",
+          "baselineCount": 37,
+          "controlCount": 45,
+          "droughtCount": 2,
+          "countDelta": -43,
+          "baselineShare": 0.22289156626506024,
+          "controlShare": 0.28846153846153844,
+          "droughtShare": 0.2,
+          "shareDeltaPercentagePoints": -8.846153846153843
+        }
+      ]
+    },
+    {
+      "seed": 4227,
+      "baseline": {
+        "population": 155,
+        "leaders": [
+          4
+        ]
+      },
+      "control": {
+        "population": 132,
+        "leaders": [
+          4
+        ],
+        "retainedBaselineLead": true
+      },
+      "drought": {
+        "population": 13,
+        "leaders": [
+          5
+        ],
+        "retainedBaselineLead": false
+      },
+      "endpointLeaderComparison": "disjoint",
+      "populationDelta": -119,
+      "populationReductionPercent": 90.15151515151516,
+      "lineages": [
+        {
+          "lineage": 0,
+          "name": "Akım",
+          "baselineCount": 19,
+          "controlCount": 12,
+          "droughtCount": 0,
+          "countDelta": -12,
+          "baselineShare": 0.12258064516129032,
+          "controlShare": 0.09090909090909091,
+          "droughtShare": 0,
+          "shareDeltaPercentagePoints": -9.090909090909092
+        },
+        {
+          "lineage": 1,
+          "name": "Çiy",
+          "baselineCount": 19,
+          "controlCount": 19,
+          "droughtCount": 5,
+          "countDelta": -14,
+          "baselineShare": 0.12258064516129032,
+          "controlShare": 0.14393939393939395,
+          "droughtShare": 0.38461538461538464,
+          "shareDeltaPercentagePoints": 24.06759906759907
+        },
+        {
+          "lineage": 2,
+          "name": "Köz",
+          "baselineCount": 30,
+          "controlCount": 28,
+          "droughtCount": 0,
+          "countDelta": -28,
+          "baselineShare": 0.1935483870967742,
+          "controlShare": 0.21212121212121213,
+          "droughtShare": 0,
+          "shareDeltaPercentagePoints": -21.21212121212121
+        },
+        {
+          "lineage": 3,
+          "name": "Sis",
+          "baselineCount": 25,
+          "controlCount": 12,
+          "droughtCount": 0,
+          "countDelta": -12,
+          "baselineShare": 0.16129032258064516,
+          "controlShare": 0.09090909090909091,
+          "droughtShare": 0,
+          "shareDeltaPercentagePoints": -9.090909090909092
+        },
+        {
+          "lineage": 4,
+          "name": "Yankı",
+          "baselineCount": 34,
+          "controlCount": 34,
+          "droughtCount": 2,
+          "countDelta": -32,
+          "baselineShare": 0.21935483870967742,
+          "controlShare": 0.25757575757575757,
+          "droughtShare": 0.15384615384615385,
+          "shareDeltaPercentagePoints": -10.372960372960371
+        },
+        {
+          "lineage": 5,
+          "name": "Filiz",
+          "baselineCount": 28,
+          "controlCount": 27,
+          "droughtCount": 6,
+          "countDelta": -21,
+          "baselineShare": 0.18064516129032257,
+          "controlShare": 0.20454545454545456,
+          "droughtShare": 0.46153846153846156,
+          "shareDeltaPercentagePoints": 25.699300699300696
+        }
+      ]
+    },
+    {
+      "seed": 4228,
+      "baseline": {
+        "population": 156,
+        "leaders": [
+          4
+        ]
+      },
+      "control": {
+        "population": 152,
+        "leaders": [
+          4,
+          5
+        ],
+        "retainedBaselineLead": true
+      },
+      "drought": {
+        "population": 15,
+        "leaders": [
+          5
+        ],
+        "retainedBaselineLead": false
+      },
+      "endpointLeaderComparison": "partial-overlap",
+      "populationDelta": -137,
+      "populationReductionPercent": 90.13157894736842,
+      "lineages": [
+        {
+          "lineage": 0,
+          "name": "Akım",
+          "baselineCount": 9,
+          "controlCount": 2,
+          "droughtCount": 0,
+          "countDelta": -2,
+          "baselineShare": 0.057692307692307696,
+          "controlShare": 0.013157894736842105,
+          "droughtShare": 0,
+          "shareDeltaPercentagePoints": -1.3157894736842104
+        },
+        {
+          "lineage": 1,
+          "name": "Çiy",
+          "baselineCount": 23,
+          "controlCount": 31,
+          "droughtCount": 6,
+          "countDelta": -25,
+          "baselineShare": 0.14743589743589744,
+          "controlShare": 0.20394736842105263,
+          "droughtShare": 0.4,
+          "shareDeltaPercentagePoints": 19.60526315789474
+        },
+        {
+          "lineage": 2,
+          "name": "Köz",
+          "baselineCount": 24,
+          "controlCount": 14,
+          "droughtCount": 0,
+          "countDelta": -14,
+          "baselineShare": 0.15384615384615385,
+          "controlShare": 0.09210526315789473,
+          "droughtShare": 0,
+          "shareDeltaPercentagePoints": -9.210526315789473
+        },
+        {
+          "lineage": 3,
+          "name": "Sis",
+          "baselineCount": 12,
+          "controlCount": 7,
+          "droughtCount": 0,
+          "countDelta": -7,
+          "baselineShare": 0.07692307692307693,
+          "controlShare": 0.046052631578947366,
+          "droughtShare": 0,
+          "shareDeltaPercentagePoints": -4.605263157894736
+        },
+        {
+          "lineage": 4,
+          "name": "Yankı",
+          "baselineCount": 56,
+          "controlCount": 49,
+          "droughtCount": 1,
+          "countDelta": -48,
+          "baselineShare": 0.358974358974359,
+          "controlShare": 0.3223684210526316,
+          "droughtShare": 0.06666666666666667,
+          "shareDeltaPercentagePoints": -25.570175438596493
+        },
+        {
+          "lineage": 5,
+          "name": "Filiz",
+          "baselineCount": 32,
+          "controlCount": 49,
+          "droughtCount": 8,
+          "countDelta": -41,
+          "baselineShare": 0.20512820512820512,
+          "controlShare": 0.3223684210526316,
+          "droughtShare": 0.5333333333333333,
+          "shareDeltaPercentagePoints": 21.096491228070175
+        }
+      ]
+    }
+  ]
+}
