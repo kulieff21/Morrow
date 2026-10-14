@@ -1,5 +1,21 @@
 # Morrow session log
 
+## October 14, 2026 — sharp README image and disk-write clarification
+
+Elmar requested a fix for the blurred README image and asked whether the work
+wrote anything to C:. Replaced the compressed preview JPEG with a native lossless
+2880 × 2520 PNG, visually verified, and updated the README reference. No simulation
+or UI behavior changed. Capture profile/cache/TEMP and npm verification logs for
+this follow-up are explicitly routed into ignored `.local/` on D:.
+
+The original five npm test/check debug logs were verified by their recorded Morrow
+working directory: 4676 bytes in the user's C:-drive npm cache. The cache-path query
+in this follow-up also creates an npm log. Project source, Git repository, reports
+and images are on D:; no dependency install was performed. Codex's own session and
+temporary storage also lives under the C:-drive user profile, so a claim of zero
+C:-drive writes or a complete disk-usage total would be unsupported. No C: cleanup
+was requested or performed.
+
 ## October 14, 2026 — first living world
 
 Elmar accepted Sisyphos's proposal for a small artificial-life world and delegated

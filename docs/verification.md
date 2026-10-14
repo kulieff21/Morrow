@@ -47,6 +47,20 @@ The in-app browser did not emit the awaited native download event, so saved-file
 delivery was **not** independently verified there. Exported model reports are
 independently available through the tested CLI and the tracked initial batch.
 
+## README image refresh
+
+Elmar reported that the original README image was blurry. The original was a
+1265 × 889 JPEG captured from the browser preview stream. It is replaced by a
+native, lossless 2880 × 2520 PNG from the real app at a 1440 × 1260 viewport and
+device scale factor 2. The PNG was inspected at full resolution before publication;
+the app itself and the original experiment measurements are unchanged.
+
+The in-app browser could not attach its webview during this follow-up. The image
+was rendered by the already-installed Chrome in a separate headless process, with
+an isolated temporary profile, cache, log and TEMP/TMP under the project's ignored
+`.local/readme-capture/` on D:. No browser package was installed. That temporary
+capture process and the separately started port-4328 preview are stopped at handoff.
+
 ## Boundaries
 
 No persistence across page reloads, import UI, production hosting, or cross-browser

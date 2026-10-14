@@ -7,7 +7,7 @@ generations. Then change the environment and test your prediction.
 The interface is in Turkish. The app runs locally with no dependencies, accounts,
 API keys, analytics, external fonts, or network services.
 
-![The Morrow observation pond](docs/screenshots/pond.jpg)
+![The Morrow observation pond](docs/screenshots/pond.png)
 
 ## Run
 
