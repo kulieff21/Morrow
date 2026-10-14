@@ -1,0 +1,3 @@
+# Additional authoring dependency for the separate Turkish article.
+-r requirements.txt
+pypdfium2==5.14.0
