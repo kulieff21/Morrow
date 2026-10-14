@@ -74,6 +74,29 @@ npm run experiment -- 4217 4218 4219
 
 The CLI prints full per-lineage reports as JSON; default is the twelve seeds above.
 
+## What the paired branches reveal
+
+Reanalyzing those same twelve reports, the baseline leader changes in 3 control
+branches and 7 drought branches. At the final endpoint, leader sets are disjoint
+in 9 pairs, identical in 2, and overlap partially in 1. The two marginal change
+counts alone do not say which seeds changed only under drought; the paired
+transition table preserves that distinction.
+
+Mean population is 147.33 in the control and 13.50 in drought. Çiy's mean share
+rises from 17.91% to 33.42%, while its mean count falls from 26.67 to 4.67. A larger
+share of a smaller surviving population does not imply population growth.
+Every seed has equal weight; these are descriptive outcomes of the twelve saved
+runs, with no significance or general biological claim.
+
+See the [paired analysis](docs/paired-analysis.md) for all six lineages, every seed,
+ties, formulas and limitations. Analyze the saved batch without new experiment
+trials:
+
+```powershell
+npm run analyze
+npm run analyze -- --check
+```
+
 ## Verify
 
 ```powershell
@@ -99,6 +122,7 @@ and [session log](LOG.md).
 | `index.html`, `styles.css` | Accessible responsive Turkish interface |
 | `server.mjs` | Loopback-only static preview with explicit route allowlist |
 | `scripts/experiment.mjs` | Repeatable multi-seed CLI |
+| `scripts/analyze-batch.mjs` | Read-only paired analysis and reproducible reports |
 | `tests/` | Node built-in tests; no external test runner |
 
 ## Limits

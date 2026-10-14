@@ -61,6 +61,22 @@ an isolated temporary profile, cache, log and TEMP/TMP under the project's ignor
 `.local/readme-capture/` on D:. No browser package was installed. That temporary
 capture process and the separately started port-4328 preview are stopped at handoff.
 
+## Paired analysis follow-up
+
+- Full suite: 21 passing tests, including six new analysis/report tests.
+- Source check: ten JavaScript modules; original 80 DOM IDs and asset links.
+- Analysis checks reject malformed counts, duplicate lineage IDs/seeds, incompatible
+  protocols, incomplete runs and inconsistent recorded leadership outcomes.
+- Tests explicitly cover endpoint ties, extinction/null share denominators,
+  equal seed weighting, share increases alongside count losses, and input immutability.
+- Source batch SHA-256 is unchanged:
+  `5576ea15805262502465348b160ef4ff4c56e7cdf5de8122bd04f437e284ba18`.
+- `npm run check` now also verifies the generated paired JSON and Markdown against
+  the frozen source. `npm run analyze -- --check` checks just those artifacts.
+- No app/engine/protocol change and no new recorded experiment trials. Browser QA
+  was not repeated for this CLI/document-only work. npm cache stayed under D:-drive
+  project `.local/`; no package installation or cleanup was performed.
+
 ## Boundaries
 
 No persistence across page reloads, import UI, production hosting, or cross-browser

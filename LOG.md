@@ -1,5 +1,28 @@
 # Morrow session log
 
+## October 14, 2026 — paired control-versus-drought analysis
+
+Elmar authorized the proposed follow-up and requested more frequent commits.
+Recorded this workflow preference in project AGENTS.md. Added a pure validated
+analysis CLI, six tests, machine-readable results and a deterministic Markdown
+report; check/CI now reject stale generated analysis. Published implementation
+and results as separate commits (0360f80 and c20998b), then updated the explanatory
+documentation as a third coherent unit.
+
+The original twelve reports and their SHA-256 remain unchanged. Control retains
+baseline leadership in nine runs; drought in five. Final leader sets are disjoint
+in nine pairs, identical in two, with one partial-overlap tie. Persistence pairs:
+both retained 2, control only 7, drought only 3, neither 0. Mean populations:
+147.33 control, 13.50 drought. Çiy gains 15.51 percentage points in mean share,
+Filiz 8.89; Yankı loses 17.21. Every lineage has a lower mean absolute count.
+
+These are equal-seed-weighted descriptive results, not new trials or a general
+causal claim about a gene. Recorded speed/thrift aggregates exist but are not
+analyzed in this count/share follow-up. Full suite 21/21; source and generated
+artifact checks passed. npm cache routed to ignored D:-drive `.local/`; no new
+dependency, browser work, service start/stop or unrelated cleanup. The earlier
+retained capture profile was left untouched. See docs/paired-analysis.md.
+
 ## October 14, 2026 — sharp README image and disk-write clarification
 
 Elmar requested a fix for the blurred README image and asked whether the work

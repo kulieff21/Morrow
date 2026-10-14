@@ -38,3 +38,12 @@ interpreting the result.
 Next questions worth testing: does the result depend on the drought duration?
 Does the shift come mainly from between-lineage replacement or within-lineage
 mutation? Neither was answered in this first version.
+
+## Paired follow-up on the same records
+
+The [paired endpoint analysis](paired-analysis.md) now compares control and drought
+at the same day-16 endpoint. Baseline leadership changes in 3 control branches and
+7 drought branches; the 7/12 figure by itself does not isolate an effect of drought.
+Final leader sets are disjoint in nine pairs. This follow-up uses the original
+batch unchanged and adds no new experiment trials. The duration and gene-mechanism
+questions above remain unanswered.

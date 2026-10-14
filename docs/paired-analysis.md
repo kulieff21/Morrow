@@ -94,16 +94,17 @@ in [paired-analysis.json](paired-analysis.json).
 - Branch differences include the full modeled intervention path and diverging random draws.
 - A higher population share can coexist with fewer living descendants.
 - The data do not isolate a causal effect of speed, sense, or thrift.
-- Lineage endpoints do not separate birth rates, death rates, or within-lineage trait evolution.
+- This count/share analysis does not examine the recorded speed/thrift aggregates or reconstruct within-lineage genealogies.
 
 The control branch captures modeled change under continued abundance. The
 paired contrast measures the full outcome difference under the two modeled
 environments, including divergent random draws. It does not identify the
 mechanism of a particular gene or establish a result for biology.
 
-The endpoint records do not reveal lineage-specific birth/death rates, the
-full time course of scarcity, or within-lineage gene changes. No new evidence
-about those mechanisms is claimed here.
+The endpoint records do not reveal lineage-specific birth/death rates or the
+full time course of scarcity. They do contain speed/thrift sums, which this
+count/share analysis does not examine. No individual genealogy or isolated
+gene mechanism is established here.
 
 ## Reproduce
 
