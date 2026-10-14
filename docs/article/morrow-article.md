@@ -1,20 +1,20 @@
 # Resource scarcity and lineage success in Morrow
 
-A paired artificial life study with a targeted thrift intervention
+A paired artificial life study with a targeted intervention and unseen seed replication
 
-Prepared for Elmar Quliyev • 14 October 2026
+Prepared for Elmar Quliyev • Updated 14 October 2026 • Revision 2
 
 ## Abstract
 
 **Background.** Numerical dominance under one resource regime need not persist after an environmental change. A small artificial-life model can make this question experimentally accessible, provided that its rules, comparison units and limits are explicit. Morrow is a deterministic, spatial, individual-based sandbox in which organisms search for food, spend energy, reproduce with bounded trait mutation and die. It is an exploratory computational system without empirical biological calibration.
 
-**Methods.** Twelve consecutive seeds, 4217–4228, each generated a world with six founder lineages and 30 organisms. After eight model days at full food renewal, the complete world state was cloned into abundance and drought branches, with renewal multipliers of 1.00 and 0.15. Both continued for eight days. An initial leadership question was followed by a post hoc paired analysis of counts and population shares. A subsequent protocol, committed before its four-arm batch outcomes were examined, crossed resource regime with a one-time intervention setting living Çiy organisms' thrift genes to 1.00 at the checkpoint. Normal descendant mutation continued. The primary follow-up outcome was the interaction between normalization and resource regime in final Çiy share; absolute count was secondary. All analyses were descriptive and equally weighted the twelve paired initial conditions.
+**Methods.** An initial study used twelve seeds, 4217–4228. Complete day-8 checkpoints were copied into abundance and drought branches and followed to day 16. Post hoc count/share analysis motivated a four-arm intervention crossing renewal regime with one-time normalization of living Çiy thrift to 1.00. A separately committed replication protocol then fixed 100 previously unexamined seeds, 10000–10099, with the same engine, intervention and horizon. The primary outcome was the mean share interaction, defined as the normalization effect in drought minus that in abundance; count was secondary. The prospective replication criterion required 100 defined share interactions, a negative mean and a central 95% paired-seed percentile-bootstrap interval wholly below zero. Twenty thousand resamples were fixed in advance. The consecutive seed range is not a probability sample of all possible worlds.
 
-**Results.** Baseline leadership persisted in 9/12 abundance branches and 5/12 drought branches. Mean total population was 147.33 versus 13.50. Çiy's mean share increased from 17.91% to 33.42%, although its mean count decreased from 26.67 to 4.67. Normalization changed mean Çiy share by −5.46 percentage points in abundance and −17.86 in drought. The mean share interaction was −12.40 points, the median −6.90, and the observed range −57.73 to +12.47; 8/12 seeds had the predicted negative sign. The corresponding mean count interaction was +6.50 organisms, reflecting larger absolute losses in abundance. Çiy disappeared in four normalized-drought branches and none of the natural-drought branches. No whole world became extinct.
+**Results.** In the original twelve worlds, leadership persisted in 9/12 abundance and 5/12 drought branches. Çiy's mean share increased from 17.91% to 33.42% while its count decreased from 26.67 to 4.67. Original mean share and count interactions were −12.40 percentage points and +6.50 organisms. In the 100 new paired worlds, the share interaction averaged −14.73 points, with bootstrap interval [−18.69, −10.75], median −14.67 and range [−70.27, +47.61]. It was negative in 81 seeds and positive in 19; all 100 were defined. The prespecified criterion was met. The count interaction averaged +4.78 organisms, with interval [+3.01, +6.56]. Natural abundance/drought Çiy counts averaged 28.28/6.34 and shares 19.25%/42.25%. Ten normalized-drought branches lost Çiy; no whole world became extinct.
 
-**Conclusions.** The targeted intervention supports the predicted average relative-share effect within this fixed model, seed set and horizon. It does not establish a universal effect across worlds or isolate energy conservation: thrift simultaneously changes movement, reproduction thresholds, lifespan and checkpoint trait variation. Reused seeds and natural-arm replays provide no held-out validation. Complete endpoints, executable analyses, source hashes and a replay procedure make the result auditable by collaborators with repository access.
+**Conclusions.** The predicted average relative-share pattern recurred in previously unexamined initial conditions without changing the model. This reduces dependence on the original twelve worlds but does not establish a universal effect or isolate energy conservation. Nineteen reversed interactions, a fixed consecutive seed range, coupled thrift mechanisms and one endpoint limit interpretation. Bootstrap intervals describe resampling of this ensemble; broader sampling coverage is not established. Original and new evidence remain separate and publicly auditable with full checkpoints, all seed endpoints, source hashes and executable replay.
 
-**Keywords:** artificial life; individual-based simulation; resource scarcity; paired experiment; lineage composition; reproducibility; gene intervention
+**Keywords:** artificial life; individual-based simulation; resource scarcity; paired experiment; lineage composition; reproducibility; gene intervention; unseen seed replication
 
 ## 1 Introduction
 
@@ -42,7 +42,7 @@ The contribution is a fully traceable small computational case study. It connect
 
 ### 2.1 Study stages and experimental units
 
-The study has three stages. The original experiment generated twelve paired abundance–drought outcomes. The second stage described those same outcomes more fully. The third stage replayed the natural conditions and added the thrift intervention. The follow-up hypothesis was informed by the earlier results and reused all twelve original seeds.
+The study has four stages. The original experiment generated twelve paired abundance–drought outcomes. The second stage analyzed those same records. The third replayed the natural conditions and added the thrift intervention on the original seeds. The fourth tested its prespecified primary contrast on 100 previously unexamined seeds. Original and new ensembles are reported separately; new initial conditions are not independent investigators or a different model.
 
 **Table 1 Study chronology and evidential status**
 
@@ -51,6 +51,7 @@ The study has three stages. The original experiment generated twelve paired abun
 | Initial paired experiment | Does day 8 leadership persist to day 16 under drought with an abundance comparison | Twelve paired worlds; original leadership question |
 | Paired endpoint analysis | Compare leadership transitions, total population, all lineage counts and shares | Post hoc analysis of the same saved records; no new recorded trials |
 | Four arm thrift experiment | Normalize living Çiy thrift once and cross that edit with renewal regime | Follow-up protocol committed before examining this batch; hypothesis and seeds came from earlier results |
+| Unseen seed replication | Repeat the unchanged four-arm design on seeds 10000–10099 | Protocol and implementation committed before new outcomes; 100 new paired units and 400 branches |
 
 The paired unit is one seeded initial world and its day-8 checkpoint. Four branches from one checkpoint are related outcomes of that unit. The follow-up contains 48 branch executions: 24 natural-arm replays and 24 treated branches. It does not provide 48 independent replicates. Combining the earlier experiment and later replay does not create additional independent initial conditions. The twelve seeds were consecutive integers, selected as a compact reproducible batch; they were not a probability sample of ecosystems or a held-out validation set.
 
@@ -58,7 +59,7 @@ The paired unit is one seeded initial world and its day-8 checkpoint. Four branc
 
 Morrow version 0.1 is an individual-based spatial model designed for observation and controlled perturbation. Its intended adequacy is operational: reproducible worlds, explicit energy and reproduction rules, branching from an identical checkpoint, and transparent accounting of outcomes. It has no calibration target, fitted biological parameter, measured species, physical energy unit or empirical environmental time series. Parameters were chosen by the developer to create an observable sandbox, not estimated from external data.
 
-The browser application has a Turkish interface and runs locally without application dependencies, accounts, API keys, analytics, external fonts or network services. A Node.js server serves the files on loopback. The ecological engine is pure JavaScript and can also run headlessly. Organisms do not contain language models, neural networks or learning algorithms. AI assistance was used to build and analyze the software, not to decide the actions of simulated organisms.
+The browser application and case study default to English with a Turkish switch. They run without application dependencies, accounts, API keys, analytics or external fonts. A Node.js server provides loopback preview, and GitHub Pages hosts the static public release. Language changes affect the view, not simulation state or ecological randomness. The ecological engine is pure JavaScript and can also run headlessly. Organisms do not contain language models, neural networks or learning algorithms. AI assistance was used to build and analyze the software, not to decide the actions of simulated organisms.
 
 ### 2.3 Entities state variables and scales
 
@@ -190,7 +191,7 @@ These questions were formulated after the original outcomes were available. Thei
 
 ### 2.13 Four arm targeted thrift intervention
 
-The follow-up protocol was committed as `4352cde6c77044e0fc1242ae66757940c1421403` before the current four-arm batch outcomes were examined. Its runner was frozen at execution revision `eceb3c6166f798688bde2cef23472f219861de7a`. The ecological engine remained unchanged. These records establish an ordering within the private repository; they are not an external registry or an independent replication.
+The follow-up protocol was committed as `4352cde6c77044e0fc1242ae66757940c1421403` before the current four-arm batch outcomes were examined. Its runner was frozen at execution revision `eceb3c6166f798688bde2cef23472f219861de7a`. The ecological engine remained unchanged. These records establish ordering in the initially private repository, subsequently made public; they are not an external registry. The later unseen-seed replication has a separate protocol and evidence file.
 
 For each original seed, the runner regenerates the day-8 checkpoint and creates four complete copies. In the two normalized branches it sets only `genes.thrift` of organisms whose permanent lineage is Çiy to exactly 1.00. The edit is applied once to the living checkpoint cohort. It does not affect founders retrospectively, resurrect dead members, edit another lineage, reset energy or erase food. It consumes no random draw. Mutation remains 0.08, so descendants can depart from 1.00 immediately through inheritance.
 
@@ -221,11 +222,25 @@ The same contrasts are calculated separately for absolute Çiy count. Total popu
 
 ### 2.15 Software verification and evidence preservation
 
-The application and scientific runners use Node.js 22 or newer without an npm installation step. The test suite at the evidence revision contains 30 tests. It checks seeded continuation, seed zero, fixed-step batching, snapshot independence, inheritance bounds, starvation, population accounting, obstacle behavior, seasons, branch timing, ties, extinction rules and the loopback server. Follow-up tests check that clones differ only as declared, the edit is applied once, mutation continues, contrast signs are correct, evidence tampering is rejected, and natural arms reproduce the original records.
+The dependency-free application and scientific runners use Node.js 22 or newer. The expanded suite contains 41 tests, including comparison of the new runner with the complete original seed-4217 checkpoint and all four endpoints, deterministic paired resampling, strict decision boundaries, undefined shares and rejection of altered records. Tests before the first replication run used known old outcomes and synthetic validation fixtures; they did not execute any of seeds 10000–10099.
 
-The source check validates thirteen JavaScript modules, eighty unique DOM targets and local assets. It also rejects stale generated analysis files. The full follow-up replay reconstructs all twelve checkpoints and all four arms and compares the saved evidence, including the original natural-arm statistics. The runner refuses to replace the raw evidence during ordinary generation. An independent Python recalculation checked hashes, edits, endpoints, contrasts and summary statistics against the saved records.
+Source checks validate JavaScript syntax, both pages' DOM targets, public asset paths and generated report freshness. Original and replication runners refuse raw-file replacement. Full replay reconstructs 48 original and 400 new branch outcomes, complete checkpoints, edits, starting hashes and final-state hashes. A separate standard-library Python audit recalculates the new endpoints, interactions, summaries and both 20,000-resample intervals without running the ecological engine. CI repeats verification before deployment.
 
-These procedures support computational consistency. They do not verify that an ecological assumption is realistic, show that every possible implementation bug is absent, or validate a real biological mechanism. A successful GitHub Actions run on Linux additionally demonstrates replay in that configured environment, rather than universal bitwise portability across every future JavaScript engine.
+These checks support computational consistency, not ecological realism, absence of every possible bug or biological mechanism. Cross-platform CI replay demonstrates execution in its configured environment; it does not guarantee bitwise portability to every future JavaScript implementation.
+
+### 2.16 Prospective replication in previously unexamined worlds
+
+The replication protocol was fixed and pushed as `2158e085b706c647829637182d51829231b8ff77` before any new world was executed or examined. Implementation and tests were committed at `274454f164f9ecb8474c25856cee2be4a3adad8f`, the execution revision recorded in the raw batch. Exactly 100 seeds, 10000 through 10099 inclusive, were run in ascending order. There was no pilot, replacement, optional stopping, threshold change or parameter search on these seeds. The count of 100 was a fixed practical design choice, not the output of a power or precision calculation. It provides 100 new paired units and 400 branches, with no pooling of old worlds for the primary estimate.
+
+The engine and existing checkpoint/fork functions were unchanged. Each seed underwent 960 shared warmup ticks and 960 ticks per branch with the conditions in Table 3. All 100 complete checkpoints, edited IDs and before/after values, starting hashes, final full statistics and endpoint hashes were saved separately. Hashes identify the protocol, runner, original helper and original contrast implementation. Seeds are held out from the earlier investigation by nonuse before this protocol; a consecutive integer range is not random sampling over all uint32 seeds.
+
+The mean share interaction was the primary estimate. The prospective criterion required all 100 share interactions to be defined, a negative mean and an upper endpoint below zero in the central 95% percentile-bootstrap interval. An interval crossing or touching zero would yield an inconclusive criterion; a wholly positive interval would support the opposite direction under this rule. Any undefined share interaction would make the primary criterion inconclusive, while eligible estimates and count results would still be reported. An absent Çiy lineage in a living world is zero share, whereas whole-world extinction makes share undefined. A checkpoint without living Çiy would remain an intention-to-intervene unit with zero edits.
+
+For each reported interaction outcome, 20,000 bootstrap samples drew whole paired seed records with replacement, each with the eligible sample size. Organisms and individual arms were never resampled separately. A separate Mulberry32 analysis generator was reset to seed 20261014 for each outcome and never touched ecological RNG state. Sorted bootstrap means were interpolated at indices (19999 × 0.025) and (19999 × 0.975), using type-7 quantiles [7]. No p-values, multiplicity claims or new inferential decision thresholds were introduced for secondary outcomes.
+
+The interval measures resampling variation in this chosen ensemble. Interpretation as a population confidence interval requires representative, exchangeable seed outcomes, which the fixed consecutive range does not establish. Percentile intervals also need not have nominal finite-sample coverage [8]. Meeting the declared criterion is therefore a conditional replication result, not a biological test or a guarantee for arbitrary initial conditions. The original twelve-seed results remain descriptive and receive no retroactive confidence interval.
+
+Secondary summaries include count effects, all arm population/count/share means, sign counts, observed ranges, target and whole-world extinctions, natural drought-minus-abundance contrasts and leadership retention. Complete new endpoint ledgers appear in Appendix D. Extreme or reversed worlds are inspected only after the primary analysis and are labeled descriptive.
 
 ## 3 Results
 
@@ -321,6 +336,45 @@ Seed 4220 gives a concrete denominator example. Natural drought ended with four 
 
 The most negative share interaction occurred at seed 4222, at −57.73 points. Its natural drought endpoint contained eight Çiy among thirteen organisms, while normalized drought contained none. The mean interaction is therefore accompanied by a noticeably less negative median. Both measures are reported without trimming or removing extreme worlds. The four opposite-sign interactions at seeds 4220, 4221, 4223 and 4226 also remain in every summary. Appendix B gives every arm and contrast, including the edited cohort sizes and endpoint thrift means.
 
+### 3.7 Replication on 100 unseen seeds
+
+The prospective criterion was met: all 100 share interactions were defined, their mean was −14.73 percentage points, and the bootstrap interval [−18.69, −10.75] lay below zero. The median was −14.67 and the observed range was −70.27 to +47.61. Eighty-one interactions were negative, none zero and nineteen positive. This reproduces the average direction in a disjoint set of initial conditions while retaining substantial heterogeneity.
+
+**Table 9 Replication arm means at day 16**
+
+| Arm | Mean total N | Mean Çiy n | Mean share percent | Çiy extinctions |
+| --- | --- | --- | --- | --- |
+| A | 146.01 | 28.28 | 19.25 | 0 of 100 |
+| D | 14.73 | 6.34 | 42.25 | 0 of 100 |
+| XA | 140.96 | 20.29 | 14.35 | 0 of 100 |
+| XD | 13.90 | 3.13 | 22.63 | 10 of 100 |
+
+Natural drought reduced mean Çiy count from 28.28 to 6.34 while increasing mean share from 19.25% to 42.25%. The equally weighted mean share difference was +23.00 points; 97 worlds had a share gain and three a loss. Natural count fell in 99 worlds and increased in one. Thus the original mean count/share pattern recurred, but a lower count was not universal in the new set. Mean total population was 146.01 in natural abundance and 14.73 in natural drought.
+
+**Table 10 Replication interactions and paired bootstrap intervals**
+
+| Outcome | Mean | Median | Minimum | Maximum | 95 lower | 95 upper |
+| --- | --- | --- | --- | --- | --- | --- |
+| Share pp | -14.73 | -14.67 | -70.27 | 47.61 | -18.69 | -10.75 |
+| Count n | 4.78 | 4.00 | -18.00 | 29.00 | 3.01 | 6.56 |
+
+The count interaction averaged +4.78 organisms, with median +4.00, range −18 to +29 and interval [+3.01, +6.56]. Thirty were negative, three zero and 67 positive. Normalization changed mean count by −7.99 in abundance and −3.21 in drought, while the corresponding share effects were −4.90 and −19.63 points. The sign difference between the two outcome scales therefore persisted. These count estimates are secondary descriptive context, not a second primary success criterion.
+
+![Individual share interactions in 100 unseen seeds with the mean and its paired bootstrap interval](figures/replication-interactions.png)
+
+Figure 3. Each point is one new seed's share interaction. Blue denotes the predicted negative direction and brown the reversed direction. The dark horizontal line is the mean, the pale band its central 95% paired-bootstrap interval, and gray marks zero. The band describes resampling uncertainty of the mean; it is not an interval for individual outcomes or validated coverage across all possible seeds. Seed identifiers are initial conditions rather than a time trajectory.
+
+**Table 11 Original and unseen ensembles kept separate**
+
+| Batch | Share interaction | Count interaction | Negative share interactions |
+| --- | --- | --- | --- |
+| 12 original seeds | −12.40 pp | +6.50 n | 8 of 12 |
+| 100 unseen seeds | −14.73 pp | +4.78 n | 81 of 100 |
+
+No whole world became extinct in any new arm. Çiy disappeared in 10 normalized-drought branches and none of the other three arms. All checkpoint target cohorts were retained in the analysis. Baseline leaders persisted in 64/100 natural-abundance branches and 35/100 natural-drought branches. Final natural leader sets were disjoint in 59 worlds, identical in 37 and partially overlapping in four. These are additional descriptive outcomes.
+
+The strongest negative interaction was seed 10046 at −70.27 points: natural drought retained 10 Çiy out of 14 organisms, whereas normalized drought retained one out of 15. The largest positive interaction was seed 10058 at +47.61 points: its abundance normalization effect was −12.19 points, while its drought effect was +35.42 points. Natural drought had five Çiy out of 15 and normalized drought eleven out of 16. These post hoc extremes illustrate how opposite outcomes remain compatible with a negative mean; they are not new mechanistic tests or exclusion grounds.
+
 ## 4 Discussion
 
 ### 4.1 What the experiment establishes within its rules
@@ -351,7 +405,7 @@ Shares are also compositional: the six values sum to 100% in every living world.
 
 The four-arm protocol was fixed before examining its batch, which limits opportunities to change the target, horizon or primary contrast in response to those outcomes. It does not erase the exploratory history. Çiy was selected after its share gain was observed, and the same twelve initial conditions were reused. A prospective intervention on previously studied worlds is more structured than a wholly post hoc explanation, but it is not an independent confirmation on unseen worlds.
 
-No formal sampling model was specified for selecting these twelve consecutive seeds. The reported means describe them exactly up to numerical rounding. Confidence intervals or significance language could suggest a broader population of worlds without defining how that population was sampled. We therefore retain descriptive summaries and complete seed-level results. A larger future study should define its seed-selection mechanism and desired Monte Carlo precision before running its confirmatory batch.
+No formal sampling model was specified for selecting these twelve consecutive seeds. The reported means describe them exactly up to numerical rounding. Confidence intervals or significance language could suggest a broader population of worlds without defining how that population was sampled. We therefore retain descriptive summaries and complete seed-level results. The subsequent 100-seed replication fixed its range, sample size, uncertainty method and criterion before execution. It met that criterion, while 19 reversed outcomes remained. Its sample size was pragmatic rather than precision-derived, and the chosen range does not establish probability sampling. The bootstrap interval is therefore reported with the restricted interpretation in Section 2.16, rather than retroactively treating the original twelve worlds as confirmatory.
 
 ### 4.5 Structural and numerical limitations
 
@@ -365,7 +419,7 @@ Reproducible execution does not make these assumptions empirically correct. Test
 
 ### 4.6 Future work derived from the present limits
 
-The first useful extension would be a held-out seed batch using the unchanged primary contrast and a predeclared seed-generation procedure. It should preserve all outcomes, choose a replication count based on a stated precision goal and distinguish the original exploratory worlds from the new validation worlds. Expanding the number of seeds alone would not test sensitivity to the model's structural assumptions.
+The unseen-seed batch completes one extension: testing the unchanged contrast beyond the initial twelve worlds. A further study could specify random seed sampling and a precision-based sample size, or repeat disjoint ensembles independently. Expanding the seed count alone does not test sensitivity to the model's structural assumptions.
 
 A second extension could separate thrift's pathways by changing the energy divisor independently from movement, reproduction and lifespan. Such a change would define a new model and would need its own explicit estimand. Another design could preserve the treated cohort's thrift variance while shifting its mean, or compare interventions at multiple checkpoint times. These would answer different questions from a one-time assignment to 1.00.
 
@@ -375,9 +429,9 @@ Sensitivity studies could examine tick size, branch duration, spatial supply, mu
 
 ### 5.1 Evidence package and immutable identifiers
 
-The evidence is stored in the private repository [kulieff21 Morrow](https://github.com/kulieff21/Morrow). The final pre-article explanatory revision is `75cbe6901fcdfa604d8f0b357035ce74e1809961`. The model, original batch and follow-up inputs have the identifiers in Table 9. SHA-256 values identify bytes; a changed line ending or formatting byte will change a digest even when a reader considers the content equivalent.
+The evidence is stored in the public repository [kulieff21 Morrow](https://github.com/kulieff21/Morrow). The final pre-article explanatory revision is `75cbe6901fcdfa604d8f0b357035ce74e1809961`. The model, original batch and follow-up inputs have the identifiers in Table 12. SHA-256 values identify bytes; a changed line ending or formatting byte will change a digest even when a reader considers the content equivalent.
 
-**Table 9 Frozen evidence identifiers**
+**Table 12 Frozen evidence identifiers**
 
 | Artifact | Repository path | SHA256 |
 | --- | --- | --- |
@@ -385,14 +439,17 @@ The evidence is stored in the private repository [kulieff21 Morrow](https://gith
 | Original paired batch | docs/initial-batch.json | 5576ea15805262502465348b160ef4ff4c56e7cdf5de8122bd04f437e284ba18 |
 | Follow-up protocol | docs/thrift-protocol.md | bb2c7d2da5dac4109e9e3c4b12a778a53b04b303820572789f14e23c29273919 |
 | Complete follow-up evidence | docs/thrift-raw.json | 88a55655488c95447dc283a4af58b42151578e7062441a5b19cb152ad473d9c8 |
+| Unseen seed protocol | docs/replication-protocol.md | 536e2a8ce51b8c037ef8d80cdbac435fe5f09b501d4b69a9b4a9dfd4c84e71bd |
+| Unseen seed raw evidence | docs/replication-raw.json | 321feaa61e0eeffb05a4e964521dfd8559d5a0372e04347baa6785af5befabaa |
+| Unseen seed implementation | scripts/replication.mjs | b7604dfb1c248d089ac140e32c83bb70198202082f58a79f33a68bb576d48587 |
 
-The pre-article CI run [38539248610](https://github.com/kulieff21/Morrow/actions/runs/38539248610) passed tests, generated-artifact checks and the complete four-arm replay. Access to the run and repository may require authorization. No public dataset DOI, open-source license or public hosting has been created. The materials can be inspected by collaborators granted repository access; a reader without that access cannot independently fetch them from the private link.
+The pre-article CI run [38539248610](https://github.com/kulieff21/Morrow/actions/runs/38539248610) passed the original checks and replay. Elmar subsequently authorized public visibility and GitHub Pages on 14 October 2026. The [public case study](https://kulieff21.github.io/Morrow/) links the interactive app, evidence and article download. The initial manuscript at revision c1409cc retained a private-access statement; this second revision updates access and adds the separately identified replication. No dataset DOI, open-source license, journal submission or peer review is claimed.
 
-Machine-readable files, version control, checksums and executable analyses follow practical reproducibility principles [4]. They improve provenance but do not by themselves establish full FAIR compliance [5]. In particular, this package currently has restricted discovery and access and no public archival identifier. Any future public release would need a deliberate access and licensing decision by the project owner.
+Machine-readable files, version control, checksums and executable analyses follow practical reproducibility principles [4]. They improve provenance but do not by themselves establish full FAIR compliance [5]. Public Git access improves discovery and access, but no public archival identifier or open-source license has been assigned. Public hosting alone does not establish full FAIR compliance or long-term archival preservation.
 
 ### 5.2 Executable replay sequence
 
-From an authorized local checkout with Node.js 22 or newer, the following commands verify the model and regenerate or check its scientific analyses. The analysis commands read the saved evidence; the replay command reruns all four arms without replacing the raw record.
+From a local checkout with Node.js 22 or newer, the following commands verify the model and regenerate or check its scientific analyses. The analysis commands read the saved evidence; the replay command reruns all four arms without replacing the raw record.
 
 ```powershell
 npm test
@@ -400,25 +457,31 @@ npm run check
 npm run analyze -- --check
 npm run analyze:thrift -- --check
 npm run experiment:thrift -- --replay
+node scripts/replication.mjs --check
+python scripts/check-replication.py
+npm run experiment:replication -- --replay
 ```
 
 To inspect a newly printed two-arm experiment without modifying the stored original file, use `npm run experiment -- 4217 4218 4219`. The CLI's standard output can be saved to a new filename chosen by the investigator. The original twelve-seed file should remain preserved rather than silently replaced by a later execution.
 
-The browser can be started with `npm start` and opened at `http://127.0.0.1:4317/`. It is an observation interface, not the authoring environment for the four-arm batch. The browser experiment remains the original two-arm protocol. The follow-up intervention and audit evidence are provided by the CLI scripts.
+The browser can be started with `npm start` and opened at `http://127.0.0.1:4317/pond.html`; the case study is at the root. It is an observation interface, not the authoring environment for the four-arm batch. The browser experiment remains the original two-arm protocol. The follow-up intervention and audit evidence are provided by the CLI scripts.
 
 ### 5.3 Software responsibilities
 
-**Table 10 Source map for inspection and replay**
+**Table 13 Source map for inspection and replay**
 
 | Component | Responsibility |
 | --- | --- |
 | src/engine.js | World state, generator, fixed-step rules, snapshots and original paired protocol |
-| src/app.js and src/render.js | Turkish controls, view state, playback, observation and canvas rendering |
+| src/app.js and src/render.js | Bilingual controls, view state, playback, observation and canvas rendering |
 | server.mjs | Loopback-only static server with explicit route allowlist |
 | scripts/experiment.mjs | Original multi-seed two-arm runner |
 | scripts/analyze-batch.mjs | Validated paired endpoints and generated reports |
 | scripts/thrift-experiment.mjs | One-time edit, four-arm execution, evidence and replay |
 | scripts/analyze-thrift.mjs | Follow-up contrasts, validation and report generation |
+| scripts/replication.mjs | Frozen unseen-seed runner, paired bootstrap, reports and replay |
+| scripts/check-replication.py | Independent standard-library Python numerical audit |
+| src/case.js and index.html | Bilingual case study, original replay and replication explorer |
 | tests | Built-in Node tests for engine, server, analysis and intervention |
 | scripts/build-article-evidence.py | Article appendix tables and data figures from saved JSON |
 | scripts/md-to-docx.py | Reusable conversion from the article Markdown to Word |
@@ -435,21 +498,21 @@ The project source, Git repository, evidence and article outputs are located on 
 
 ## 6 Conclusions
 
-In twelve paired Morrow worlds, scarcity changed lineage composition and frequently changed leadership while sharply reducing total population. Çiy became a larger mean fraction of the survivors despite having fewer living descendants. A one-time reset of its checkpoint thrift genes to 1.00 produced a negative mean environment interaction in share, as predicted, but a positive interaction in absolute count. The different signs reflect different outcome scales and must remain separate in interpretation.
+The original twelve worlds linked scarcity to changed lineage composition and leadership, and identified a negative average share interaction under one-time Çiy thrift normalization. A prospective repetition on 100 previously unexamined seeds reproduced the average direction: −14.73 percentage points with central 95% paired-bootstrap interval [−18.69, −10.75]. All 100 share interactions were defined, so the prespecified criterion was met. The count interaction remained positive at +4.78 organisms; relative representation and absolute persistence remain different outcomes.
 
-The experiment illustrates a disciplined progression from observation to saved-data analysis to a fixed intervention protocol. Its strength is traceability within a clearly specified computational system. Its limits are equally specific: a toy ecology, coupled trait mechanisms, twelve reused initial conditions, no held-out worlds, no empirical calibration and one finite endpoint. The resulting claims concern the implemented model under the reported conditions.
+The new evidence extends the result beyond the initial exploratory worlds without changing the rules. It does not make the response universal: nineteen interactions reversed sign, and the observed range was broad. The fixed seed range, ensemble-based bootstrap interpretation, coupled trait mechanisms, one horizon and lack of empirical calibration remain substantive limits. The contribution is a traceable progression from observation through a fixed intervention to a separately identified replication, with complete public evidence rather than a biological generalization.
 
 ## 7 Contributions and declarations
 
 ### 7.1 Human direction and AI assistance
 
-Elmar Quliyev authorized the project, its private repository and successive investigations, tested the interactive application, provided feedback and requested this article. The coding assistant used in the project, referred to in the conversation as Sisyphos and operating in Codex, proposed and implemented the sandbox and follow-up analyses, executed checks, researched reporting guidance, drafted the manuscript and built its document conversion tools under that direction.
+Elmar Quliyev authorized the project, its initially private repository, later public release and successive investigations including the 100-seed replication, tested the interactive application, provided feedback and requested this article. The coding assistant used in the project, referred to in the conversation as Sisyphos and operating in Codex, proposed and implemented the sandbox and follow-up analyses, executed checks, researched reporting guidance, drafted the manuscript and built its document conversion tools under that direction.
 
 AI assistance is disclosed because substantial software and writing work was AI generated. The assistant is not listed as an accountable scientific author. Consistent with general authorship guidance [6], human review of the final claims, attribution and submission decisions remains necessary before any external submission. This document does not assert that such a submission review has already occurred. Primary evidence is the recorded model computation and cited sources, not the assistant's conversational descriptions.
 
 ### 7.2 Ethical scope
 
-The experiment uses simulated entities and does not include human participants, animals, clinical data or an external biological dataset. The private evidence package contains generated world states rather than observations about identifiable people. The scientific claims are restricted to the implemented rules and recorded computational outcomes. Repository access and any external release of the code, data or manuscript remain under the project owner's control.
+The experiment uses simulated entities and does not include human participants, animals, clinical data or an external biological dataset. The public evidence package contains generated world states rather than observations about identifiable people. The scientific claims are restricted to the implemented rules and recorded computational outcomes. Repository access and any external release of the code, data or manuscript remain under the project owner's control.
 
 ## References
 
@@ -464,6 +527,10 @@ The experiment uses simulated entities and does not include human participants, 
 [5] Wilkinson MD, Dumontier M, Aalbersberg IJJ, Appleton G, Axton M, Baak A, et al. The FAIR Guiding Principles for scientific data management and stewardship. Scientific Data. 2016;3:160018. [doi 10.1038/sdata.2016.18](https://doi.org/10.1038/sdata.2016.18).
 
 [6] International Committee of Medical Journal Editors. Use of AI by Authors. Accessed 14 October 2026. [AI disclosure and authorship guidance](https://www.icmje.org/recommendations/browse/artificial-intelligence/ai-use-by-authors.html).
+
+[7] NIST cmomy documentation. Bootstrap confidence intervals from resampled statistics. Accessed 14 October 2026. [Percentile interval method](https://pages.nist.gov/cmomy/reference/generated/cmomy.confidence_interval.html).
+
+[8] Hesterberg TC. What Teachers Should Know about the Bootstrap: Resampling in the Undergraduate Statistics Curriculum. 2014. [Author manuscript](https://arxiv.org/abs/1411.5279).
 
 <!-- BEGIN GENERATED EVIDENCE -->
 
@@ -722,7 +789,7 @@ Endpoint thrift averages describe surviving descendants, not a new mechanistic a
 
 ### C2 Checks that are distinct from scientific validation
 
-The birth–death identity detects accounting inconsistencies. Clone-independence checks detect accidental shared references. Seeded replay detects unintended changes to ordering, random draws or transition rules. Hash checks detect changed source bytes. Generated-artifact checks detect disagreement between raw input and derived reports. None of these checks alone establishes external validity, and the thirty automated tests are not thirty independent ecological replications.
+The birth–death identity detects accounting inconsistencies. Clone-independence checks detect accidental shared references. Seeded replay detects unintended changes to ordering, random draws or transition rules. Hash checks detect changed source bytes. Generated-artifact checks detect disagreement between raw input and derived reports. None of these checks alone establishes external validity, and the 41 automated tests are not 41 independent ecological replications.
 
 ### C3 Document reproduction
 
@@ -734,3 +801,433 @@ python scripts/md-to-docx.py docs/article/morrow-article.md `
 ```
 
 The converter resolves images relative to the Markdown source, writes actual Word headings, hyperlinks, repeated table headers and editable Office Math objects, and fails on unsupported block syntax. The generated Word document is a presentation of this Markdown source rather than an additional experimental data record. Pagination depends on fonts and the Word renderer, while the source numbers and definitions remain the same.
+
+<!-- BEGIN REPLICATION EVIDENCE -->
+
+## Appendix D Complete unseen seed replication ledger
+
+These are the 100 new paired units, seeds 10000–10099. A and D denote natural abundance and drought; XA and XD denote normalized abundance and drought. All endpoints are at day 16. No seed is removed or pooled with the original twelve. Counts are exact integers; shares and effects are rounded only for display. Complete six-lineage statistics, checkpoints and state hashes remain in the public raw JSON.
+
+**Table D1 Total population in the 400 new branches**
+
+| Seed | A N | D N | XA N | XD N |
+| --- | --- | --- | --- | --- |
+| 10000 | 156 | 22 | 145 | 16 |
+| 10001 | 147 | 14 | 144 | 13 |
+| 10002 | 136 | 14 | 134 | 19 |
+| 10003 | 153 | 10 | 145 | 16 |
+| 10004 | 144 | 11 | 132 | 13 |
+| 10005 | 162 | 17 | 137 | 12 |
+| 10006 | 140 | 13 | 139 | 13 |
+| 10007 | 153 | 18 | 146 | 16 |
+| 10008 | 150 | 14 | 155 | 13 |
+| 10009 | 148 | 20 | 141 | 14 |
+| 10010 | 155 | 20 | 152 | 18 |
+| 10011 | 141 | 9 | 133 | 10 |
+| 10012 | 140 | 18 | 141 | 10 |
+| 10013 | 159 | 16 | 133 | 14 |
+| 10014 | 163 | 9 | 136 | 16 |
+| 10015 | 155 | 14 | 149 | 16 |
+| 10016 | 150 | 12 | 135 | 12 |
+| 10017 | 151 | 15 | 148 | 10 |
+| 10018 | 131 | 13 | 131 | 11 |
+| 10019 | 147 | 14 | 146 | 14 |
+| 10020 | 138 | 16 | 129 | 12 |
+| 10021 | 153 | 14 | 154 | 16 |
+| 10022 | 140 | 14 | 134 | 16 |
+| 10023 | 145 | 11 | 138 | 7 |
+| 10024 | 150 | 12 | 135 | 14 |
+| 10025 | 142 | 13 | 135 | 16 |
+| 10026 | 154 | 19 | 146 | 10 |
+| 10027 | 148 | 14 | 144 | 15 |
+| 10028 | 155 | 17 | 151 | 17 |
+| 10029 | 145 | 12 | 140 | 12 |
+| 10030 | 154 | 16 | 150 | 11 |
+| 10031 | 140 | 15 | 132 | 13 |
+| 10032 | 147 | 20 | 155 | 13 |
+| 10033 | 137 | 13 | 129 | 14 |
+| 10034 | 138 | 14 | 134 | 21 |
+| 10035 | 147 | 13 | 144 | 15 |
+| 10036 | 135 | 16 | 143 | 15 |
+| 10037 | 127 | 10 | 134 | 13 |
+| 10038 | 149 | 17 | 124 | 17 |
+| 10039 | 150 | 17 | 141 | 12 |
+| 10040 | 148 | 18 | 141 | 11 |
+| 10041 | 139 | 15 | 131 | 10 |
+| 10042 | 154 | 16 | 144 | 10 |
+| 10043 | 143 | 9 | 141 | 14 |
+| 10044 | 156 | 19 | 154 | 18 |
+| 10045 | 157 | 7 | 147 | 14 |
+| 10046 | 150 | 14 | 155 | 15 |
+| 10047 | 136 | 13 | 137 | 18 |
+| 10048 | 143 | 18 | 140 | 11 |
+| 10049 | 148 | 17 | 141 | 18 |
+| 10050 | 155 | 8 | 152 | 17 |
+| 10051 | 134 | 12 | 140 | 13 |
+| 10052 | 143 | 16 | 147 | 11 |
+| 10053 | 142 | 15 | 154 | 10 |
+| 10054 | 129 | 18 | 135 | 16 |
+| 10055 | 139 | 13 | 139 | 13 |
+| 10056 | 144 | 17 | 144 | 14 |
+| 10057 | 147 | 16 | 146 | 8 |
+| 10058 | 150 | 15 | 146 | 16 |
+| 10059 | 146 | 14 | 139 | 14 |
+| 10060 | 138 | 14 | 152 | 12 |
+| 10061 | 149 | 18 | 134 | 15 |
+| 10062 | 137 | 10 | 127 | 14 |
+| 10063 | 149 | 14 | 146 | 15 |
+| 10064 | 132 | 14 | 130 | 15 |
+| 10065 | 140 | 17 | 136 | 12 |
+| 10066 | 148 | 18 | 152 | 13 |
+| 10067 | 151 | 18 | 147 | 15 |
+| 10068 | 164 | 14 | 164 | 24 |
+| 10069 | 147 | 8 | 142 | 13 |
+| 10070 | 153 | 15 | 151 | 14 |
+| 10071 | 150 | 17 | 136 | 17 |
+| 10072 | 161 | 19 | 136 | 12 |
+| 10073 | 140 | 14 | 149 | 14 |
+| 10074 | 146 | 15 | 134 | 9 |
+| 10075 | 151 | 15 | 144 | 15 |
+| 10076 | 145 | 15 | 140 | 16 |
+| 10077 | 137 | 14 | 128 | 17 |
+| 10078 | 141 | 12 | 133 | 8 |
+| 10079 | 151 | 15 | 138 | 16 |
+| 10080 | 133 | 17 | 132 | 16 |
+| 10081 | 138 | 10 | 125 | 12 |
+| 10082 | 146 | 15 | 144 | 9 |
+| 10083 | 148 | 17 | 131 | 17 |
+| 10084 | 141 | 15 | 147 | 16 |
+| 10085 | 134 | 19 | 132 | 13 |
+| 10086 | 138 | 15 | 143 | 12 |
+| 10087 | 135 | 13 | 145 | 17 |
+| 10088 | 143 | 17 | 138 | 19 |
+| 10089 | 136 | 14 | 143 | 14 |
+| 10090 | 146 | 10 | 137 | 12 |
+| 10091 | 153 | 15 | 142 | 12 |
+| 10092 | 157 | 15 | 135 | 14 |
+| 10093 | 154 | 17 | 142 | 11 |
+| 10094 | 148 | 19 | 139 | 16 |
+| 10095 | 155 | 13 | 139 | 16 |
+| 10096 | 143 | 15 | 133 | 13 |
+| 10097 | 143 | 12 | 140 | 12 |
+| 10098 | 151 | 18 | 152 | 17 |
+| 10099 | 151 | 15 | 151 | 10 |
+
+**Table D2 Living Ciy descendants in the 400 new branches**
+
+| Seed | A n | D n | XA n | XD n |
+| --- | --- | --- | --- | --- |
+| 10000 | 41 | 11 | 33 | 4 |
+| 10001 | 19 | 4 | 15 | 0 |
+| 10002 | 12 | 3 | 6 | 1 |
+| 10003 | 35 | 7 | 21 | 8 |
+| 10004 | 21 | 5 | 15 | 1 |
+| 10005 | 35 | 7 | 20 | 1 |
+| 10006 | 41 | 5 | 26 | 6 |
+| 10007 | 23 | 6 | 22 | 6 |
+| 10008 | 26 | 7 | 22 | 1 |
+| 10009 | 18 | 8 | 12 | 6 |
+| 10010 | 53 | 8 | 26 | 4 |
+| 10011 | 20 | 2 | 15 | 0 |
+| 10012 | 30 | 12 | 33 | 6 |
+| 10013 | 31 | 8 | 19 | 9 |
+| 10014 | 52 | 3 | 22 | 2 |
+| 10015 | 29 | 4 | 17 | 4 |
+| 10016 | 26 | 4 | 18 | 2 |
+| 10017 | 32 | 7 | 27 | 0 |
+| 10018 | 23 | 4 | 16 | 7 |
+| 10019 | 29 | 7 | 26 | 5 |
+| 10020 | 21 | 6 | 12 | 1 |
+| 10021 | 22 | 8 | 24 | 4 |
+| 10022 | 19 | 7 | 17 | 3 |
+| 10023 | 31 | 1 | 16 | 2 |
+| 10024 | 37 | 8 | 28 | 2 |
+| 10025 | 27 | 6 | 23 | 1 |
+| 10026 | 35 | 10 | 38 | 4 |
+| 10027 | 16 | 3 | 9 | 1 |
+| 10028 | 24 | 5 | 17 | 4 |
+| 10029 | 30 | 6 | 25 | 2 |
+| 10030 | 18 | 4 | 9 | 0 |
+| 10031 | 34 | 5 | 20 | 2 |
+| 10032 | 24 | 9 | 19 | 2 |
+| 10033 | 33 | 3 | 13 | 3 |
+| 10034 | 18 | 4 | 15 | 1 |
+| 10035 | 28 | 3 | 20 | 1 |
+| 10036 | 24 | 5 | 25 | 3 |
+| 10037 | 12 | 3 | 14 | 3 |
+| 10038 | 25 | 5 | 9 | 1 |
+| 10039 | 32 | 9 | 21 | 3 |
+| 10040 | 27 | 9 | 21 | 5 |
+| 10041 | 19 | 7 | 19 | 3 |
+| 10042 | 38 | 5 | 17 | 0 |
+| 10043 | 18 | 4 | 11 | 2 |
+| 10044 | 25 | 6 | 19 | 1 |
+| 10045 | 27 | 2 | 14 | 1 |
+| 10046 | 14 | 10 | 23 | 1 |
+| 10047 | 18 | 7 | 19 | 1 |
+| 10048 | 38 | 9 | 24 | 1 |
+| 10049 | 28 | 7 | 17 | 7 |
+| 10050 | 38 | 3 | 17 | 6 |
+| 10051 | 34 | 7 | 19 | 4 |
+| 10052 | 29 | 7 | 27 | 1 |
+| 10053 | 25 | 5 | 19 | 2 |
+| 10054 | 19 | 8 | 20 | 3 |
+| 10055 | 23 | 2 | 10 | 2 |
+| 10056 | 27 | 11 | 32 | 4 |
+| 10057 | 18 | 6 | 18 | 3 |
+| 10058 | 45 | 5 | 26 | 11 |
+| 10059 | 20 | 5 | 11 | 4 |
+| 10060 | 22 | 4 | 14 | 1 |
+| 10061 | 36 | 16 | 35 | 6 |
+| 10062 | 22 | 4 | 13 | 1 |
+| 10063 | 20 | 4 | 10 | 3 |
+| 10064 | 30 | 8 | 19 | 6 |
+| 10065 | 34 | 10 | 28 | 3 |
+| 10066 | 39 | 9 | 36 | 3 |
+| 10067 | 58 | 12 | 32 | 8 |
+| 10068 | 50 | 7 | 26 | 8 |
+| 10069 | 20 | 4 | 13 | 3 |
+| 10070 | 24 | 6 | 21 | 1 |
+| 10071 | 30 | 9 | 16 | 4 |
+| 10072 | 38 | 7 | 14 | 1 |
+| 10073 | 31 | 7 | 32 | 4 |
+| 10074 | 40 | 9 | 24 | 4 |
+| 10075 | 60 | 9 | 43 | 5 |
+| 10076 | 24 | 6 | 14 | 6 |
+| 10077 | 32 | 9 | 25 | 5 |
+| 10078 | 21 | 2 | 18 | 0 |
+| 10079 | 33 | 7 | 18 | 4 |
+| 10080 | 25 | 9 | 20 | 3 |
+| 10081 | 18 | 2 | 15 | 1 |
+| 10082 | 32 | 7 | 28 | 4 |
+| 10083 | 32 | 6 | 10 | 4 |
+| 10084 | 9 | 5 | 11 | 0 |
+| 10085 | 27 | 13 | 22 | 6 |
+| 10086 | 18 | 4 | 20 | 2 |
+| 10087 | 22 | 6 | 14 | 6 |
+| 10088 | 9 | 10 | 11 | 0 |
+| 10089 | 11 | 4 | 12 | 1 |
+| 10090 | 19 | 5 | 14 | 0 |
+| 10091 | 43 | 5 | 24 | 5 |
+| 10092 | 29 | 5 | 34 | 3 |
+| 10093 | 46 | 11 | 32 | 0 |
+| 10094 | 40 | 12 | 24 | 3 |
+| 10095 | 22 | 3 | 16 | 1 |
+| 10096 | 24 | 7 | 18 | 5 |
+| 10097 | 34 | 4 | 19 | 2 |
+| 10098 | 28 | 6 | 33 | 8 |
+| 10099 | 40 | 4 | 33 | 5 |
+
+**Table D3 Ciy shares in the 400 new branches in percent**
+
+| Seed | A | D | XA | XD |
+| --- | --- | --- | --- | --- |
+| 10000 | 26.2821 | 50.0000 | 22.7586 | 25.0000 |
+| 10001 | 12.9252 | 28.5714 | 10.4167 | 0.0000 |
+| 10002 | 8.8235 | 21.4286 | 4.4776 | 5.2632 |
+| 10003 | 22.8758 | 70.0000 | 14.4828 | 50.0000 |
+| 10004 | 14.5833 | 45.4545 | 11.3636 | 7.6923 |
+| 10005 | 21.6049 | 41.1765 | 14.5985 | 8.3333 |
+| 10006 | 29.2857 | 38.4615 | 18.7050 | 46.1538 |
+| 10007 | 15.0327 | 33.3333 | 15.0685 | 37.5000 |
+| 10008 | 17.3333 | 50.0000 | 14.1935 | 7.6923 |
+| 10009 | 12.1622 | 40.0000 | 8.5106 | 42.8571 |
+| 10010 | 34.1935 | 40.0000 | 17.1053 | 22.2222 |
+| 10011 | 14.1844 | 22.2222 | 11.2782 | 0.0000 |
+| 10012 | 21.4286 | 66.6667 | 23.4043 | 60.0000 |
+| 10013 | 19.4969 | 50.0000 | 14.2857 | 64.2857 |
+| 10014 | 31.9018 | 33.3333 | 16.1765 | 12.5000 |
+| 10015 | 18.7097 | 28.5714 | 11.4094 | 25.0000 |
+| 10016 | 17.3333 | 33.3333 | 13.3333 | 16.6667 |
+| 10017 | 21.1921 | 46.6667 | 18.2432 | 0.0000 |
+| 10018 | 17.5573 | 30.7692 | 12.2137 | 63.6364 |
+| 10019 | 19.7279 | 50.0000 | 17.8082 | 35.7143 |
+| 10020 | 15.2174 | 37.5000 | 9.3023 | 8.3333 |
+| 10021 | 14.3791 | 57.1429 | 15.5844 | 25.0000 |
+| 10022 | 13.5714 | 50.0000 | 12.6866 | 18.7500 |
+| 10023 | 21.3793 | 9.0909 | 11.5942 | 28.5714 |
+| 10024 | 24.6667 | 66.6667 | 20.7407 | 14.2857 |
+| 10025 | 19.0141 | 46.1538 | 17.0370 | 6.2500 |
+| 10026 | 22.7273 | 52.6316 | 26.0274 | 40.0000 |
+| 10027 | 10.8108 | 21.4286 | 6.2500 | 6.6667 |
+| 10028 | 15.4839 | 29.4118 | 11.2583 | 23.5294 |
+| 10029 | 20.6897 | 50.0000 | 17.8571 | 16.6667 |
+| 10030 | 11.6883 | 25.0000 | 6.0000 | 0.0000 |
+| 10031 | 24.2857 | 33.3333 | 15.1515 | 15.3846 |
+| 10032 | 16.3265 | 45.0000 | 12.2581 | 15.3846 |
+| 10033 | 24.0876 | 23.0769 | 10.0775 | 21.4286 |
+| 10034 | 13.0435 | 28.5714 | 11.1940 | 4.7619 |
+| 10035 | 19.0476 | 23.0769 | 13.8889 | 6.6667 |
+| 10036 | 17.7778 | 31.2500 | 17.4825 | 20.0000 |
+| 10037 | 9.4488 | 30.0000 | 10.4478 | 23.0769 |
+| 10038 | 16.7785 | 29.4118 | 7.2581 | 5.8824 |
+| 10039 | 21.3333 | 52.9412 | 14.8936 | 25.0000 |
+| 10040 | 18.2432 | 50.0000 | 14.8936 | 45.4545 |
+| 10041 | 13.6691 | 46.6667 | 14.5038 | 30.0000 |
+| 10042 | 24.6753 | 31.2500 | 11.8056 | 0.0000 |
+| 10043 | 12.5874 | 44.4444 | 7.8014 | 14.2857 |
+| 10044 | 16.0256 | 31.5789 | 12.3377 | 5.5556 |
+| 10045 | 17.1975 | 28.5714 | 9.5238 | 7.1429 |
+| 10046 | 9.3333 | 71.4286 | 14.8387 | 6.6667 |
+| 10047 | 13.2353 | 53.8462 | 13.8686 | 5.5556 |
+| 10048 | 26.5734 | 50.0000 | 17.1429 | 9.0909 |
+| 10049 | 18.9189 | 41.1765 | 12.0567 | 38.8889 |
+| 10050 | 24.5161 | 37.5000 | 11.1842 | 35.2941 |
+| 10051 | 25.3731 | 58.3333 | 13.5714 | 30.7692 |
+| 10052 | 20.2797 | 43.7500 | 18.3673 | 9.0909 |
+| 10053 | 17.6056 | 33.3333 | 12.3377 | 20.0000 |
+| 10054 | 14.7287 | 44.4444 | 14.8148 | 18.7500 |
+| 10055 | 16.5468 | 15.3846 | 7.1942 | 15.3846 |
+| 10056 | 18.7500 | 64.7059 | 22.2222 | 28.5714 |
+| 10057 | 12.2449 | 37.5000 | 12.3288 | 37.5000 |
+| 10058 | 30.0000 | 33.3333 | 17.8082 | 68.7500 |
+| 10059 | 13.6986 | 35.7143 | 7.9137 | 28.5714 |
+| 10060 | 15.9420 | 28.5714 | 9.2105 | 8.3333 |
+| 10061 | 24.1611 | 88.8889 | 26.1194 | 40.0000 |
+| 10062 | 16.0584 | 40.0000 | 10.2362 | 7.1429 |
+| 10063 | 13.4228 | 28.5714 | 6.8493 | 20.0000 |
+| 10064 | 22.7273 | 57.1429 | 14.6154 | 40.0000 |
+| 10065 | 24.2857 | 58.8235 | 20.5882 | 25.0000 |
+| 10066 | 26.3514 | 50.0000 | 23.6842 | 23.0769 |
+| 10067 | 38.4106 | 66.6667 | 21.7687 | 53.3333 |
+| 10068 | 30.4878 | 50.0000 | 15.8537 | 33.3333 |
+| 10069 | 13.6054 | 50.0000 | 9.1549 | 23.0769 |
+| 10070 | 15.6863 | 40.0000 | 13.9073 | 7.1429 |
+| 10071 | 20.0000 | 52.9412 | 11.7647 | 23.5294 |
+| 10072 | 23.6025 | 36.8421 | 10.2941 | 8.3333 |
+| 10073 | 22.1429 | 50.0000 | 21.4765 | 28.5714 |
+| 10074 | 27.3973 | 60.0000 | 17.9104 | 44.4444 |
+| 10075 | 39.7351 | 60.0000 | 29.8611 | 33.3333 |
+| 10076 | 16.5517 | 40.0000 | 10.0000 | 37.5000 |
+| 10077 | 23.3577 | 64.2857 | 19.5312 | 29.4118 |
+| 10078 | 14.8936 | 16.6667 | 13.5338 | 0.0000 |
+| 10079 | 21.8543 | 46.6667 | 13.0435 | 25.0000 |
+| 10080 | 18.7970 | 52.9412 | 15.1515 | 18.7500 |
+| 10081 | 13.0435 | 20.0000 | 12.0000 | 8.3333 |
+| 10082 | 21.9178 | 46.6667 | 19.4444 | 44.4444 |
+| 10083 | 21.6216 | 35.2941 | 7.6336 | 23.5294 |
+| 10084 | 6.3830 | 33.3333 | 7.4830 | 0.0000 |
+| 10085 | 20.1493 | 68.4211 | 16.6667 | 46.1538 |
+| 10086 | 13.0435 | 26.6667 | 13.9860 | 16.6667 |
+| 10087 | 16.2963 | 46.1538 | 9.6552 | 35.2941 |
+| 10088 | 6.2937 | 58.8235 | 7.9710 | 0.0000 |
+| 10089 | 8.0882 | 28.5714 | 8.3916 | 7.1429 |
+| 10090 | 13.0137 | 50.0000 | 10.2190 | 0.0000 |
+| 10091 | 28.1046 | 33.3333 | 16.9014 | 41.6667 |
+| 10092 | 18.4713 | 33.3333 | 25.1852 | 21.4286 |
+| 10093 | 29.8701 | 64.7059 | 22.5352 | 0.0000 |
+| 10094 | 27.0270 | 63.1579 | 17.2662 | 18.7500 |
+| 10095 | 14.1935 | 23.0769 | 11.5108 | 6.2500 |
+| 10096 | 16.7832 | 46.6667 | 13.5338 | 38.4615 |
+| 10097 | 23.7762 | 33.3333 | 13.5714 | 16.6667 |
+| 10098 | 18.5430 | 33.3333 | 21.7105 | 47.0588 |
+| 10099 | 26.4901 | 26.6667 | 21.8543 | 50.0000 |
+
+**Table D4 Environment specific effects and interactions**
+
+| Seed | Share EA | Share ED | Share I | Count EA | Count ED | Count I |
+| --- | --- | --- | --- | --- | --- | --- |
+| 10000 | -3.5234 | -25.0000 | -21.4766 | -8.0000 | -7.0000 | 1.0000 |
+| 10001 | -2.5085 | -28.5714 | -26.0629 | -4.0000 | -4.0000 | 0.0000 |
+| 10002 | -4.3459 | -16.1654 | -11.8195 | -6.0000 | -2.0000 | 4.0000 |
+| 10003 | -8.3931 | -20.0000 | -11.6069 | -14.0000 | 1.0000 | 15.0000 |
+| 10004 | -3.2197 | -37.7622 | -34.5425 | -6.0000 | -4.0000 | 2.0000 |
+| 10005 | -7.0064 | -32.8431 | -25.8367 | -15.0000 | -6.0000 | 9.0000 |
+| 10006 | -10.5807 | 7.6923 | 18.2730 | -15.0000 | 1.0000 | 16.0000 |
+| 10007 | 0.0358 | 4.1667 | 4.1309 | -1.0000 | 0.0000 | 1.0000 |
+| 10008 | -3.1398 | -42.3077 | -39.1679 | -4.0000 | -6.0000 | -2.0000 |
+| 10009 | -3.6515 | 2.8571 | 6.5087 | -6.0000 | -2.0000 | 4.0000 |
+| 10010 | -17.0883 | -17.7778 | -0.6895 | -27.0000 | -4.0000 | 23.0000 |
+| 10011 | -2.9062 | -22.2222 | -19.3160 | -5.0000 | -2.0000 | 3.0000 |
+| 10012 | 1.9757 | -6.6667 | -8.6424 | 3.0000 | -6.0000 | -9.0000 |
+| 10013 | -5.2111 | 14.2857 | 19.4969 | -12.0000 | 1.0000 | 13.0000 |
+| 10014 | -15.7254 | -20.8333 | -5.1080 | -30.0000 | -1.0000 | 29.0000 |
+| 10015 | -7.3003 | -3.5714 | 3.7289 | -12.0000 | 0.0000 | 12.0000 |
+| 10016 | -4.0000 | -16.6667 | -12.6667 | -8.0000 | -2.0000 | 6.0000 |
+| 10017 | -2.9488 | -46.6667 | -43.7179 | -5.0000 | -7.0000 | -2.0000 |
+| 10018 | -5.3435 | 32.8671 | 38.2106 | -7.0000 | 3.0000 | 10.0000 |
+| 10019 | -1.9197 | -14.2857 | -12.3660 | -3.0000 | -2.0000 | 1.0000 |
+| 10020 | -5.9151 | -29.1667 | -23.2516 | -9.0000 | -5.0000 | 4.0000 |
+| 10021 | 1.2053 | -32.1429 | -33.3482 | 2.0000 | -4.0000 | -6.0000 |
+| 10022 | -0.8849 | -31.2500 | -30.3651 | -2.0000 | -4.0000 | -2.0000 |
+| 10023 | -9.7851 | 19.4805 | 29.2656 | -15.0000 | 1.0000 | 16.0000 |
+| 10024 | -3.9259 | -52.3810 | -48.4550 | -9.0000 | -6.0000 | 3.0000 |
+| 10025 | -1.9770 | -39.9038 | -37.9268 | -4.0000 | -5.0000 | -1.0000 |
+| 10026 | 3.3001 | -12.6316 | -15.9317 | 3.0000 | -6.0000 | -9.0000 |
+| 10027 | -4.5608 | -14.7619 | -10.2011 | -7.0000 | -2.0000 | 5.0000 |
+| 10028 | -4.2256 | -5.8824 | -1.6568 | -7.0000 | -1.0000 | 6.0000 |
+| 10029 | -2.8325 | -33.3333 | -30.5008 | -5.0000 | -4.0000 | 1.0000 |
+| 10030 | -5.6883 | -25.0000 | -19.3117 | -9.0000 | -4.0000 | 5.0000 |
+| 10031 | -9.1342 | -17.9487 | -8.8145 | -14.0000 | -3.0000 | 11.0000 |
+| 10032 | -4.0685 | -29.6154 | -25.5469 | -5.0000 | -7.0000 | -2.0000 |
+| 10033 | -14.0101 | -1.6484 | 12.3617 | -20.0000 | 0.0000 | 20.0000 |
+| 10034 | -1.8494 | -23.8095 | -21.9601 | -3.0000 | -3.0000 | 0.0000 |
+| 10035 | -5.1587 | -16.4103 | -11.2515 | -8.0000 | -2.0000 | 6.0000 |
+| 10036 | -0.2953 | -11.2500 | -10.9547 | 1.0000 | -2.0000 | -3.0000 |
+| 10037 | 0.9989 | -6.9231 | -7.9220 | 2.0000 | 0.0000 | -2.0000 |
+| 10038 | -9.5205 | -23.5294 | -14.0090 | -16.0000 | -4.0000 | 12.0000 |
+| 10039 | -6.4397 | -27.9412 | -21.5015 | -11.0000 | -6.0000 | 5.0000 |
+| 10040 | -3.3496 | -4.5455 | -1.1958 | -6.0000 | -4.0000 | 2.0000 |
+| 10041 | 0.8348 | -16.6667 | -17.5014 | 0.0000 | -4.0000 | -4.0000 |
+| 10042 | -12.8698 | -31.2500 | -18.3802 | -21.0000 | -5.0000 | 16.0000 |
+| 10043 | -4.7860 | -30.1587 | -25.3727 | -7.0000 | -2.0000 | 5.0000 |
+| 10044 | -3.6880 | -26.0234 | -22.3354 | -6.0000 | -5.0000 | 1.0000 |
+| 10045 | -7.6736 | -21.4286 | -13.7549 | -13.0000 | -1.0000 | 12.0000 |
+| 10046 | 5.5054 | -64.7619 | -70.2673 | 9.0000 | -9.0000 | -18.0000 |
+| 10047 | 0.6333 | -48.2906 | -48.9239 | 1.0000 | -6.0000 | -7.0000 |
+| 10048 | -9.4306 | -40.9091 | -31.4785 | -14.0000 | -8.0000 | 6.0000 |
+| 10049 | -6.8622 | -2.2876 | 4.5746 | -11.0000 | 0.0000 | 11.0000 |
+| 10050 | -13.3319 | -2.2059 | 11.1260 | -21.0000 | 3.0000 | 24.0000 |
+| 10051 | -11.8017 | -27.5641 | -15.7624 | -15.0000 | -3.0000 | 12.0000 |
+| 10052 | -1.9124 | -34.6591 | -32.7467 | -2.0000 | -6.0000 | -4.0000 |
+| 10053 | -5.2680 | -13.3333 | -8.0654 | -6.0000 | -3.0000 | 3.0000 |
+| 10054 | 0.0861 | -25.6944 | -25.7806 | 1.0000 | -5.0000 | -6.0000 |
+| 10055 | -9.3525 | 0.0000 | 9.3525 | -13.0000 | 0.0000 | 13.0000 |
+| 10056 | 3.4722 | -36.1345 | -39.6067 | 5.0000 | -7.0000 | -12.0000 |
+| 10057 | 0.0839 | 0.0000 | -0.0839 | 0.0000 | -3.0000 | -3.0000 |
+| 10058 | -12.1918 | 35.4167 | 47.6084 | -19.0000 | 6.0000 | 25.0000 |
+| 10059 | -5.7850 | -7.1429 | -1.3579 | -9.0000 | -1.0000 | 8.0000 |
+| 10060 | -6.7315 | -20.2381 | -13.5066 | -8.0000 | -3.0000 | 5.0000 |
+| 10061 | 1.9583 | -48.8889 | -50.8472 | -1.0000 | -10.0000 | -9.0000 |
+| 10062 | -5.8222 | -32.8571 | -27.0350 | -9.0000 | -3.0000 | 6.0000 |
+| 10063 | -6.5735 | -8.5714 | -1.9979 | -10.0000 | -1.0000 | 9.0000 |
+| 10064 | -8.1119 | -17.1429 | -9.0310 | -11.0000 | -2.0000 | 9.0000 |
+| 10065 | -3.6975 | -33.8235 | -30.1261 | -6.0000 | -7.0000 | -1.0000 |
+| 10066 | -2.6671 | -26.9231 | -24.2559 | -3.0000 | -6.0000 | -3.0000 |
+| 10067 | -16.6419 | -13.3333 | 3.3086 | -26.0000 | -4.0000 | 22.0000 |
+| 10068 | -14.6341 | -16.6667 | -2.0325 | -24.0000 | 1.0000 | 25.0000 |
+| 10069 | -4.4505 | -26.9231 | -22.4726 | -7.0000 | -1.0000 | 6.0000 |
+| 10070 | -1.7790 | -32.8571 | -31.0782 | -3.0000 | -5.0000 | -2.0000 |
+| 10071 | -8.2353 | -29.4118 | -21.1765 | -14.0000 | -5.0000 | 9.0000 |
+| 10072 | -13.3084 | -28.5088 | -15.2004 | -24.0000 | -6.0000 | 18.0000 |
+| 10073 | -0.6663 | -21.4286 | -20.7622 | 1.0000 | -3.0000 | -4.0000 |
+| 10074 | -9.4868 | -15.5556 | -6.0687 | -16.0000 | -5.0000 | 11.0000 |
+| 10075 | -9.8740 | -26.6667 | -16.7927 | -17.0000 | -4.0000 | 13.0000 |
+| 10076 | -6.5517 | -2.5000 | 4.0517 | -10.0000 | 0.0000 | 10.0000 |
+| 10077 | -3.8264 | -34.8739 | -31.0475 | -7.0000 | -4.0000 | 3.0000 |
+| 10078 | -1.3598 | -16.6667 | -15.3069 | -3.0000 | -2.0000 | 1.0000 |
+| 10079 | -8.8108 | -21.6667 | -12.8558 | -15.0000 | -3.0000 | 12.0000 |
+| 10080 | -3.6455 | -34.1912 | -30.5457 | -5.0000 | -6.0000 | -1.0000 |
+| 10081 | -1.0435 | -11.6667 | -10.6232 | -3.0000 | -1.0000 | 2.0000 |
+| 10082 | -2.4734 | -2.2222 | 0.2511 | -4.0000 | -3.0000 | 1.0000 |
+| 10083 | -13.9880 | -11.7647 | 2.2233 | -22.0000 | -2.0000 | 20.0000 |
+| 10084 | 1.1000 | -33.3333 | -34.4333 | 2.0000 | -5.0000 | -7.0000 |
+| 10085 | -3.4826 | -22.2672 | -18.7846 | -5.0000 | -7.0000 | -2.0000 |
+| 10086 | 0.9425 | -10.0000 | -10.9425 | 2.0000 | -2.0000 | -4.0000 |
+| 10087 | -6.6411 | -10.8597 | -4.2186 | -8.0000 | 0.0000 | 8.0000 |
+| 10088 | 1.6773 | -58.8235 | -60.5008 | 2.0000 | -10.0000 | -12.0000 |
+| 10089 | 0.3034 | -21.4286 | -21.7319 | 1.0000 | -3.0000 | -4.0000 |
+| 10090 | -2.7947 | -50.0000 | -47.2053 | -5.0000 | -5.0000 | 0.0000 |
+| 10091 | -11.2032 | 8.3333 | 19.5365 | -19.0000 | 0.0000 | 19.0000 |
+| 10092 | 6.7138 | -11.9048 | -18.6186 | 5.0000 | -2.0000 | -7.0000 |
+| 10093 | -7.3349 | -64.7059 | -57.3710 | -14.0000 | -11.0000 | 3.0000 |
+| 10094 | -9.7608 | -44.4079 | -34.6471 | -16.0000 | -9.0000 | 7.0000 |
+| 10095 | -2.6828 | -16.8269 | -14.1442 | -6.0000 | -2.0000 | 4.0000 |
+| 10096 | -3.2494 | -8.2051 | -4.9557 | -6.0000 | -2.0000 | 4.0000 |
+| 10097 | -10.2048 | -16.6667 | -6.4619 | -15.0000 | -2.0000 | 13.0000 |
+| 10098 | 3.1675 | 13.7255 | 10.5580 | 5.0000 | 2.0000 | -3.0000 |
+| 10099 | -4.6358 | 23.3333 | 27.9691 | -7.0000 | 1.0000 | 8.0000 |
+
+EA is XA minus A; ED is XD minus D; I is ED minus EA. Share effects are percentage points and count effects are organisms. All 100 share interactions are defined. The criterion and uncertainty method were fixed before any of these outcomes were executed.
+
+<!-- END REPLICATION EVIDENCE -->

@@ -9,11 +9,12 @@ Entirely English, prepared for Elmar Quliyev on 14 October 2026.
 - [Evidence table and figure builder](../../scripts/build-article-evidence.py)
 - [Article audit](../../scripts/check-article.py)
 
-The manuscript contains the complete model, three-stage study chronology,
+The manuscript contains the complete model, four-stage study chronology,
 equations, both outcome scales, all twelve paired endpoints, four-arm target
 endpoints, limitations, access statements, AI-assistance disclosure and references.
-Twenty-one tables include ten generated endpoint ledgers and a parameter ledger.
-The two scientific figures are generated from preserved JSON rather than screenshots.
+Revision 2 has 40 A4 pages, 28 tables, three data figures and ten native equations.
+The four new Appendix D tables give all 100 unseen-seed endpoints; the original
+12-seed tables remain separate. Figures are generated from JSON, not screenshots.
 
 ## Build
 
@@ -40,13 +41,17 @@ To regenerate all appendix tables and SVG figures from frozen evidence:
 
 ```powershell
 python scripts/build-article-evidence.py
+python scripts/build-replication-article.py
 ```
 
 To regenerate PNG figures as well, supply the directory containing Poppler's
 `pdftoppm` with `--poppler-bin`. The builder uses ReportLab vector PDFs and
 360-dpi rasterization, keeping temporary files under ignored `.local/` on D.
-It replaces only the marked generated-evidence region in the Markdown and does
-not run a new experiment. Rebuild the DOCX after regenerating evidence.
+Each builder replaces only its own marked evidence region in the Markdown and
+does not run a new experiment. The replication builder creates Figure 3 and
+tables D1–D4, and accepts the same --poppler-bin argument. On Windows it uses
+relative ASCII output paths to avoid Poppler Unicode-path limitations. Rebuild
+the DOCX after regenerating evidence.
 
 ## Review
 
@@ -64,10 +69,11 @@ Independent PDF text extraction confirmed those characters remained in the PDF;
 PDFium rendered them correctly. Internal PDFs and page PNGs remain ignored in
 `.local/`. No packaged renderer files were modified.
 
-The manuscript was finalized while the repository was private. Later on
-14 October 2026, Elmar authorized public visibility and GitHub Pages publication.
+The original manuscript was finalized while the repository was private. Later
+on 14 October 2026, Elmar authorized public access and a 100-seed replication.
+Revision 2 incorporates the new experiment and the public access statement.
 The source and evidence are now at [the public repository](https://github.com/kulieff21/Morrow),
 with the [case study and Word download](https://kulieff21.github.io/Morrow/#article)
-on Pages. The original manuscript and its manifest are preserved byte-for-byte;
-its private-access wording describes the earlier revision. Publication does not
+on Pages. [Revision 1 and its original manifest](https://github.com/kulieff21/Morrow/tree/c1409ccfb1f8b878dc1432b671cbc6d1ddb19e44/docs/article)
+remain in Git history; the current manifest identifies revision 2. Publication does not
 confer an open-source license or represent peer review or journal acceptance.

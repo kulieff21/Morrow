@@ -1,20 +1,24 @@
 {
   "date": "2026-10-14",
+  "revision": 2,
   "language": "English",
-  "wordPages": 24,
-  "tables": 21,
-  "figures": 2,
+  "wordPages": 40,
+  "tables": 28,
+  "figures": 3,
   "nativeMathExpressions": 10,
+  "originalArticleRevision": "c1409ccfb1f8b878dc1432b671cbc6d1ddb19e44",
+  "replicationProtocolCommit": "2158e085b706c647829637182d51829231b8ff77",
+  "replicationExecutionRevision": "274454f164f9ecb8474c25856cee2be4a3adad8f",
   "files": [
     {
       "path": "docs/article/morrow-article.md",
-      "bytes": 67084,
-      "sha256": "c7da73b22601b66b60aa3573c0c867d267b54ede309c81a3619ea24f06dad631"
+      "bytes": 96365,
+      "sha256": "5215f423e991bc73edf7bcf329e089455c9fc8b19544e063fcee72c51cce8252"
     },
     {
       "path": "docs/article/morrow-article.docx",
-      "bytes": 222433,
-      "sha256": "4d85ec459bbeaa88037146345336ad0cd87ae2ae67b0f2a422c7c09956a7961d"
+      "bytes": 334059,
+      "sha256": "28e3d3d7429d39ac9d312a14572ea9e82739ffe71805ca6f984b5e8dd67a4794"
     },
     {
       "path": "docs/article/figures/population.png",
@@ -38,8 +42,43 @@
     },
     {
       "path": "scripts/check-article.py",
-      "bytes": 4116,
-      "sha256": "503605cfb76bd74c50b69694c6c65be08df9f52ab5a3517dd01aa8fdfd01622d"
+      "bytes": 6144,
+      "sha256": "b551d9428b538f4ab8d59045a4d5117e6620cf0512aff018164331412b84cd67"
+    },
+    {
+      "path": "docs/article/figures/replication-interactions.png",
+      "bytes": 114056,
+      "sha256": "e6b8009abe57d25a79af57b6ea4646f83993f270342149b97cc1e41bb9b80a0c"
+    },
+    {
+      "path": "scripts/build-replication-article.py",
+      "bytes": 6252,
+      "sha256": "9e37ee35cf14e05375e8733e1de186f4244f8f675c22bad19b5c4a57b8a6b285"
+    },
+    {
+      "path": "docs/replication-protocol.md",
+      "bytes": 6414,
+      "sha256": "536e2a8ce51b8c037ef8d80cdbac435fe5f09b501d4b69a9b4a9dfd4c84e71bd"
+    },
+    {
+      "path": "docs/replication-raw.json",
+      "bytes": 7449879,
+      "sha256": "321feaa61e0eeffb05a4e964521dfd8559d5a0372e04347baa6785af5befabaa"
+    },
+    {
+      "path": "docs/replication-analysis.json",
+      "bytes": 150659,
+      "sha256": "b311e533081a3de3ee14fcb98e066af850ed720276b79dcc3f133ce3b7223236"
+    },
+    {
+      "path": "scripts/replication.mjs",
+      "bytes": 16109,
+      "sha256": "b7604dfb1c248d089ac140e32c83bb70198202082f58a79f33a68bb576d48587"
+    },
+    {
+      "path": "scripts/check-replication.py",
+      "bytes": 4432,
+      "sha256": "cbeb1750de09ce8d66bde77e0bf32899530be1984c4451282d2e781dcb3662c3"
     }
   ]
 }

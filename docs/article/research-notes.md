@@ -55,3 +55,22 @@ tables, repeated table headers, hyperlinks, embedded figures and page numbers.
 Figures and appendix tables are generated from existing JSON, never transcribed
 from screenshots. Internal rendering files stay in ignored `.local/` on D:.
 The final DOCX must be rendered and every page visually inspected.
+
+
+## Revision 2 and prospective replication
+
+After public release, Elmar authorized a new 100-seed experiment and updates to
+all outputs. The replication protocol was pushed before any new outcomes,
+followed by tested implementation, then the complete saved batch. The new
+bootstrap method and its limitations were researched before execution using
+[NIST percentile-bootstrap documentation](https://pages.nist.gov/cmomy/reference/generated/cmomy.confidence_interval.html)
+and [Hesterberg's discussion of bootstrap coverage](https://arxiv.org/abs/1411.5279).
+These support method reporting; neither establishes exchangeability or coverage
+for the chosen deterministic consecutive seed range.
+
+Revision 2 preserves all original scientific evidence, adds a fourth study stage,
+reports all new seed endpoints separately, updates the abstract/discussion/access,
+and includes the 19 reversed share interactions. The practical count of 100 was
+fixed without a formal power or precision calculation; the article says so.
+No retrospective interval is attached to the original twelve worlds. No parameter
+search, seed replacement, stopping-rule change or new mechanism claim was made.
