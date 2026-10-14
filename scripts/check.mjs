@@ -6,6 +6,7 @@ import { readAnalysis, renderMarkdown } from './analyze-batch.mjs';
 import { checkThriftArtifacts } from './analyze-thrift.mjs';
 import { SITE_FILES } from './site-files.mjs';
 import { checkReplicationArtifacts } from './replication.mjs';
+import { createHash } from 'node:crypto';
 
 const root = path.dirname(path.dirname(fileURLToPath(import.meta.url)));
 const files = ['server.mjs'];
@@ -56,3 +57,11 @@ await checkThriftArtifacts();
 console.log('Four-arm thrift artifacts match raw evidence and frozen inputs.');
 await checkReplicationArtifacts();
 console.log('Unseen-seed replication artifacts match frozen implementation and raw evidence.');
+const manifest = JSON.parse(await readFile(path.join(root, 'docs/article/artifact-manifest.json'), 'utf8'));
+for (const entry of manifest.files) {
+  const bytes = await readFile(path.join(root, entry.path));
+  if (bytes.length !== entry.bytes || createHash('sha256').update(bytes).digest('hex') !== entry.sha256) {
+    throw new Error(`Article manifest mismatch: ${entry.path}`);
+  }
+}
+console.log(`Article manifest verifies all ${manifest.files.length} published artifact hashes and lengths.`);

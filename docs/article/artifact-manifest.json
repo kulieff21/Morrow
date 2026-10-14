@@ -42,8 +42,8 @@
     },
     {
       "path": "scripts/check-article.py",
-      "bytes": 6144,
-      "sha256": "b551d9428b538f4ab8d59045a4d5117e6620cf0512aff018164331412b84cd67"
+      "bytes": 6038,
+      "sha256": "3efe9f0d35a835cb3825bf0439388d101e29ee837f0f051d05017c6d70d301f9"
     },
     {
       "path": "docs/article/figures/replication-interactions.png",
@@ -77,8 +77,8 @@
     },
     {
       "path": "scripts/check-replication.py",
-      "bytes": 4432,
-      "sha256": "cbeb1750de09ce8d66bde77e0bf32899530be1984c4451282d2e781dcb3662c3"
+      "bytes": 4352,
+      "sha256": "10fe568d96aac7c9c9e0106b53495ee8315975d5f1cc37d44c1735a40c842b55"
     }
   ]
 }
