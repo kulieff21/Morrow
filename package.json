@@ -10,6 +10,7 @@
     "dev": "node server.mjs",
     "test": "node --test",
     "check": "node scripts/check.mjs",
+    "build:pages": "node scripts/build-pages.mjs",
     "experiment": "node scripts/experiment.mjs",
     "analyze": "node scripts/analyze-batch.mjs",
     "experiment:thrift": "node scripts/thrift-experiment.mjs",
