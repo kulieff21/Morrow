@@ -1,4 +1,5 @@
 import { WIDTH, HEIGHT, DAY, LINEAGES, clamp } from './engine.js';
+import { tr } from './i18n.js';
 
 export function fitCanvas(canvas) {
   const rect = canvas.getBoundingClientRect();
@@ -60,10 +61,10 @@ export function drawWorld(canvas, world, { selectedId = null, drought = false, e
     context.textAlign = 'center';
     context.fillStyle = '#a7bfce';
     context.font = '25px Georgia';
-    context.fillText(empty || 'Bir dünya birazdan uyanacak.', 500, 320);
+    context.fillText(empty || tr('A world will wake soon.', 'Bir dünya birazdan uyanacak.'), 500, 320);
     context.font = '16px Segoe UI';
     context.fillStyle = '#7e9cb2';
-    context.fillText('Önce bir tahmin, sonra gözlem.', 500, 355);
+    context.fillText(tr('First a prediction, then an observation.', 'Önce bir tahmin, sonra gözlem.'), 500, 355);
     return;
   }
   for (const rock of world.obstacles) {

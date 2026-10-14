@@ -1,5 +1,6 @@
 import { World, STEP, DAY, LINEAGES, clamp, startExperiment, advanceExperiment } from './engine.js';
 import { drawWorld, drawHistory, pointInWorld, formatDay } from './render.js';
+import { tr, eventText, initLanguage } from './i18n.js';
 
 const $ = (id) => document.getElementById(id);
 const worldCanvas = $('world');
@@ -23,7 +24,7 @@ function announce(message) { $('announcement').textContent = message; }
 
 function validatedSeed(input) {
   if (input.value.trim() === '' || !input.checkValidity() || !Number.isInteger(Number(input.value))) {
-    input.setCustomValidity('0 ile 4294967295 arasında bir tam sayı gir.');
+    input.setCustomValidity(tr('Enter an integer between 0 and 4294967295.', '0 ile 4294967295 arasında bir tam sayı gir.'));
     input.reportValidity();
     return null;
   }
@@ -37,7 +38,7 @@ function setPause(value) {
   accumulator = 0;
   redraw = true;
   $('play').textContent = paused ? '▶' : 'Ⅱ';
-  $('play').setAttribute('aria-label', paused ? 'Simülasyonu oynat' : 'Simülasyonu duraklat');
+  $('play').setAttribute('aria-label', paused ? tr('Play simulation', 'Simülasyonu oynat') : tr('Pause simulation', 'Simülasyonu duraklat'));
   $('play').setAttribute('aria-pressed', String(paused));
 }
 setPause(paused);
@@ -56,24 +57,28 @@ document.querySelectorAll('[data-tool]').forEach((button) => button.addEventList
     const active = item.dataset.tool === tool;
     item.classList.toggle('active', active); item.setAttribute('aria-pressed', String(active));
   });
-  $('pool-hint').textContent = tool === 'feed' ? 'Besin bırakmak için havuza dokun'
-    : tool === 'rock' ? 'Kaya yerleştirmek için havuza dokun' : 'Yakından bakmak için bir canlı seç';
-  announce(tool === 'select' ? 'Gözlem aracı seçildi.' : tool === 'feed' ? 'Besin aracı seçildi. Havuza dokun.' : 'Kaya aracı seçildi. Havuza dokun.');
+  refreshTool();
+  announce(tool === 'select' ? tr('Selection tool chosen.', 'Gözlem aracı seçildi.') : tool === 'feed' ? tr('Food tool chosen. Click the pond.', 'Besin aracı seçildi. Havuza dokun.') : tr('Rock tool chosen. Click the pond.', 'Kaya aracı seçildi. Havuza dokun.'));
 }));
+
+function refreshTool() {
+  $('pool-hint').textContent = tool === 'feed' ? tr('Click the pond to add food', 'Besin bırakmak için havuza dokun')
+    : tool === 'rock' ? tr('Click the pond to add a rock', 'Kaya yerleştirmek için havuza dokun') : tr('Select an organism to look closer', 'Yakından bakmak için bir canlı seç');
+}
 
 function selectAgent(agent) {
   selectedId = agent?.id ?? null;
   lastSelected = agent ? structuredClone(agent) : null;
   redraw = true;
   refreshWorld();
-  if (agent) announce(`${LINEAGES[agent.lineage].name} #${agent.id} seçildi. Kuşak ${agent.generation}.`);
+  if (agent) announce(tr(`${LINEAGES[agent.lineage].name} #${agent.id} selected. Generation ${agent.generation}.`, `${LINEAGES[agent.lineage].name} #${agent.id} seçildi. Kuşak ${agent.generation}.`));
 }
 worldCanvas.addEventListener('click', (event) => {
   const point = pointInWorld(worldCanvas, event);
   if (tool === 'feed') world.addFood(point.x, point.y);
   else if (tool === 'rock') {
     const added = world.addObstacle(point.x, point.y);
-    if (!added) announce('Kaya yerleştirilemedi. Başka bir nokta dene; en fazla 12 kaya ekleyebilirsin.');
+    if (!added) announce(tr('Rock could not be placed. Try another point; the limit is 12 rocks.', 'Kaya yerleştirilemedi. Başka bir nokta dene; en fazla 12 kaya ekleyebilirsin.'));
   } else {
     const radius = Math.max(24, 1000 / worldCanvas.getBoundingClientRect().width * 14);
     let nearest = null;
@@ -96,7 +101,7 @@ function resetWorld() {
   selectedId = null; lastSelected = null; accumulator = 0;
   setPause(window.matchMedia('(prefers-reduced-motion: reduce)').matches);
   redraw = true; refreshWorld();
-  announce(`Seed ${seed} ile yeni dünya başladı.`);
+  announce(tr(`New world started with seed ${seed}.`, `Seed ${seed} ile yeni dünya başladı.`));
 }
 $('reset').addEventListener('click', resetWorld);
 $('revive').addEventListener('click', resetWorld);
@@ -118,7 +123,7 @@ $('seasons').addEventListener('change', () => {
 function setResources(value, message) {
   $('resources').value = value;
   world.setEnvironment({ resources: value / 100 }, message);
-  refreshWorld(); redraw = true; announce(message);
+  refreshWorld(); redraw = true; announce(eventText(message));
 }
 $('drought').addEventListener('click', () => setResources(15, 'Kıtlık başladı. Besin yenilenmesi %15.'));
 $('abundance').addEventListener('click', () => setResources(100, 'Bolluk geri geldi. Besin yenilenmesi %100.'));
@@ -146,41 +151,41 @@ function refreshWorld() {
   $('population').textContent = stats.population;
   $('generation').textContent = stats.generation;
   $('food-count').textContent = stats.food;
-  $('life-totals').textContent = `${stats.births} doğum · ${stats.deaths} kayıp`;
+  $('life-totals').textContent = tr(`${stats.births} births · ${stats.deaths} deaths`, `${stats.births} doğum · ${stats.deaths} kayıp`);
   $('resource-value').textContent = `${Math.round(world.options.resources * 100)}%`;
-  $('mutation-value').textContent = `${Math.round(world.options.mutation * 100)}%`;
-  $('weather').textContent = world.options.seasons ? 'Mevsimler' : world.options.resources < 0.4 ? 'Kıtlık'
-    : world.options.resources < 0.85 ? 'Seyrek besin' : 'Bolluk';
+  $('mutation-value').textContent = `±${world.options.mutation.toFixed(2)}`;
+  $('weather').textContent = world.options.seasons ? tr('Seasons', 'Mevsimler') : world.options.resources < 0.4 ? tr('Drought', 'Kıtlık')
+    : world.options.resources < 0.85 ? tr('Sparse food', 'Seyrek besin') : tr('Abundance', 'Bolluk');
   $('extinction').hidden = stats.population > 0;
-  $('event-note').textContent = world.events[0]?.message ?? '';
-  $('history-start').textContent = `${formatDay(world.history[0]?.time ?? 0)} gün`;
-  $('history-end').textContent = `${stats.day.toFixed(1)} gün`;
-  $('history').setAttribute('aria-label', `Soylara göre canlı sayısı grafiği. Şu an ${stats.population} canlı, ${stats.births} doğum, ${stats.deaths} kayıp.`);
+  $('event-note').textContent = eventText(world.events[0]?.message);
+  $('history-start').textContent = `${formatDay(world.history[0]?.time ?? 0)} ${tr('days', 'gün')}`;
+  $('history-end').textContent = `${stats.day.toFixed(1)} ${tr('days', 'gün')}`;
+  $('history').setAttribute('aria-label', tr(`Population by lineage. Now ${stats.population} organisms, ${stats.births} births, ${stats.deaths} deaths.`, `Soylara göre canlı sayısı grafiği. Şu an ${stats.population} canlı, ${stats.births} doğum, ${stats.deaths} kayıp.`));
   const maximum = Math.max(1, ...stats.lineages.map((row) => row.count));
   for (const row of stats.lineages) {
     const elements = lineageElements[row.lineage];
     elements.count.textContent = row.count;
     elements.fill.style.width = `${row.count / maximum * 100}%`;
     elements.button.disabled = row.count === 0;
-    elements.button.setAttribute('aria-label', `${row.name}: ${row.count} canlı. Bu soydan bir canlı seç.`);
+    elements.button.setAttribute('aria-label', tr(`${row.name}: ${row.count} organisms. Select a member of this lineage.`, `${row.name}: ${row.count} canlı. Bu soydan bir canlı seç.`));
   }
   const specimen = world.agents.find((agent) => agent.id === selectedId);
   if (specimen) lastSelected = structuredClone(specimen);
   const display = specimen ?? lastSelected;
   $('specimen-empty').hidden = Boolean(display);
   $('specimen-detail').hidden = !display;
-  $('specimen-state').textContent = !display ? 'Bir canlı seç' : specimen ? 'Takip ediliyor' : 'Yaşamı sona erdi';
+  $('specimen-state').textContent = !display ? tr('Select an organism', 'Bir canlı seç') : specimen ? tr('Following', 'Takip ediliyor') : tr('Life ended', 'Yaşamı sona erdi');
   if (display) {
     $('specimen-mark').style.background = LINEAGES[display.lineage].color;
     $('specimen-name').textContent = `${LINEAGES[display.lineage].name} #${display.id}`;
-    $('specimen-family').textContent = `${display.generation}. kuşak · ${formatDay(display.age)} günlük${display.parentId ? ` · Ebeveyn #${display.parentId}` : ' · Kurucu canlı'}`;
+    $('specimen-family').textContent = tr(`Generation ${display.generation} · ${formatDay(display.age)} days old${display.parentId ? ` · Parent #${display.parentId}` : ' · Founder'}`, `${display.generation}. kuşak · ${formatDay(display.age)} günlük${display.parentId ? ` · Ebeveyn #${display.parentId}` : ' · Kurucu canlı'}`);
     $('energy').value = specimen ? clamp(display.energy, 0, 150) : 0;
     $('energy-value').textContent = specimen ? `${Math.round(display.energy)} / 150` : '—';
     for (const key of ['speed', 'sense', 'thrift']) {
       $(`trait-${key}`).style.width = `${display.genes[key] / 1.75 * 100}%`;
       $(`${key}-value`).textContent = display.genes[key].toFixed(2);
     }
-    $('specimen-story').textContent = `${display.eaten} besin topladı, ${display.children} yavrusu oldu.${specimen ? '' : ' Son görülen özellikleri gösteriliyor.'}`;
+    $('specimen-story').textContent = tr(`${display.eaten} food collected, ${display.children} offspring.${specimen ? '' : ' Showing the last observed traits.'}`, `${display.eaten} besin topladı, ${display.children} yavrusu oldu.${specimen ? '' : ' Son görülen özellikleri gösteriliyor.'}`);
   }
 }
 
@@ -213,17 +218,15 @@ $('run-experiment').addEventListener('click', () => {
   setExperimentInputs(true);
   $('results').hidden = true;
   $('pause-experiment').hidden = false;
-  $('pause-experiment').textContent = 'Deneyi duraklat';
-  $('experiment-notice').textContent = 'Deney 12× hızda çalışıyor. Sekme arka plana geçerse bekler. Gözlem havuzun korunuyor.';
-  refreshExperiment(); redraw = true; announce('Deney başladı. Önce sekiz günlük bolluk dönemi.');
+  refreshExperiment(); redraw = true; announce(tr('Experiment started. First, eight days of abundance.', 'Deney başladı. Önce sekiz günlük bolluk dönemi.'));
 });
 $('pause-experiment').addEventListener('click', () => {
   experimentPaused = !experimentPaused; experimentAccumulator = 0;
-  $('pause-experiment').textContent = experimentPaused ? 'Deneye devam et' : 'Deneyi duraklat';
   refreshExperiment();
 });
 
 function refreshExperiment() {
+  $('pause-experiment').textContent = experimentPaused ? tr('Resume experiment', 'Deneye devam et') : tr('Pause experiment', 'Deneyi duraklat');
   if (!experiment) {
     drawWorld($('control-world'), null); drawWorld($('drought-world'), null);
     return;
@@ -232,14 +235,16 @@ function refreshExperiment() {
   const complete = experiment.phase === 'complete';
   const ticks = warmup ? experiment.elapsedTicks : 960 + experiment.elapsedTicks;
   $('experiment-progress').value = ticks;
-  $('experiment-progress-label').textContent = `${(ticks * STEP / DAY).toFixed(1)} / 16 gün`;
-  $('experiment-status').textContent = complete ? `Deney tamamlandı · seed ${experiment.seed}`
-    : experimentPaused ? 'Deney bekliyor.'
-      : warmup ? 'Tek dünya büyüyor. Henüz koşullar aynı.' : 'Aynı başlangıçtan iki farklı gelecek.';
+  $('experiment-progress-label').textContent = `${(ticks * STEP / DAY).toFixed(1)} / 16 ${tr('days', 'gün')}`;
+  $('experiment-status').textContent = complete ? tr(`Experiment complete · seed ${experiment.seed}`, `Deney tamamlandı · seed ${experiment.seed}`)
+    : experimentPaused ? tr('Experiment paused.', 'Deney bekliyor.')
+      : warmup ? tr('One world grows. Conditions are still shared.', 'Tek dünya büyüyor. Henüz koşullar aynı.') : tr('One beginning, two different futures.', 'Aynı başlangıçtan iki farklı gelecek.');
+  $('experiment-notice').textContent = complete ? tr('The same seed gives the same result. Change it for another run.', 'Aynı seed aynı sonucu verir. Başka bir koşu için seed’i değiştir.') : tr('Runs at 12×. Background tabs wait. Your observation pond is preserved.', 'Deney 12× hızda çalışıyor. Sekme arka plana geçerse bekler. Gözlem havuzun korunuyor.');
+  if (complete) $('run-experiment').textContent = tr('Start another run ↗', 'Başka bir koşu başlat ↗');
   const control = warmup ? experiment.warmup : experiment.control;
   const drought = warmup ? experiment.warmup : experiment.drought;
-  $('control-count').textContent = `${control.agents.length} canlı`;
-  $('drought-count').textContent = `${drought.agents.length} canlı`;
+  $('control-count').textContent = `${control.agents.length} ${tr('organisms', 'canlı')}`;
+  $('drought-count').textContent = `${drought.agents.length} ${tr('organisms', 'canlı')}`;
   if (complete && $('results').hidden) showResults();
 }
 
@@ -247,16 +252,16 @@ function showResults() {
   const report = experiment.result;
   $('results').hidden = false;
   setExperimentInputs(false);
-  $('run-experiment').textContent = 'Başka bir koşu başlat ↗';
+  $('run-experiment').textContent = tr('Start another run ↗', 'Başka bir koşu başlat ↗');
   $('pause-experiment').hidden = true;
-  $('experiment-notice').textContent = 'Aynı seed aynı sonucu verir. Başka bir koşu için seed’i değiştir.';
+  $('experiment-notice').textContent = tr('The same seed gives the same result. Change it for another run.', 'Aynı seed aynı sonucu verir. Başka bir koşu için seed’i değiştir.');
   const names = report.leaders.map((id) => LINEAGES[id].name).join(', ');
   const endNames = report.droughtLeaders.map((id) => LINEAGES[id].name).join(', ');
   if (report.retainedLead === null) $('result-verdict').textContent = report.leaders.length === 0
-    ? 'Ayrılma anında yaşayan soy kalmadı. Bu koşuda lider karşılaştırılamıyor.'
-    : 'Kıtlıkta bütün soylar tükendi. Lider karşılaştırması tanımsız.';
-  else if (report.retainedLead) $('result-verdict').textContent = `${names}, kıtlık sonunda da liderler arasında.`;
-  else $('result-verdict').textContent = `Bolluğun lideri ${names} idi. Kıtlık sonunda ${endNames} öne geçti.`;
+    ? tr('No lineage survived to the checkpoint. Leadership cannot be compared.', 'Ayrılma anında yaşayan soy kalmadı. Bu koşuda lider karşılaştırılamıyor.')
+    : tr('All lineages died out in drought. Leadership is undefined.', 'Kıtlıkta bütün soylar tükendi. Lider karşılaştırması tanımsız.');
+  else if (report.retainedLead) $('result-verdict').textContent = tr(`${names} remains among the leaders after drought.`, `${names}, kıtlık sonunda da liderler arasında.`);
+  else $('result-verdict').textContent = tr(`${names} led in abundance. ${endNames} leads after drought.`, `Bolluğun lideri ${names} idi. Kıtlık sonunda ${endNames} öne geçti.`);
   const body = $('results-body'); body.replaceChildren();
   for (let lineage = 0; lineage < LINEAGES.length; lineage++) {
     const definition = LINEAGES[lineage];
@@ -270,9 +275,9 @@ function showResults() {
     }
     body.append(row);
   }
-  $('prediction-result').textContent = report.retainedLead === null ? 'Bu koşuda tahmin değerlendirilemiyor.'
-    : (prediction === 'yes') === report.retainedLead ? 'Tahminin bu koşunun sonucuyla örtüştü.' : 'Bu koşunun sonucu tahmininden farklı çıktı.';
-  announce(`Deney tamamlandı. ${$('result-verdict').textContent}`);
+  $('prediction-result').textContent = report.retainedLead === null ? tr('Your prediction cannot be evaluated for this run.', 'Bu koşuda tahmin değerlendirilemiyor.')
+    : (prediction === 'yes') === report.retainedLead ? tr('Your prediction matches this run.', 'Tahminin bu koşunun sonucuyla örtüştü.') : tr('This run differs from your prediction.', 'Bu koşunun sonucu tahmininden farklı çıktı.');
+  announce(`${tr('Experiment complete.', 'Deney tamamlandı.')} ${$('result-verdict').textContent}`);
 }
 
 function downloadJson(filename, data) {
@@ -285,12 +290,12 @@ $('export-world').addEventListener('click', () => {
   downloadJson(`morrow-world-${world.seed}-tick-${world.tick}.json`, {
     version: 1, model: 'morrow-0.1', kind: 'world-snapshot', state: world.snapshot(),
     note: 'Full in-memory state, including recent history. No import UI in version 0.1.',
-  }); announce('Gözlem verisinin JSON indirmesi başlatıldı.');
+  }); announce(tr('Observation JSON download started.', 'Gözlem verisinin JSON indirmesi başlatıldı.'));
 });
 $('export-experiment').addEventListener('click', () => {
   if (!experiment?.result) return;
   downloadJson(`morrow-experiment-${experiment.seed}.json`, { ...experiment.result, prediction });
-  announce('Deney sonucunun JSON indirmesi başlatıldı.');
+  announce(tr('Experiment JSON download started.', 'Deney sonucunun JSON indirmesi başlatıldı.'));
 });
 
 let helpWasPaused = false;
@@ -343,5 +348,12 @@ function frame(now) {
   }
   requestAnimationFrame(frame);
 }
-refreshWorld();
+initLanguage(() => {
+  $('play').setAttribute('aria-label', paused ? tr('Play simulation', 'Simülasyonu oynat') : tr('Pause simulation', 'Simülasyonu duraklat'));
+  for (const id of ['seed', 'experiment-seed']) $(id).setCustomValidity('');
+  $('announcement').textContent = '';
+  refreshWorld(); refreshTool(); refreshExperiment();
+  if (experiment?.phase === 'complete') showResults();
+  redraw = true;
+});
 requestAnimationFrame(frame);
