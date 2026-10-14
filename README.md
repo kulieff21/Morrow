@@ -188,6 +188,9 @@ the model, all four study stages, equations, all 100 replication endpoints, both
 scales, limitations, references and reproducibility. A formatted
 [Word version](docs/article/morrow-article.docx) accompanies the Markdown.
 Revision 2 has 40 A4 pages, 28 tables, three data figures and ten native equations.
+An unabridged [Turkish translation](docs/article/morrow-article.tr.md) and its
+[Word version](docs/article/morrow-article.tr.docx) preserve the English source,
+all endpoints, equations and references. The translation has 41 A4 pages.
 See [article tools and build instructions](docs/article/README.md) for the Python
 converter, generated tables and figures, and numerical/document audits.
 

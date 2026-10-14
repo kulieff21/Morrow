@@ -1,0 +1,83 @@
+{
+  "date": "2026-10-15",
+  "language": "Turkish",
+  "translationOfRevision": 2,
+  "translationOfCommit": "09133d082070e5f56a88aae1da3bcebb59eb72f4",
+  "wordPages": 41,
+  "tables": 28,
+  "figures": 3,
+  "nativeMathExpressions": 10,
+  "sourceEnglishMarkdownSha256": "5215f423e991bc73edf7bcf329e089455c9fc8b19544e063fcee72c51cce8252",
+  "sourceEnglishDocxSha256": "28e3d3d7429d39ac9d312a14572ea9e82739ffe71805ca6f984b5e8dd67a4794",
+  "translationScope": "Unabridged prose, headings, tables and figure labels; original published bibliography titles, technical literals, numbers, equations, paths, hashes and URLs preserved. No new scientific claims or experiments.",
+  "dependencies": {
+    "python-docx": "1.2.0",
+    "reportlab": "4.4.9",
+    "pypdfium2": "5.14.0"
+  },
+  "verification": {
+    "alignedMarkdownLines": 1233,
+    "complete100SeedLedgers": 4,
+    "originalEnglishFilesUnchanged": true,
+    "all41FinalPagesVisuallyReviewed": true,
+    "render": "Read-only Microsoft Word PDF export, packaged render_docx.py with bundled PDFium rasterization at 120 dpi",
+    "unchangedPackageParts": "Every part except word/document.xml, docProps/core.xml and the three media PNGs"
+  },
+  "files": [
+    {
+      "path": "docs/article/morrow-article.tr.md",
+      "bytes": 106477,
+      "sha256": "2a0165b74567443d18de53a62d6d70b5ae7654ef8389d19085733b3419ced209"
+    },
+    {
+      "path": "docs/article/morrow-article.tr.docx",
+      "bytes": 458451,
+      "sha256": "f7a5e527894dae6ce14d2fce310ccf0cefd4822987cfc2b40b46829adf310306"
+    },
+    {
+      "path": "docs/article/figures/population.tr.svg",
+      "bytes": 14163,
+      "sha256": "574490e295fa6f6c482397472238ee1c91feef16b39e23e2de3a376201dfe651"
+    },
+    {
+      "path": "docs/article/figures/population.tr.png",
+      "bytes": 130736,
+      "sha256": "1a0ddb2589de0cc521fb842509e69dbaf090f6353a3b2baa162370611cb901df"
+    },
+    {
+      "path": "docs/article/figures/share-interaction.tr.svg",
+      "bytes": 15637,
+      "sha256": "9cc14c5e04a7bd591aff700f0cdc578a6ca022074d070e54b45f4f4582df5594"
+    },
+    {
+      "path": "docs/article/figures/share-interaction.tr.png",
+      "bytes": 129916,
+      "sha256": "0245c3984a1a170e7a8af8bd2c79e92b1b32ce8a5a14c5f81db1f5a9eb099ea0"
+    },
+    {
+      "path": "docs/article/figures/replication-interactions.tr.svg",
+      "bytes": 22032,
+      "sha256": "2f1a7b5c98f24e073deafb6c123a4c1bca18dcf2418b8c47808e8d460ac93a3f"
+    },
+    {
+      "path": "docs/article/figures/replication-interactions.tr.png",
+      "bytes": 167792,
+      "sha256": "f7bd318fdc509d5b3db2f9d16d466636063765a010f807fbde7dc92ed66a523b"
+    },
+    {
+      "path": "scripts/build-turkish-article.py",
+      "bytes": 11242,
+      "sha256": "d2a22752801c50b08bc3147b57f56e55e5cda56c0a5782f11ee38be90fad97ca"
+    },
+    {
+      "path": "scripts/check-turkish-article.py",
+      "bytes": 7631,
+      "sha256": "a4fd1be0498bd0b713b92905b0a7515bdcc04686c43ffed54d6ad764117bb0c2"
+    },
+    {
+      "path": "docs/article/requirements-tr.txt",
+      "bytes": 106,
+      "sha256": "cfd09af92ccdc648c6409d037d7156c213c62beb3d5da050c5e6626aaa13c9a2"
+    }
+  ]
+}
