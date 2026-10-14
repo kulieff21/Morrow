@@ -11,6 +11,7 @@ An interactive, deterministic artificial-life sandbox created with Elmar.
 - Run `npm test` and `npm run check` before committing. Use the Browser skill for UI QA.
 - Keep exports user-initiated. No analytics, external services or credentials.
 - Git operations are authorized for this project, including private repository creation.
+- Commit completed, coherent units frequently; Elmar explicitly requested shorter commit intervals.
 - Do not change repository visibility or publish hosting without a user request.
 
 ## Layout
