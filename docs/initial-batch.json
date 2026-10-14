@@ -1,0 +1,3399 @@
+{
+  "model": "morrow-0.1",
+  "seeds": [
+    4217,
+    4218,
+    4219,
+    4220,
+    4221,
+    4222,
+    4223,
+    4224,
+    4225,
+    4226,
+    4227,
+    4228
+  ],
+  "measured": "At least one checkpoint-leading lineage is also a final drought leader.",
+  "sampleSize": 12,
+  "eligible": 12,
+  "retainedLead": 5,
+  "changedLead": 7,
+  "undefined": 0,
+  "limitation": "Descriptive toy-model outcomes for these seeds only, not independent evidence about biology.",
+  "runs": [
+    {
+      "version": 1,
+      "model": "morrow-0.1",
+      "seed": 4217,
+      "protocol": {
+        "warmupDays": 8,
+        "branchDays": 8,
+        "controlResources": 1,
+        "droughtResources": 0.15,
+        "mutation": 0.08,
+        "seasons": false
+      },
+      "complete": true,
+      "baseline": {
+        "population": 162,
+        "food": 20,
+        "births": 218,
+        "deaths": 86,
+        "generation": 5,
+        "day": 8,
+        "speed": 1.0591698957482973,
+        "thrift": 1.1078621571144822,
+        "lineages": [
+          {
+            "name": "Akım",
+            "color": "#b6a6ec",
+            "speed": 1.42,
+            "sense": 0.86,
+            "thrift": 0.78,
+            "lineage": 0,
+            "count": 13,
+            "speedSum": 18.12141283705831,
+            "thriftSum": 10.694480635263027,
+            "generation": 3
+          },
+          {
+            "name": "Çiy",
+            "color": "#8ed7c6",
+            "speed": 0.78,
+            "sense": 1.12,
+            "thrift": 1.35,
+            "lineage": 1,
+            "count": 17,
+            "speedSum": 13.055837520966305,
+            "thriftSum": 22.919942012494424,
+            "generation": 2
+          },
+          {
+            "name": "Köz",
+            "color": "#f4b582",
+            "speed": 1.12,
+            "sense": 1.25,
+            "thrift": 0.92,
+            "lineage": 2,
+            "count": 37,
+            "speedSum": 41.296845635371284,
+            "thriftSum": 35.22704688051716,
+            "generation": 5
+          },
+          {
+            "name": "Sis",
+            "color": "#a6c9f5",
+            "speed": 0.9,
+            "sense": 1.45,
+            "thrift": 1.08,
+            "lineage": 3,
+            "count": 24,
+            "speedSum": 21.814909335961566,
+            "thriftSum": 25.967393191931773,
+            "generation": 2
+          },
+          {
+            "name": "Yankı",
+            "color": "#e6a7c6",
+            "speed": 1.24,
+            "sense": 0.7,
+            "thrift": 1.15,
+            "lineage": 4,
+            "count": 32,
+            "speedSum": 39.34530910311267,
+            "thriftSum": 37.12652556239627,
+            "generation": 3
+          },
+          {
+            "name": "Filiz",
+            "color": "#d4d995",
+            "speed": 0.95,
+            "sense": 0.92,
+            "thrift": 1.2,
+            "lineage": 5,
+            "count": 39,
+            "speedSum": 37.95120867875405,
+            "thriftSum": 47.538281169943524,
+            "generation": 4
+          }
+        ]
+      },
+      "control": {
+        "population": 139,
+        "food": 16,
+        "births": 355,
+        "deaths": 246,
+        "generation": 6,
+        "day": 16,
+        "speed": 1.0806881575553717,
+        "thrift": 1.1441521278028404,
+        "lineages": [
+          {
+            "name": "Akım",
+            "color": "#b6a6ec",
+            "speed": 1.42,
+            "sense": 0.86,
+            "thrift": 0.78,
+            "lineage": 0,
+            "count": 1,
+            "speedSum": 1.3866029095929115,
+            "thriftSum": 0.8294441700913012,
+            "generation": 3
+          },
+          {
+            "name": "Çiy",
+            "color": "#8ed7c6",
+            "speed": 0.78,
+            "sense": 1.12,
+            "thrift": 1.35,
+            "lineage": 1,
+            "count": 8,
+            "speedSum": 6.187054802002385,
+            "thriftSum": 10.601118992939593,
+            "generation": 2
+          },
+          {
+            "name": "Köz",
+            "color": "#f4b582",
+            "speed": 1.12,
+            "sense": 1.25,
+            "thrift": 0.92,
+            "lineage": 2,
+            "count": 26,
+            "speedSum": 29.228956026704978,
+            "thriftSum": 25.14289944007993,
+            "generation": 6
+          },
+          {
+            "name": "Sis",
+            "color": "#a6c9f5",
+            "speed": 0.9,
+            "sense": 1.45,
+            "thrift": 1.08,
+            "lineage": 3,
+            "count": 10,
+            "speedSum": 9.591760923331602,
+            "thriftSum": 10.644858422055842,
+            "generation": 3
+          },
+          {
+            "name": "Yankı",
+            "color": "#e6a7c6",
+            "speed": 1.24,
+            "sense": 0.7,
+            "thrift": 1.15,
+            "lineage": 4,
+            "count": 54,
+            "speedSum": 64.88769141198135,
+            "thriftSum": 63.07449984061533,
+            "generation": 5
+          },
+          {
+            "name": "Filiz",
+            "color": "#d4d995",
+            "speed": 0.95,
+            "sense": 0.92,
+            "thrift": 1.2,
+            "lineage": 5,
+            "count": 40,
+            "speedSum": 38.93358782658354,
+            "thriftSum": 48.74432489881292,
+            "generation": 3
+          }
+        ]
+      },
+      "drought": {
+        "population": 14,
+        "food": 30,
+        "births": 229,
+        "deaths": 245,
+        "generation": 4,
+        "day": 16,
+        "speed": 0.9550547116848506,
+        "thrift": 1.2260532898329466,
+        "lineages": [
+          {
+            "name": "Akım",
+            "color": "#b6a6ec",
+            "speed": 1.42,
+            "sense": 0.86,
+            "thrift": 0.78,
+            "lineage": 0,
+            "count": 0,
+            "speedSum": 0,
+            "thriftSum": 0,
+            "generation": 0
+          },
+          {
+            "name": "Çiy",
+            "color": "#8ed7c6",
+            "speed": 0.78,
+            "sense": 1.12,
+            "thrift": 1.35,
+            "lineage": 1,
+            "count": 4,
+            "speedSum": 3.073901528837159,
+            "thriftSum": 5.700674804318697,
+            "generation": 3
+          },
+          {
+            "name": "Köz",
+            "color": "#f4b582",
+            "speed": 1.12,
+            "sense": 1.25,
+            "thrift": 0.92,
+            "lineage": 2,
+            "count": 2,
+            "speedSum": 2.168378420490772,
+            "thriftSum": 1.9289213610813025,
+            "generation": 4
+          },
+          {
+            "name": "Sis",
+            "color": "#a6c9f5",
+            "speed": 0.9,
+            "sense": 1.45,
+            "thrift": 1.08,
+            "lineage": 3,
+            "count": 1,
+            "speedSum": 0.9562232507579028,
+            "thriftSum": 1.04520204952918,
+            "generation": 2
+          },
+          {
+            "name": "Yankı",
+            "color": "#e6a7c6",
+            "speed": 1.24,
+            "sense": 0.7,
+            "thrift": 1.15,
+            "lineage": 4,
+            "count": 2,
+            "speedSum": 2.3041068444773556,
+            "thriftSum": 2.292319665197283,
+            "generation": 3
+          },
+          {
+            "name": "Filiz",
+            "color": "#d4d995",
+            "speed": 0.95,
+            "sense": 0.92,
+            "thrift": 1.2,
+            "lineage": 5,
+            "count": 5,
+            "speedSum": 4.868155919024721,
+            "thriftSum": 6.197628177534789,
+            "generation": 2
+          }
+        ]
+      },
+      "leaders": [
+        5
+      ],
+      "droughtLeaders": [
+        5
+      ],
+      "retainedLead": true,
+      "limitations": [
+        "A rule-based toy model, not a biological prediction.",
+        "Lineage success is measured by living descendants, not individuals or universal fitness.",
+        "Population ties are retained; extinction makes leadership undefined.",
+        "The branches start identically but their random draws diverge as behavior diverges.",
+        "One seed is one run; it does not establish a general result.",
+        "Food already present at the checkpoint remains in both branches."
+      ]
+    },
+    {
+      "version": 1,
+      "model": "morrow-0.1",
+      "seed": 4218,
+      "protocol": {
+        "warmupDays": 8,
+        "branchDays": 8,
+        "controlResources": 1,
+        "droughtResources": 0.15,
+        "mutation": 0.08,
+        "seasons": false
+      },
+      "complete": true,
+      "baseline": {
+        "population": 150,
+        "food": 20,
+        "births": 234,
+        "deaths": 114,
+        "generation": 6,
+        "day": 8,
+        "speed": 1.1005926431924107,
+        "thrift": 1.1056177578583364,
+        "lineages": [
+          {
+            "name": "Akım",
+            "color": "#b6a6ec",
+            "speed": 1.42,
+            "sense": 0.86,
+            "thrift": 0.78,
+            "lineage": 0,
+            "count": 22,
+            "speedSum": 31.17734583867714,
+            "thriftSum": 18.567820560103282,
+            "generation": 6
+          },
+          {
+            "name": "Çiy",
+            "color": "#8ed7c6",
+            "speed": 0.78,
+            "sense": 1.12,
+            "thrift": 1.35,
+            "lineage": 1,
+            "count": 16,
+            "speedSum": 13.072161927251145,
+            "thriftSum": 20.973158517321572,
+            "generation": 3
+          },
+          {
+            "name": "Köz",
+            "color": "#f4b582",
+            "speed": 1.12,
+            "sense": 1.25,
+            "thrift": 0.92,
+            "lineage": 2,
+            "count": 19,
+            "speedSum": 21.66786998747848,
+            "thriftSum": 18.639126711413265,
+            "generation": 4
+          },
+          {
+            "name": "Sis",
+            "color": "#a6c9f5",
+            "speed": 0.9,
+            "sense": 1.45,
+            "thrift": 1.08,
+            "lineage": 3,
+            "count": 25,
+            "speedSum": 22.449757721871133,
+            "thriftSum": 28.01798990659416,
+            "generation": 3
+          },
+          {
+            "name": "Yankı",
+            "color": "#e6a7c6",
+            "speed": 1.24,
+            "sense": 0.7,
+            "thrift": 1.15,
+            "lineage": 4,
+            "count": 40,
+            "speedSum": 49.41083130979909,
+            "thriftSum": 46.42028015549294,
+            "generation": 5
+          },
+          {
+            "name": "Filiz",
+            "color": "#d4d995",
+            "speed": 0.95,
+            "sense": 0.92,
+            "thrift": 1.2,
+            "lineage": 5,
+            "count": 28,
+            "speedSum": 27.31092969378457,
+            "thriftSum": 33.22428782782517,
+            "generation": 4
+          }
+        ]
+      },
+      "control": {
+        "population": 149,
+        "food": 25,
+        "births": 380,
+        "deaths": 261,
+        "generation": 7,
+        "day": 16,
+        "speed": 1.0643461642873746,
+        "thrift": 1.166633272313282,
+        "lineages": [
+          {
+            "name": "Akım",
+            "color": "#b6a6ec",
+            "speed": 1.42,
+            "sense": 0.86,
+            "thrift": 0.78,
+            "lineage": 0,
+            "count": 3,
+            "speedSum": 4.146469718422741,
+            "thriftSum": 2.5423126312531528,
+            "generation": 3
+          },
+          {
+            "name": "Çiy",
+            "color": "#8ed7c6",
+            "speed": 0.78,
+            "sense": 1.12,
+            "thrift": 1.35,
+            "lineage": 1,
+            "count": 15,
+            "speedSum": 11.903552841152994,
+            "thriftSum": 19.248254993045705,
+            "generation": 3
+          },
+          {
+            "name": "Köz",
+            "color": "#f4b582",
+            "speed": 1.12,
+            "sense": 1.25,
+            "thrift": 0.92,
+            "lineage": 2,
+            "count": 10,
+            "speedSum": 11.158539834804834,
+            "thriftSum": 10.585175726059825,
+            "generation": 5
+          },
+          {
+            "name": "Sis",
+            "color": "#a6c9f5",
+            "speed": 0.9,
+            "sense": 1.45,
+            "thrift": 1.08,
+            "lineage": 3,
+            "count": 17,
+            "speedSum": 14.88315009248443,
+            "thriftSum": 18.59042655473575,
+            "generation": 4
+          },
+          {
+            "name": "Yankı",
+            "color": "#e6a7c6",
+            "speed": 1.24,
+            "sense": 0.7,
+            "thrift": 1.15,
+            "lineage": 4,
+            "count": 61,
+            "speedSum": 74.76898210563695,
+            "thriftSum": 72.1693648145441,
+            "generation": 7
+          },
+          {
+            "name": "Filiz",
+            "color": "#d4d995",
+            "speed": 0.95,
+            "sense": 0.92,
+            "thrift": 1.2,
+            "lineage": 5,
+            "count": 43,
+            "speedSum": 41.72688388631678,
+            "thriftSum": 50.692822855040426,
+            "generation": 4
+          }
+        ]
+      },
+      "drought": {
+        "population": 13,
+        "food": 27,
+        "births": 243,
+        "deaths": 260,
+        "generation": 3,
+        "day": 16,
+        "speed": 0.936944274084929,
+        "thrift": 1.267410744172879,
+        "lineages": [
+          {
+            "name": "Akım",
+            "color": "#b6a6ec",
+            "speed": 1.42,
+            "sense": 0.86,
+            "thrift": 0.78,
+            "lineage": 0,
+            "count": 0,
+            "speedSum": 0,
+            "thriftSum": 0,
+            "generation": 0
+          },
+          {
+            "name": "Çiy",
+            "color": "#8ed7c6",
+            "speed": 0.78,
+            "sense": 1.12,
+            "thrift": 1.35,
+            "lineage": 1,
+            "count": 7,
+            "speedSum": 6.007493061563,
+            "thriftSum": 9.281553848562762,
+            "generation": 3
+          },
+          {
+            "name": "Köz",
+            "color": "#f4b582",
+            "speed": 1.12,
+            "sense": 1.25,
+            "thrift": 0.92,
+            "lineage": 2,
+            "count": 0,
+            "speedSum": 0,
+            "thriftSum": 0,
+            "generation": 0
+          },
+          {
+            "name": "Sis",
+            "color": "#a6c9f5",
+            "speed": 0.9,
+            "sense": 1.45,
+            "thrift": 1.08,
+            "lineage": 3,
+            "count": 1,
+            "speedSum": 0.9495582670718431,
+            "thriftSum": 1.01851486726664,
+            "generation": 2
+          },
+          {
+            "name": "Yankı",
+            "color": "#e6a7c6",
+            "speed": 1.24,
+            "sense": 0.7,
+            "thrift": 1.15,
+            "lineage": 4,
+            "count": 2,
+            "speedSum": 2.333540038522333,
+            "thriftSum": 2.4050410165078935,
+            "generation": 3
+          },
+          {
+            "name": "Filiz",
+            "color": "#d4d995",
+            "speed": 0.95,
+            "sense": 0.92,
+            "thrift": 1.2,
+            "lineage": 5,
+            "count": 3,
+            "speedSum": 2.889684195946902,
+            "thriftSum": 3.7712299419101325,
+            "generation": 3
+          }
+        ]
+      },
+      "leaders": [
+        4
+      ],
+      "droughtLeaders": [
+        1
+      ],
+      "retainedLead": false,
+      "limitations": [
+        "A rule-based toy model, not a biological prediction.",
+        "Lineage success is measured by living descendants, not individuals or universal fitness.",
+        "Population ties are retained; extinction makes leadership undefined.",
+        "The branches start identically but their random draws diverge as behavior diverges.",
+        "One seed is one run; it does not establish a general result.",
+        "Food already present at the checkpoint remains in both branches."
+      ]
+    },
+    {
+      "version": 1,
+      "model": "morrow-0.1",
+      "seed": 4219,
+      "protocol": {
+        "warmupDays": 8,
+        "branchDays": 8,
+        "controlResources": 1,
+        "droughtResources": 0.15,
+        "mutation": 0.08,
+        "seasons": false
+      },
+      "complete": true,
+      "baseline": {
+        "population": 172,
+        "food": 9,
+        "births": 233,
+        "deaths": 91,
+        "generation": 5,
+        "day": 8,
+        "speed": 1.0196386026703688,
+        "thrift": 1.1382766367116584,
+        "lineages": [
+          {
+            "name": "Akım",
+            "color": "#b6a6ec",
+            "speed": 1.42,
+            "sense": 0.86,
+            "thrift": 0.78,
+            "lineage": 0,
+            "count": 19,
+            "speedSum": 26.733333778595547,
+            "thriftSum": 15.792803884064778,
+            "generation": 4
+          },
+          {
+            "name": "Çiy",
+            "color": "#8ed7c6",
+            "speed": 0.78,
+            "sense": 1.12,
+            "thrift": 1.35,
+            "lineage": 1,
+            "count": 43,
+            "speedSum": 33.931401392100376,
+            "thriftSum": 57.79777402973734,
+            "generation": 5
+          },
+          {
+            "name": "Köz",
+            "color": "#f4b582",
+            "speed": 1.12,
+            "sense": 1.25,
+            "thrift": 0.92,
+            "lineage": 2,
+            "count": 18,
+            "speedSum": 19.59963786129839,
+            "thriftSum": 16.645915042310953,
+            "generation": 4
+          },
+          {
+            "name": "Sis",
+            "color": "#a6c9f5",
+            "speed": 0.9,
+            "sense": 1.45,
+            "thrift": 1.08,
+            "lineage": 3,
+            "count": 28,
+            "speedSum": 26.53976227257401,
+            "thriftSum": 29.791116626951837,
+            "generation": 4
+          },
+          {
+            "name": "Yankı",
+            "color": "#e6a7c6",
+            "speed": 1.24,
+            "sense": 0.7,
+            "thrift": 1.15,
+            "lineage": 4,
+            "count": 27,
+            "speedSum": 33.59666717660613,
+            "thriftSum": 31.66636947068385,
+            "generation": 3
+          },
+          {
+            "name": "Filiz",
+            "color": "#d4d995",
+            "speed": 0.95,
+            "sense": 0.92,
+            "thrift": 1.2,
+            "lineage": 5,
+            "count": 37,
+            "speedSum": 34.97703717812895,
+            "thriftSum": 44.0896024606563,
+            "generation": 3
+          }
+        ]
+      },
+      "control": {
+        "population": 153,
+        "food": 19,
+        "births": 384,
+        "deaths": 261,
+        "generation": 6,
+        "day": 16,
+        "speed": 0.9939339215641996,
+        "thrift": 1.189482015348254,
+        "lineages": [
+          {
+            "name": "Akım",
+            "color": "#b6a6ec",
+            "speed": 1.42,
+            "sense": 0.86,
+            "thrift": 0.78,
+            "lineage": 0,
+            "count": 12,
+            "speedSum": 15.983006896423177,
+            "thriftSum": 10.45987858637236,
+            "generation": 6
+          },
+          {
+            "name": "Çiy",
+            "color": "#8ed7c6",
+            "speed": 0.78,
+            "sense": 1.12,
+            "thrift": 1.35,
+            "lineage": 1,
+            "count": 47,
+            "speedSum": 38.92537919109686,
+            "thriftSum": 63.8777982843481,
+            "generation": 6
+          },
+          {
+            "name": "Köz",
+            "color": "#f4b582",
+            "speed": 1.12,
+            "sense": 1.25,
+            "thrift": 0.92,
+            "lineage": 2,
+            "count": 9,
+            "speedSum": 9.671597041366622,
+            "thriftSum": 8.635773370107636,
+            "generation": 4
+          },
+          {
+            "name": "Sis",
+            "color": "#a6c9f5",
+            "speed": 0.9,
+            "sense": 1.45,
+            "thrift": 1.08,
+            "lineage": 3,
+            "count": 9,
+            "speedSum": 8.77611175279133,
+            "thriftSum": 9.737484390931206,
+            "generation": 5
+          },
+          {
+            "name": "Yankı",
+            "color": "#e6a7c6",
+            "speed": 1.24,
+            "sense": 0.7,
+            "thrift": 1.15,
+            "lineage": 4,
+            "count": 27,
+            "speedSum": 33.161231541298335,
+            "thriftSum": 31.20119636137969,
+            "generation": 5
+          },
+          {
+            "name": "Filiz",
+            "color": "#d4d995",
+            "speed": 0.95,
+            "sense": 0.92,
+            "thrift": 1.2,
+            "lineage": 5,
+            "count": 49,
+            "speedSum": 45.554563576346254,
+            "thriftSum": 58.07861735514364,
+            "generation": 4
+          }
+        ]
+      },
+      "drought": {
+        "population": 19,
+        "food": 19,
+        "births": 241,
+        "deaths": 252,
+        "generation": 5,
+        "day": 16,
+        "speed": 0.8894145112572925,
+        "thrift": 1.2713313194731939,
+        "lineages": [
+          {
+            "name": "Akım",
+            "color": "#b6a6ec",
+            "speed": 1.42,
+            "sense": 0.86,
+            "thrift": 0.78,
+            "lineage": 0,
+            "count": 0,
+            "speedSum": 0,
+            "thriftSum": 0,
+            "generation": 0
+          },
+          {
+            "name": "Çiy",
+            "color": "#8ed7c6",
+            "speed": 0.78,
+            "sense": 1.12,
+            "thrift": 1.35,
+            "lineage": 1,
+            "count": 9,
+            "speedSum": 7.185732624325901,
+            "thriftSum": 12.172788475556299,
+            "generation": 4
+          },
+          {
+            "name": "Köz",
+            "color": "#f4b582",
+            "speed": 1.12,
+            "sense": 1.25,
+            "thrift": 0.92,
+            "lineage": 2,
+            "count": 0,
+            "speedSum": 0,
+            "thriftSum": 0,
+            "generation": 0
+          },
+          {
+            "name": "Sis",
+            "color": "#a6c9f5",
+            "speed": 0.9,
+            "sense": 1.45,
+            "thrift": 1.08,
+            "lineage": 3,
+            "count": 2,
+            "speedSum": 2.0980666243098676,
+            "thriftSum": 2.2728279940597718,
+            "generation": 5
+          },
+          {
+            "name": "Yankı",
+            "color": "#e6a7c6",
+            "speed": 1.24,
+            "sense": 0.7,
+            "thrift": 1.15,
+            "lineage": 4,
+            "count": 0,
+            "speedSum": 0,
+            "thriftSum": 0,
+            "generation": 0
+          },
+          {
+            "name": "Filiz",
+            "color": "#d4d995",
+            "speed": 0.95,
+            "sense": 0.92,
+            "thrift": 1.2,
+            "lineage": 5,
+            "count": 8,
+            "speedSum": 7.615076465252786,
+            "thriftSum": 9.70967860037461,
+            "generation": 3
+          }
+        ]
+      },
+      "leaders": [
+        1
+      ],
+      "droughtLeaders": [
+        1
+      ],
+      "retainedLead": true,
+      "limitations": [
+        "A rule-based toy model, not a biological prediction.",
+        "Lineage success is measured by living descendants, not individuals or universal fitness.",
+        "Population ties are retained; extinction makes leadership undefined.",
+        "The branches start identically but their random draws diverge as behavior diverges.",
+        "One seed is one run; it does not establish a general result.",
+        "Food already present at the checkpoint remains in both branches."
+      ]
+    },
+    {
+      "version": 1,
+      "model": "morrow-0.1",
+      "seed": 4220,
+      "protocol": {
+        "warmupDays": 8,
+        "branchDays": 8,
+        "controlResources": 1,
+        "droughtResources": 0.15,
+        "mutation": 0.08,
+        "seasons": false
+      },
+      "complete": true,
+      "baseline": {
+        "population": 161,
+        "food": 22,
+        "births": 221,
+        "deaths": 90,
+        "generation": 5,
+        "day": 8,
+        "speed": 1.036582141071616,
+        "thrift": 1.14316791078365,
+        "lineages": [
+          {
+            "name": "Akım",
+            "color": "#b6a6ec",
+            "speed": 1.42,
+            "sense": 0.86,
+            "thrift": 0.78,
+            "lineage": 0,
+            "count": 7,
+            "speedSum": 10.561083436198533,
+            "thriftSum": 5.664982127929107,
+            "generation": 5
+          },
+          {
+            "name": "Çiy",
+            "color": "#8ed7c6",
+            "speed": 0.78,
+            "sense": 1.12,
+            "thrift": 1.35,
+            "lineage": 1,
+            "count": 29,
+            "speedSum": 23.467934645451603,
+            "thriftSum": 38.036746850032365,
+            "generation": 4
+          },
+          {
+            "name": "Köz",
+            "color": "#f4b582",
+            "speed": 1.12,
+            "sense": 1.25,
+            "thrift": 0.92,
+            "lineage": 2,
+            "count": 29,
+            "speedSum": 33.20914243651554,
+            "thriftSum": 26.709192408127716,
+            "generation": 3
+          },
+          {
+            "name": "Sis",
+            "color": "#a6c9f5",
+            "speed": 0.9,
+            "sense": 1.45,
+            "thrift": 1.08,
+            "lineage": 3,
+            "count": 14,
+            "speedSum": 12.570280955396592,
+            "thriftSum": 14.561896568899977,
+            "generation": 3
+          },
+          {
+            "name": "Yankı",
+            "color": "#e6a7c6",
+            "speed": 1.24,
+            "sense": 0.7,
+            "thrift": 1.15,
+            "lineage": 4,
+            "count": 35,
+            "speedSum": 42.11817283499985,
+            "thriftSum": 41.09907671388238,
+            "generation": 4
+          },
+          {
+            "name": "Filiz",
+            "color": "#d4d995",
+            "speed": 0.95,
+            "sense": 0.92,
+            "thrift": 1.2,
+            "lineage": 5,
+            "count": 47,
+            "speedSum": 44.963110403968,
+            "thriftSum": 57.978138967296104,
+            "generation": 4
+          }
+        ]
+      },
+      "control": {
+        "population": 155,
+        "food": 24,
+        "births": 362,
+        "deaths": 237,
+        "generation": 5,
+        "day": 16,
+        "speed": 1.0147890005200022,
+        "thrift": 1.1775124167145015,
+        "lineages": [
+          {
+            "name": "Akım",
+            "color": "#b6a6ec",
+            "speed": 1.42,
+            "sense": 0.86,
+            "thrift": 0.78,
+            "lineage": 0,
+            "count": 1,
+            "speedSum": 1.5386848830804227,
+            "thriftSum": 0.9085669052042067,
+            "generation": 5
+          },
+          {
+            "name": "Çiy",
+            "color": "#8ed7c6",
+            "speed": 0.78,
+            "sense": 1.12,
+            "thrift": 1.35,
+            "lineage": 1,
+            "count": 32,
+            "speedSum": 25.28329268835485,
+            "thriftSum": 42.432645159922544,
+            "generation": 4
+          },
+          {
+            "name": "Köz",
+            "color": "#f4b582",
+            "speed": 1.12,
+            "sense": 1.25,
+            "thrift": 0.92,
+            "lineage": 2,
+            "count": 25,
+            "speedSum": 28.984260969553148,
+            "thriftSum": 23.581466893563046,
+            "generation": 5
+          },
+          {
+            "name": "Sis",
+            "color": "#a6c9f5",
+            "speed": 0.9,
+            "sense": 1.45,
+            "thrift": 1.08,
+            "lineage": 3,
+            "count": 10,
+            "speedSum": 9.012774117821829,
+            "thriftSum": 10.133982846960427,
+            "generation": 5
+          },
+          {
+            "name": "Yankı",
+            "color": "#e6a7c6",
+            "speed": 1.24,
+            "sense": 0.7,
+            "thrift": 1.15,
+            "lineage": 4,
+            "count": 32,
+            "speedSum": 38.89181019474753,
+            "thriftSum": 37.440910504292695,
+            "generation": 5
+          },
+          {
+            "name": "Filiz",
+            "color": "#d4d995",
+            "speed": 0.95,
+            "sense": 0.92,
+            "thrift": 1.2,
+            "lineage": 5,
+            "count": 55,
+            "speedSum": 53.58147222704253,
+            "thriftSum": 68.01685228080486,
+            "generation": 5
+          }
+        ]
+      },
+      "drought": {
+        "population": 15,
+        "food": 24,
+        "births": 235,
+        "deaths": 250,
+        "generation": 3,
+        "day": 16,
+        "speed": 0.8847535735319058,
+        "thrift": 1.2563651765727748,
+        "lineages": [
+          {
+            "name": "Akım",
+            "color": "#b6a6ec",
+            "speed": 1.42,
+            "sense": 0.86,
+            "thrift": 0.78,
+            "lineage": 0,
+            "count": 0,
+            "speedSum": 0,
+            "thriftSum": 0,
+            "generation": 0
+          },
+          {
+            "name": "Çiy",
+            "color": "#8ed7c6",
+            "speed": 0.78,
+            "sense": 1.12,
+            "thrift": 1.35,
+            "lineage": 1,
+            "count": 4,
+            "speedSum": 3.0771287409588695,
+            "thriftSum": 5.253999901078642,
+            "generation": 3
+          },
+          {
+            "name": "Köz",
+            "color": "#f4b582",
+            "speed": 1.12,
+            "sense": 1.25,
+            "thrift": 0.92,
+            "lineage": 2,
+            "count": 0,
+            "speedSum": 0,
+            "thriftSum": 0,
+            "generation": 0
+          },
+          {
+            "name": "Sis",
+            "color": "#a6c9f5",
+            "speed": 0.9,
+            "sense": 1.45,
+            "thrift": 1.08,
+            "lineage": 3,
+            "count": 1,
+            "speedSum": 0.8212657948397101,
+            "thriftSum": 1.025126242050901,
+            "generation": 2
+          },
+          {
+            "name": "Yankı",
+            "color": "#e6a7c6",
+            "speed": 1.24,
+            "sense": 0.7,
+            "thrift": 1.15,
+            "lineage": 4,
+            "count": 0,
+            "speedSum": 0,
+            "thriftSum": 0,
+            "generation": 0
+          },
+          {
+            "name": "Filiz",
+            "color": "#d4d995",
+            "speed": 0.95,
+            "sense": 0.92,
+            "thrift": 1.2,
+            "lineage": 5,
+            "count": 10,
+            "speedSum": 9.372909067180009,
+            "thriftSum": 12.56635150546208,
+            "generation": 3
+          }
+        ]
+      },
+      "leaders": [
+        5
+      ],
+      "droughtLeaders": [
+        5
+      ],
+      "retainedLead": true,
+      "limitations": [
+        "A rule-based toy model, not a biological prediction.",
+        "Lineage success is measured by living descendants, not individuals or universal fitness.",
+        "Population ties are retained; extinction makes leadership undefined.",
+        "The branches start identically but their random draws diverge as behavior diverges.",
+        "One seed is one run; it does not establish a general result.",
+        "Food already present at the checkpoint remains in both branches."
+      ]
+    },
+    {
+      "version": 1,
+      "model": "morrow-0.1",
+      "seed": 4221,
+      "protocol": {
+        "warmupDays": 8,
+        "branchDays": 8,
+        "controlResources": 1,
+        "droughtResources": 0.15,
+        "mutation": 0.08,
+        "seasons": false
+      },
+      "complete": true,
+      "baseline": {
+        "population": 163,
+        "food": 18,
+        "births": 224,
+        "deaths": 91,
+        "generation": 5,
+        "day": 8,
+        "speed": 1.0473130548114606,
+        "thrift": 1.092437502336546,
+        "lineages": [
+          {
+            "name": "Akım",
+            "color": "#b6a6ec",
+            "speed": 1.42,
+            "sense": 0.86,
+            "thrift": 0.78,
+            "lineage": 0,
+            "count": 10,
+            "speedSum": 14.257389799905939,
+            "thriftSum": 7.146939600659534,
+            "generation": 3
+          },
+          {
+            "name": "Çiy",
+            "color": "#8ed7c6",
+            "speed": 0.78,
+            "sense": 1.12,
+            "thrift": 1.35,
+            "lineage": 1,
+            "count": 22,
+            "speedSum": 17.326389395939188,
+            "thriftSum": 29.192987854788083,
+            "generation": 2
+          },
+          {
+            "name": "Köz",
+            "color": "#f4b582",
+            "speed": 1.12,
+            "sense": 1.25,
+            "thrift": 0.92,
+            "lineage": 2,
+            "count": 40,
+            "speedSum": 42.60966466680169,
+            "thriftSum": 37.85968682427891,
+            "generation": 5
+          },
+          {
+            "name": "Sis",
+            "color": "#a6c9f5",
+            "speed": 0.9,
+            "sense": 1.45,
+            "thrift": 1.08,
+            "lineage": 3,
+            "count": 18,
+            "speedSum": 16.561539864903313,
+            "thriftSum": 19.350498169092464,
+            "generation": 2
+          },
+          {
+            "name": "Yankı",
+            "color": "#e6a7c6",
+            "speed": 1.24,
+            "sense": 0.7,
+            "thrift": 1.15,
+            "lineage": 4,
+            "count": 33,
+            "speedSum": 42.52769431320951,
+            "thriftSum": 36.96697906554676,
+            "generation": 5
+          },
+          {
+            "name": "Filiz",
+            "color": "#d4d995",
+            "speed": 0.95,
+            "sense": 0.92,
+            "thrift": 1.2,
+            "lineage": 5,
+            "count": 40,
+            "speedSum": 37.42934989350847,
+            "thriftSum": 47.550221366491186,
+            "generation": 5
+          }
+        ]
+      },
+      "control": {
+        "population": 136,
+        "food": 18,
+        "births": 368,
+        "deaths": 262,
+        "generation": 7,
+        "day": 16,
+        "speed": 1.0576690509609246,
+        "thrift": 1.1117358191792777,
+        "lineages": [
+          {
+            "name": "Akım",
+            "color": "#b6a6ec",
+            "speed": 1.42,
+            "sense": 0.86,
+            "thrift": 0.78,
+            "lineage": 0,
+            "count": 0,
+            "speedSum": 0,
+            "thriftSum": 0,
+            "generation": 0
+          },
+          {
+            "name": "Çiy",
+            "color": "#8ed7c6",
+            "speed": 0.78,
+            "sense": 1.12,
+            "thrift": 1.35,
+            "lineage": 1,
+            "count": 20,
+            "speedSum": 15.597711680000646,
+            "thriftSum": 26.579616177277646,
+            "generation": 3
+          },
+          {
+            "name": "Köz",
+            "color": "#f4b582",
+            "speed": 1.12,
+            "sense": 1.25,
+            "thrift": 0.92,
+            "lineage": 2,
+            "count": 36,
+            "speedSum": 37.987675421070314,
+            "thriftSum": 33.71019943679683,
+            "generation": 7
+          },
+          {
+            "name": "Sis",
+            "color": "#a6c9f5",
+            "speed": 0.9,
+            "sense": 1.45,
+            "thrift": 1.08,
+            "lineage": 3,
+            "count": 8,
+            "speedSum": 7.58165943570435,
+            "thriftSum": 8.824968092693018,
+            "generation": 4
+          },
+          {
+            "name": "Yankı",
+            "color": "#e6a7c6",
+            "speed": 1.24,
+            "sense": 0.7,
+            "thrift": 1.15,
+            "lineage": 4,
+            "count": 43,
+            "speedSum": 56.0336104292143,
+            "thriftSum": 47.238812831863754,
+            "generation": 6
+          },
+          {
+            "name": "Filiz",
+            "color": "#d4d995",
+            "speed": 0.95,
+            "sense": 0.92,
+            "thrift": 1.2,
+            "lineage": 5,
+            "count": 29,
+            "speedSum": 26.64233396469616,
+            "thriftSum": 34.84247486975043,
+            "generation": 5
+          }
+        ]
+      },
+      "drought": {
+        "population": 12,
+        "food": 27,
+        "births": 231,
+        "deaths": 249,
+        "generation": 8,
+        "day": 16,
+        "speed": 1.0353424699557947,
+        "thrift": 1.1059722363172722,
+        "lineages": [
+          {
+            "name": "Akım",
+            "color": "#b6a6ec",
+            "speed": 1.42,
+            "sense": 0.86,
+            "thrift": 0.78,
+            "lineage": 0,
+            "count": 0,
+            "speedSum": 0,
+            "thriftSum": 0,
+            "generation": 0
+          },
+          {
+            "name": "Çiy",
+            "color": "#8ed7c6",
+            "speed": 0.78,
+            "sense": 1.12,
+            "thrift": 1.35,
+            "lineage": 1,
+            "count": 1,
+            "speedSum": 0.7767142571974546,
+            "thriftSum": 1.300601982176304,
+            "generation": 1
+          },
+          {
+            "name": "Köz",
+            "color": "#f4b582",
+            "speed": 1.12,
+            "sense": 1.25,
+            "thrift": 0.92,
+            "lineage": 2,
+            "count": 6,
+            "speedSum": 6.267411880474539,
+            "thriftSum": 5.917936244234444,
+            "generation": 8
+          },
+          {
+            "name": "Sis",
+            "color": "#a6c9f5",
+            "speed": 0.9,
+            "sense": 1.45,
+            "thrift": 1.08,
+            "lineage": 3,
+            "count": 0,
+            "speedSum": 0,
+            "thriftSum": 0,
+            "generation": 0
+          },
+          {
+            "name": "Yankı",
+            "color": "#e6a7c6",
+            "speed": 1.24,
+            "sense": 0.7,
+            "thrift": 1.15,
+            "lineage": 4,
+            "count": 2,
+            "speedSum": 2.4830758878402412,
+            "thriftSum": 2.442728275274858,
+            "generation": 1
+          },
+          {
+            "name": "Filiz",
+            "color": "#d4d995",
+            "speed": 0.95,
+            "sense": 0.92,
+            "thrift": 1.2,
+            "lineage": 5,
+            "count": 3,
+            "speedSum": 2.8969076139573007,
+            "thriftSum": 3.6104003341216595,
+            "generation": 3
+          }
+        ]
+      },
+      "leaders": [
+        2,
+        5
+      ],
+      "droughtLeaders": [
+        2
+      ],
+      "retainedLead": true,
+      "limitations": [
+        "A rule-based toy model, not a biological prediction.",
+        "Lineage success is measured by living descendants, not individuals or universal fitness.",
+        "Population ties are retained; extinction makes leadership undefined.",
+        "The branches start identically but their random draws diverge as behavior diverges.",
+        "One seed is one run; it does not establish a general result.",
+        "Food already present at the checkpoint remains in both branches."
+      ]
+    },
+    {
+      "version": 1,
+      "model": "morrow-0.1",
+      "seed": 4222,
+      "protocol": {
+        "warmupDays": 8,
+        "branchDays": 8,
+        "controlResources": 1,
+        "droughtResources": 0.15,
+        "mutation": 0.08,
+        "seasons": false
+      },
+      "complete": true,
+      "baseline": {
+        "population": 177,
+        "food": 14,
+        "births": 233,
+        "deaths": 86,
+        "generation": 4,
+        "day": 8,
+        "speed": 1.0036830814420588,
+        "thrift": 1.1611057391065032,
+        "lineages": [
+          {
+            "name": "Akım",
+            "color": "#b6a6ec",
+            "speed": 1.42,
+            "sense": 0.86,
+            "thrift": 0.78,
+            "lineage": 0,
+            "count": 10,
+            "speedSum": 14.182120999554172,
+            "thriftSum": 8.252273287605494,
+            "generation": 3
+          },
+          {
+            "name": "Çiy",
+            "color": "#8ed7c6",
+            "speed": 0.78,
+            "sense": 1.12,
+            "thrift": 1.35,
+            "lineage": 1,
+            "count": 39,
+            "speedSum": 30.76295196479187,
+            "thriftSum": 53.831900071138534,
+            "generation": 4
+          },
+          {
+            "name": "Köz",
+            "color": "#f4b582",
+            "speed": 1.12,
+            "sense": 1.25,
+            "thrift": 0.92,
+            "lineage": 2,
+            "count": 17,
+            "speedSum": 18.952810453046116,
+            "thriftSum": 14.958113349331544,
+            "generation": 4
+          },
+          {
+            "name": "Sis",
+            "color": "#a6c9f5",
+            "speed": 0.9,
+            "sense": 1.45,
+            "thrift": 1.08,
+            "lineage": 3,
+            "count": 35,
+            "speedSum": 32.528963531022896,
+            "thriftSum": 37.95783338200302,
+            "generation": 3
+          },
+          {
+            "name": "Yankı",
+            "color": "#e6a7c6",
+            "speed": 1.24,
+            "sense": 0.7,
+            "thrift": 1.15,
+            "lineage": 4,
+            "count": 29,
+            "speedSum": 36.88443012311122,
+            "thriftSum": 32.08224980473518,
+            "generation": 3
+          },
+          {
+            "name": "Filiz",
+            "color": "#d4d995",
+            "speed": 0.95,
+            "sense": 0.92,
+            "thrift": 1.2,
+            "lineage": 5,
+            "count": 47,
+            "speedSum": 44.34062834371813,
+            "thriftSum": 58.43334592703729,
+            "generation": 3
+          }
+        ]
+      },
+      "control": {
+        "population": 149,
+        "food": 21,
+        "births": 367,
+        "deaths": 248,
+        "generation": 5,
+        "day": 16,
+        "speed": 0.9634318643280201,
+        "thrift": 1.2243024830252633,
+        "lineages": [
+          {
+            "name": "Akım",
+            "color": "#b6a6ec",
+            "speed": 1.42,
+            "sense": 0.86,
+            "thrift": 0.78,
+            "lineage": 0,
+            "count": 4,
+            "speedSum": 5.550065746651962,
+            "thriftSum": 3.36689464122057,
+            "generation": 3
+          },
+          {
+            "name": "Çiy",
+            "color": "#8ed7c6",
+            "speed": 0.78,
+            "sense": 1.12,
+            "thrift": 1.35,
+            "lineage": 1,
+            "count": 39,
+            "speedSum": 30.636526313032956,
+            "thriftSum": 54.65921388377436,
+            "generation": 4
+          },
+          {
+            "name": "Köz",
+            "color": "#f4b582",
+            "speed": 1.12,
+            "sense": 1.25,
+            "thrift": 0.92,
+            "lineage": 2,
+            "count": 8,
+            "speedSum": 8.758458205787466,
+            "thriftSum": 7.9501976583153,
+            "generation": 4
+          },
+          {
+            "name": "Sis",
+            "color": "#a6c9f5",
+            "speed": 0.9,
+            "sense": 1.45,
+            "thrift": 1.08,
+            "lineage": 3,
+            "count": 18,
+            "speedSum": 17.071104234084487,
+            "thriftSum": 19.858545790780337,
+            "generation": 5
+          },
+          {
+            "name": "Yankı",
+            "color": "#e6a7c6",
+            "speed": 1.24,
+            "sense": 0.7,
+            "thrift": 1.15,
+            "lineage": 4,
+            "count": 19,
+            "speedSum": 24.310693655908107,
+            "thriftSum": 21.203940090173855,
+            "generation": 3
+          },
+          {
+            "name": "Filiz",
+            "color": "#d4d995",
+            "speed": 0.95,
+            "sense": 0.92,
+            "thrift": 1.2,
+            "lineage": 5,
+            "count": 61,
+            "speedSum": 57.22449962940998,
+            "thriftSum": 75.3822779064998,
+            "generation": 5
+          }
+        ]
+      },
+      "drought": {
+        "population": 13,
+        "food": 24,
+        "births": 239,
+        "deaths": 256,
+        "generation": 4,
+        "day": 16,
+        "speed": 0.8564032002316359,
+        "thrift": 1.3092195383359035,
+        "lineages": [
+          {
+            "name": "Akım",
+            "color": "#b6a6ec",
+            "speed": 1.42,
+            "sense": 0.86,
+            "thrift": 0.78,
+            "lineage": 0,
+            "count": 0,
+            "speedSum": 0,
+            "thriftSum": 0,
+            "generation": 0
+          },
+          {
+            "name": "Çiy",
+            "color": "#8ed7c6",
+            "speed": 0.78,
+            "sense": 1.12,
+            "thrift": 1.35,
+            "lineage": 1,
+            "count": 8,
+            "speedSum": 6.251529731443153,
+            "thriftSum": 10.665323905041442,
+            "generation": 4
+          },
+          {
+            "name": "Köz",
+            "color": "#f4b582",
+            "speed": 1.12,
+            "sense": 1.25,
+            "thrift": 0.92,
+            "lineage": 2,
+            "count": 0,
+            "speedSum": 0,
+            "thriftSum": 0,
+            "generation": 0
+          },
+          {
+            "name": "Sis",
+            "color": "#a6c9f5",
+            "speed": 0.9,
+            "sense": 1.45,
+            "thrift": 1.08,
+            "lineage": 3,
+            "count": 1,
+            "speedSum": 0.9488547538779677,
+            "thriftSum": 1.1427680508792402,
+            "generation": 2
+          },
+          {
+            "name": "Yankı",
+            "color": "#e6a7c6",
+            "speed": 1.24,
+            "sense": 0.7,
+            "thrift": 1.15,
+            "lineage": 4,
+            "count": 0,
+            "speedSum": 0,
+            "thriftSum": 0,
+            "generation": 0
+          },
+          {
+            "name": "Filiz",
+            "color": "#d4d995",
+            "speed": 0.95,
+            "sense": 0.92,
+            "thrift": 1.2,
+            "lineage": 5,
+            "count": 4,
+            "speedSum": 3.932857117690146,
+            "thriftSum": 5.211762042446062,
+            "generation": 3
+          }
+        ]
+      },
+      "leaders": [
+        5
+      ],
+      "droughtLeaders": [
+        1
+      ],
+      "retainedLead": false,
+      "limitations": [
+        "A rule-based toy model, not a biological prediction.",
+        "Lineage success is measured by living descendants, not individuals or universal fitness.",
+        "Population ties are retained; extinction makes leadership undefined.",
+        "The branches start identically but their random draws diverge as behavior diverges.",
+        "One seed is one run; it does not establish a general result.",
+        "Food already present at the checkpoint remains in both branches."
+      ]
+    },
+    {
+      "version": 1,
+      "model": "morrow-0.1",
+      "seed": 4223,
+      "protocol": {
+        "warmupDays": 8,
+        "branchDays": 8,
+        "controlResources": 1,
+        "droughtResources": 0.15,
+        "mutation": 0.08,
+        "seasons": false
+      },
+      "complete": true,
+      "baseline": {
+        "population": 169,
+        "food": 14,
+        "births": 229,
+        "deaths": 90,
+        "generation": 4,
+        "day": 8,
+        "speed": 1.0740394802289026,
+        "thrift": 1.1164866119567536,
+        "lineages": [
+          {
+            "name": "Akım",
+            "color": "#b6a6ec",
+            "speed": 1.42,
+            "sense": 0.86,
+            "thrift": 0.78,
+            "lineage": 0,
+            "count": 11,
+            "speedSum": 15.519229504503308,
+            "thriftSum": 9.167285948880016,
+            "generation": 3
+          },
+          {
+            "name": "Çiy",
+            "color": "#8ed7c6",
+            "speed": 0.78,
+            "sense": 1.12,
+            "thrift": 1.35,
+            "lineage": 1,
+            "count": 16,
+            "speedSum": 13.210333780143412,
+            "thriftSum": 21.738040301995355,
+            "generation": 2
+          },
+          {
+            "name": "Köz",
+            "color": "#f4b582",
+            "speed": 1.12,
+            "sense": 1.25,
+            "thrift": 0.92,
+            "lineage": 2,
+            "count": 25,
+            "speedSum": 28.518668360849844,
+            "thriftSum": 23.75186231229454,
+            "generation": 3
+          },
+          {
+            "name": "Sis",
+            "color": "#a6c9f5",
+            "speed": 0.9,
+            "sense": 1.45,
+            "thrift": 1.08,
+            "lineage": 3,
+            "count": 16,
+            "speedSum": 14.443688364010306,
+            "thriftSum": 17.560387589000165,
+            "generation": 3
+          },
+          {
+            "name": "Yankı",
+            "color": "#e6a7c6",
+            "speed": 1.24,
+            "sense": 0.7,
+            "thrift": 1.15,
+            "lineage": 4,
+            "count": 49,
+            "speedSum": 60.248896840214705,
+            "thriftSum": 55.560105646587914,
+            "generation": 4
+          },
+          {
+            "name": "Filiz",
+            "color": "#d4d995",
+            "speed": 0.95,
+            "sense": 0.92,
+            "thrift": 1.2,
+            "lineage": 5,
+            "count": 52,
+            "speedSum": 49.571855308962995,
+            "thriftSum": 60.90855562193319,
+            "generation": 4
+          }
+        ]
+      },
+      "control": {
+        "population": 147,
+        "food": 22,
+        "births": 375,
+        "deaths": 258,
+        "generation": 6,
+        "day": 16,
+        "speed": 1.0348004893022804,
+        "thrift": 1.1817741482388748,
+        "lineages": [
+          {
+            "name": "Akım",
+            "color": "#b6a6ec",
+            "speed": 1.42,
+            "sense": 0.86,
+            "thrift": 0.78,
+            "lineage": 0,
+            "count": 1,
+            "speedSum": 1.3427800270263104,
+            "thriftSum": 0.8852726328838617,
+            "generation": 2
+          },
+          {
+            "name": "Çiy",
+            "color": "#8ed7c6",
+            "speed": 0.78,
+            "sense": 1.12,
+            "thrift": 1.35,
+            "lineage": 1,
+            "count": 20,
+            "speedSum": 16.25575970753096,
+            "thriftSum": 27.008036424517634,
+            "generation": 2
+          },
+          {
+            "name": "Köz",
+            "color": "#f4b582",
+            "speed": 1.12,
+            "sense": 1.25,
+            "thrift": 0.92,
+            "lineage": 2,
+            "count": 5,
+            "speedSum": 5.681343440087512,
+            "thriftSum": 4.921704901726917,
+            "generation": 3
+          },
+          {
+            "name": "Sis",
+            "color": "#a6c9f5",
+            "speed": 0.9,
+            "sense": 1.45,
+            "thrift": 1.08,
+            "lineage": 3,
+            "count": 8,
+            "speedSum": 7.166206320552156,
+            "thriftSum": 8.780712861744687,
+            "generation": 3
+          },
+          {
+            "name": "Yankı",
+            "color": "#e6a7c6",
+            "speed": 1.24,
+            "sense": 0.7,
+            "thrift": 1.15,
+            "lineage": 4,
+            "count": 51,
+            "speedSum": 62.09085519529878,
+            "thriftSum": 59.313630652269325,
+            "generation": 6
+          },
+          {
+            "name": "Filiz",
+            "color": "#d4d995",
+            "speed": 0.95,
+            "sense": 0.92,
+            "thrift": 1.2,
+            "lineage": 5,
+            "count": 62,
+            "speedSum": 59.578727236939585,
+            "thriftSum": 72.81144231797194,
+            "generation": 5
+          }
+        ]
+      },
+      "drought": {
+        "population": 10,
+        "food": 32,
+        "births": 235,
+        "deaths": 255,
+        "generation": 4,
+        "day": 16,
+        "speed": 1.02083952322416,
+        "thrift": 1.1936935937246307,
+        "lineages": [
+          {
+            "name": "Akım",
+            "color": "#b6a6ec",
+            "speed": 1.42,
+            "sense": 0.86,
+            "thrift": 0.78,
+            "lineage": 0,
+            "count": 0,
+            "speedSum": 0,
+            "thriftSum": 0,
+            "generation": 0
+          },
+          {
+            "name": "Çiy",
+            "color": "#8ed7c6",
+            "speed": 0.78,
+            "sense": 1.12,
+            "thrift": 1.35,
+            "lineage": 1,
+            "count": 1,
+            "speedSum": 0.8748530376702547,
+            "thriftSum": 1.484789305413142,
+            "generation": 2
+          },
+          {
+            "name": "Köz",
+            "color": "#f4b582",
+            "speed": 1.12,
+            "sense": 1.25,
+            "thrift": 0.92,
+            "lineage": 2,
+            "count": 1,
+            "speedSum": 1.2088162159267815,
+            "thriftSum": 0.9919071505498142,
+            "generation": 3
+          },
+          {
+            "name": "Sis",
+            "color": "#a6c9f5",
+            "speed": 0.9,
+            "sense": 1.45,
+            "thrift": 1.08,
+            "lineage": 3,
+            "count": 1,
+            "speedSum": 0.8829650437925012,
+            "thriftSum": 1.1058966217469424,
+            "generation": 2
+          },
+          {
+            "name": "Yankı",
+            "color": "#e6a7c6",
+            "speed": 1.24,
+            "sense": 0.7,
+            "thrift": 1.15,
+            "lineage": 4,
+            "count": 2,
+            "speedSum": 2.2738223787583407,
+            "thriftSum": 2.4482342011108993,
+            "generation": 4
+          },
+          {
+            "name": "Filiz",
+            "color": "#d4d995",
+            "speed": 0.95,
+            "sense": 0.92,
+            "thrift": 1.2,
+            "lineage": 5,
+            "count": 5,
+            "speedSum": 4.967938556093722,
+            "thriftSum": 5.906108658425509,
+            "generation": 3
+          }
+        ]
+      },
+      "leaders": [
+        5
+      ],
+      "droughtLeaders": [
+        5
+      ],
+      "retainedLead": true,
+      "limitations": [
+        "A rule-based toy model, not a biological prediction.",
+        "Lineage success is measured by living descendants, not individuals or universal fitness.",
+        "Population ties are retained; extinction makes leadership undefined.",
+        "The branches start identically but their random draws diverge as behavior diverges.",
+        "One seed is one run; it does not establish a general result.",
+        "Food already present at the checkpoint remains in both branches."
+      ]
+    },
+    {
+      "version": 1,
+      "model": "morrow-0.1",
+      "seed": 4224,
+      "protocol": {
+        "warmupDays": 8,
+        "branchDays": 8,
+        "controlResources": 1,
+        "droughtResources": 0.15,
+        "mutation": 0.08,
+        "seasons": false
+      },
+      "complete": true,
+      "baseline": {
+        "population": 162,
+        "food": 19,
+        "births": 226,
+        "deaths": 94,
+        "generation": 6,
+        "day": 8,
+        "speed": 1.0569967296983422,
+        "thrift": 1.135249802202883,
+        "lineages": [
+          {
+            "name": "Akım",
+            "color": "#b6a6ec",
+            "speed": 1.42,
+            "sense": 0.86,
+            "thrift": 0.78,
+            "lineage": 0,
+            "count": 9,
+            "speedSum": 12.311810234822333,
+            "thriftSum": 7.576843606736512,
+            "generation": 3
+          },
+          {
+            "name": "Çiy",
+            "color": "#8ed7c6",
+            "speed": 0.78,
+            "sense": 1.12,
+            "thrift": 1.35,
+            "lineage": 1,
+            "count": 22,
+            "speedSum": 16.97384718756192,
+            "thriftSum": 30.0022560773138,
+            "generation": 4
+          },
+          {
+            "name": "Köz",
+            "color": "#f4b582",
+            "speed": 1.12,
+            "sense": 1.25,
+            "thrift": 0.92,
+            "lineage": 2,
+            "count": 28,
+            "speedSum": 31.65148211993278,
+            "thriftSum": 26.11435675291344,
+            "generation": 4
+          },
+          {
+            "name": "Sis",
+            "color": "#a6c9f5",
+            "speed": 0.9,
+            "sense": 1.45,
+            "thrift": 1.08,
+            "lineage": 3,
+            "count": 15,
+            "speedSum": 13.359519394161183,
+            "thriftSum": 15.811005089329559,
+            "generation": 2
+          },
+          {
+            "name": "Yankı",
+            "color": "#e6a7c6",
+            "speed": 1.24,
+            "sense": 0.7,
+            "thrift": 1.15,
+            "lineage": 4,
+            "count": 41,
+            "speedSum": 51.532334205927334,
+            "thriftSum": 48.177861383575944,
+            "generation": 5
+          },
+          {
+            "name": "Filiz",
+            "color": "#d4d995",
+            "speed": 0.95,
+            "sense": 0.92,
+            "thrift": 1.2,
+            "lineage": 5,
+            "count": 47,
+            "speedSum": 45.40447706872598,
+            "thriftSum": 56.22814504699782,
+            "generation": 6
+          }
+        ]
+      },
+      "control": {
+        "population": 148,
+        "food": 20,
+        "births": 370,
+        "deaths": 252,
+        "generation": 6,
+        "day": 16,
+        "speed": 1.0077710257342238,
+        "thrift": 1.1912815476108864,
+        "lineages": [
+          {
+            "name": "Akım",
+            "color": "#b6a6ec",
+            "speed": 1.42,
+            "sense": 0.86,
+            "thrift": 0.78,
+            "lineage": 0,
+            "count": 2,
+            "speedSum": 2.5652090179733937,
+            "thriftSum": 1.7613746903091667,
+            "generation": 4
+          },
+          {
+            "name": "Çiy",
+            "color": "#8ed7c6",
+            "speed": 0.78,
+            "sense": 1.12,
+            "thrift": 1.35,
+            "lineage": 1,
+            "count": 31,
+            "speedSum": 23.83814220909961,
+            "thriftSum": 42.38443888233044,
+            "generation": 4
+          },
+          {
+            "name": "Köz",
+            "color": "#f4b582",
+            "speed": 1.12,
+            "sense": 1.25,
+            "thrift": 0.92,
+            "lineage": 2,
+            "count": 19,
+            "speedSum": 21.971464251792053,
+            "thriftSum": 18.749362772926688,
+            "generation": 5
+          },
+          {
+            "name": "Sis",
+            "color": "#a6c9f5",
+            "speed": 0.9,
+            "sense": 1.45,
+            "thrift": 1.08,
+            "lineage": 3,
+            "count": 10,
+            "speedSum": 8.796387147968636,
+            "thriftSum": 10.678771613687278,
+            "generation": 4
+          },
+          {
+            "name": "Yankı",
+            "color": "#e6a7c6",
+            "speed": 1.24,
+            "sense": 0.7,
+            "thrift": 1.15,
+            "lineage": 4,
+            "count": 34,
+            "speedSum": 41.75408832347019,
+            "thriftSum": 39.96255148435942,
+            "generation": 5
+          },
+          {
+            "name": "Filiz",
+            "color": "#d4d995",
+            "speed": 0.95,
+            "sense": 0.92,
+            "thrift": 1.2,
+            "lineage": 5,
+            "count": 52,
+            "speedSum": 50.22482085836117,
+            "thriftSum": 62.773169602798326,
+            "generation": 6
+          }
+        ]
+      },
+      "drought": {
+        "population": 16,
+        "food": 21,
+        "births": 237,
+        "deaths": 251,
+        "generation": 5,
+        "day": 16,
+        "speed": 0.9669567930250196,
+        "thrift": 1.216815499407239,
+        "lineages": [
+          {
+            "name": "Akım",
+            "color": "#b6a6ec",
+            "speed": 1.42,
+            "sense": 0.86,
+            "thrift": 0.78,
+            "lineage": 0,
+            "count": 0,
+            "speedSum": 0,
+            "thriftSum": 0,
+            "generation": 0
+          },
+          {
+            "name": "Çiy",
+            "color": "#8ed7c6",
+            "speed": 0.78,
+            "sense": 1.12,
+            "thrift": 1.35,
+            "lineage": 1,
+            "count": 5,
+            "speedSum": 3.7499425451923165,
+            "thriftSum": 6.740178852202371,
+            "generation": 3
+          },
+          {
+            "name": "Köz",
+            "color": "#f4b582",
+            "speed": 1.12,
+            "sense": 1.25,
+            "thrift": 0.92,
+            "lineage": 2,
+            "count": 0,
+            "speedSum": 0,
+            "thriftSum": 0,
+            "generation": 0
+          },
+          {
+            "name": "Sis",
+            "color": "#a6c9f5",
+            "speed": 0.9,
+            "sense": 1.45,
+            "thrift": 1.08,
+            "lineage": 3,
+            "count": 3,
+            "speedSum": 2.4067379170376806,
+            "thriftSum": 3.2195439774449914,
+            "generation": 3
+          },
+          {
+            "name": "Yankı",
+            "color": "#e6a7c6",
+            "speed": 1.24,
+            "sense": 0.7,
+            "thrift": 1.15,
+            "lineage": 4,
+            "count": 4,
+            "speedSum": 5.229230970609934,
+            "thriftSum": 4.753475051848218,
+            "generation": 5
+          },
+          {
+            "name": "Filiz",
+            "color": "#d4d995",
+            "speed": 0.95,
+            "sense": 0.92,
+            "thrift": 1.2,
+            "lineage": 5,
+            "count": 4,
+            "speedSum": 4.085397255560382,
+            "thriftSum": 4.755850109020248,
+            "generation": 4
+          }
+        ]
+      },
+      "leaders": [
+        5
+      ],
+      "droughtLeaders": [
+        1
+      ],
+      "retainedLead": false,
+      "limitations": [
+        "A rule-based toy model, not a biological prediction.",
+        "Lineage success is measured by living descendants, not individuals or universal fitness.",
+        "Population ties are retained; extinction makes leadership undefined.",
+        "The branches start identically but their random draws diverge as behavior diverges.",
+        "One seed is one run; it does not establish a general result.",
+        "Food already present at the checkpoint remains in both branches."
+      ]
+    },
+    {
+      "version": 1,
+      "model": "morrow-0.1",
+      "seed": 4225,
+      "protocol": {
+        "warmupDays": 8,
+        "branchDays": 8,
+        "controlResources": 1,
+        "droughtResources": 0.15,
+        "mutation": 0.08,
+        "seasons": false
+      },
+      "complete": true,
+      "baseline": {
+        "population": 177,
+        "food": 12,
+        "births": 228,
+        "deaths": 81,
+        "generation": 7,
+        "day": 8,
+        "speed": 1.0593162581745503,
+        "thrift": 1.1146575075501082,
+        "lineages": [
+          {
+            "name": "Akım",
+            "color": "#b6a6ec",
+            "speed": 1.42,
+            "sense": 0.86,
+            "thrift": 0.78,
+            "lineage": 0,
+            "count": 7,
+            "speedSum": 10.180962777053937,
+            "thriftSum": 5.51616532866843,
+            "generation": 4
+          },
+          {
+            "name": "Çiy",
+            "color": "#8ed7c6",
+            "speed": 0.78,
+            "sense": 1.12,
+            "thrift": 1.35,
+            "lineage": 1,
+            "count": 19,
+            "speedSum": 15.513429131833837,
+            "thriftSum": 25.311506720734766,
+            "generation": 2
+          },
+          {
+            "name": "Köz",
+            "color": "#f4b582",
+            "speed": 1.12,
+            "sense": 1.25,
+            "thrift": 0.92,
+            "lineage": 2,
+            "count": 34,
+            "speedSum": 37.9535776789952,
+            "thriftSum": 30.100307362191376,
+            "generation": 3
+          },
+          {
+            "name": "Sis",
+            "color": "#a6c9f5",
+            "speed": 0.9,
+            "sense": 1.45,
+            "thrift": 1.08,
+            "lineage": 3,
+            "count": 16,
+            "speedSum": 14.553457256406547,
+            "thriftSum": 17.44394611847587,
+            "generation": 2
+          },
+          {
+            "name": "Yankı",
+            "color": "#e6a7c6",
+            "speed": 1.24,
+            "sense": 0.7,
+            "thrift": 1.15,
+            "lineage": 4,
+            "count": 55,
+            "speedSum": 65.37148895544,
+            "thriftSum": 64.05204493188297,
+            "generation": 7
+          },
+          {
+            "name": "Filiz",
+            "color": "#d4d995",
+            "speed": 0.95,
+            "sense": 0.92,
+            "thrift": 1.2,
+            "lineage": 5,
+            "count": 46,
+            "speedSum": 43.92606189716607,
+            "thriftSum": 54.8704083744157,
+            "generation": 3
+          }
+        ]
+      },
+      "control": {
+        "population": 152,
+        "food": 24,
+        "births": 379,
+        "deaths": 257,
+        "generation": 7,
+        "day": 16,
+        "speed": 1.021944491935183,
+        "thrift": 1.1745863040238862,
+        "lineages": [
+          {
+            "name": "Akım",
+            "color": "#b6a6ec",
+            "speed": 1.42,
+            "sense": 0.86,
+            "thrift": 0.78,
+            "lineage": 0,
+            "count": 0,
+            "speedSum": 0,
+            "thriftSum": 0,
+            "generation": 0
+          },
+          {
+            "name": "Çiy",
+            "color": "#8ed7c6",
+            "speed": 0.78,
+            "sense": 1.12,
+            "thrift": 1.35,
+            "lineage": 1,
+            "count": 22,
+            "speedSum": 17.77592644907534,
+            "thriftSum": 30.149876411054294,
+            "generation": 3
+          },
+          {
+            "name": "Köz",
+            "color": "#f4b582",
+            "speed": 1.12,
+            "sense": 1.25,
+            "thrift": 0.92,
+            "lineage": 2,
+            "count": 19,
+            "speedSum": 20.311454561948782,
+            "thriftSum": 17.832771793743596,
+            "generation": 5
+          },
+          {
+            "name": "Sis",
+            "color": "#a6c9f5",
+            "speed": 0.9,
+            "sense": 1.45,
+            "thrift": 1.08,
+            "lineage": 3,
+            "count": 13,
+            "speedSum": 12.05994113783352,
+            "thriftSum": 13.816660649403932,
+            "generation": 4
+          },
+          {
+            "name": "Yankı",
+            "color": "#e6a7c6",
+            "speed": 1.24,
+            "sense": 0.7,
+            "thrift": 1.15,
+            "lineage": 4,
+            "count": 50,
+            "speedSum": 59.10329439334569,
+            "thriftSum": 59.72599624292923,
+            "generation": 7
+          },
+          {
+            "name": "Filiz",
+            "color": "#d4d995",
+            "speed": 0.95,
+            "sense": 0.92,
+            "thrift": 1.2,
+            "lineage": 5,
+            "count": 48,
+            "speedSum": 46.084946231944485,
+            "thriftSum": 57.01181311449967,
+            "generation": 4
+          }
+        ]
+      },
+      "drought": {
+        "population": 12,
+        "food": 30,
+        "births": 230,
+        "deaths": 248,
+        "generation": 3,
+        "day": 16,
+        "speed": 0.9015516864089294,
+        "thrift": 1.2203007847443224,
+        "lineages": [
+          {
+            "name": "Akım",
+            "color": "#b6a6ec",
+            "speed": 1.42,
+            "sense": 0.86,
+            "thrift": 0.78,
+            "lineage": 0,
+            "count": 0,
+            "speedSum": 0,
+            "thriftSum": 0,
+            "generation": 0
+          },
+          {
+            "name": "Çiy",
+            "color": "#8ed7c6",
+            "speed": 0.78,
+            "sense": 1.12,
+            "thrift": 1.35,
+            "lineage": 1,
+            "count": 3,
+            "speedSum": 2.1653586651850496,
+            "thriftSum": 4.0216992182563995,
+            "generation": 2
+          },
+          {
+            "name": "Köz",
+            "color": "#f4b582",
+            "speed": 1.12,
+            "sense": 1.25,
+            "thrift": 0.92,
+            "lineage": 2,
+            "count": 0,
+            "speedSum": 0,
+            "thriftSum": 0,
+            "generation": 0
+          },
+          {
+            "name": "Sis",
+            "color": "#a6c9f5",
+            "speed": 0.9,
+            "sense": 1.45,
+            "thrift": 1.08,
+            "lineage": 3,
+            "count": 1,
+            "speedSum": 1.0543666994478553,
+            "thriftSum": 1.1243493516091259,
+            "generation": 2
+          },
+          {
+            "name": "Yankı",
+            "color": "#e6a7c6",
+            "speed": 1.24,
+            "sense": 0.7,
+            "thrift": 1.15,
+            "lineage": 4,
+            "count": 0,
+            "speedSum": 0,
+            "thriftSum": 0,
+            "generation": 0
+          },
+          {
+            "name": "Filiz",
+            "color": "#d4d995",
+            "speed": 0.95,
+            "sense": 0.92,
+            "thrift": 1.2,
+            "lineage": 5,
+            "count": 8,
+            "speedSum": 7.598894872274251,
+            "thriftSum": 9.497560847066342,
+            "generation": 3
+          }
+        ]
+      },
+      "leaders": [
+        4
+      ],
+      "droughtLeaders": [
+        5
+      ],
+      "retainedLead": false,
+      "limitations": [
+        "A rule-based toy model, not a biological prediction.",
+        "Lineage success is measured by living descendants, not individuals or universal fitness.",
+        "Population ties are retained; extinction makes leadership undefined.",
+        "The branches start identically but their random draws diverge as behavior diverges.",
+        "One seed is one run; it does not establish a general result.",
+        "Food already present at the checkpoint remains in both branches."
+      ]
+    },
+    {
+      "version": 1,
+      "model": "morrow-0.1",
+      "seed": 4226,
+      "protocol": {
+        "warmupDays": 8,
+        "branchDays": 8,
+        "controlResources": 1,
+        "droughtResources": 0.15,
+        "mutation": 0.08,
+        "seasons": false
+      },
+      "complete": true,
+      "baseline": {
+        "population": 166,
+        "food": 15,
+        "births": 230,
+        "deaths": 94,
+        "generation": 5,
+        "day": 8,
+        "speed": 1.0503516033677247,
+        "thrift": 1.1311915827959396,
+        "lineages": [
+          {
+            "name": "Akım",
+            "color": "#b6a6ec",
+            "speed": 1.42,
+            "sense": 0.86,
+            "thrift": 0.78,
+            "lineage": 0,
+            "count": 12,
+            "speedSum": 16.416317287646233,
+            "thriftSum": 8.909007204314694,
+            "generation": 5
+          },
+          {
+            "name": "Çiy",
+            "color": "#8ed7c6",
+            "speed": 0.78,
+            "sense": 1.12,
+            "thrift": 1.35,
+            "lineage": 1,
+            "count": 30,
+            "speedSum": 24.617154933596026,
+            "thriftSum": 41.56260829169304,
+            "generation": 4
+          },
+          {
+            "name": "Köz",
+            "color": "#f4b582",
+            "speed": 1.12,
+            "sense": 1.25,
+            "thrift": 0.92,
+            "lineage": 2,
+            "count": 30,
+            "speedSum": 33.8388037922606,
+            "thriftSum": 27.228238750230524,
+            "generation": 4
+          },
+          {
+            "name": "Sis",
+            "color": "#a6c9f5",
+            "speed": 0.9,
+            "sense": 1.45,
+            "thrift": 1.08,
+            "lineage": 3,
+            "count": 19,
+            "speedSum": 17.903007614919918,
+            "thriftSum": 21.032742218505597,
+            "generation": 2
+          },
+          {
+            "name": "Yankı",
+            "color": "#e6a7c6",
+            "speed": 1.24,
+            "sense": 0.7,
+            "thrift": 1.15,
+            "lineage": 4,
+            "count": 38,
+            "speedSum": 47.53917733437382,
+            "thriftSum": 44.47316858150996,
+            "generation": 4
+          },
+          {
+            "name": "Filiz",
+            "color": "#d4d995",
+            "speed": 0.95,
+            "sense": 0.92,
+            "thrift": 1.2,
+            "lineage": 5,
+            "count": 37,
+            "speedSum": 34.04390519624576,
+            "thriftSum": 44.57203769787215,
+            "generation": 4
+          }
+        ]
+      },
+      "control": {
+        "population": 156,
+        "food": 23,
+        "births": 375,
+        "deaths": 249,
+        "generation": 7,
+        "day": 16,
+        "speed": 1.028006076897817,
+        "thrift": 1.2032974747675231,
+        "lineages": [
+          {
+            "name": "Akım",
+            "color": "#b6a6ec",
+            "speed": 1.42,
+            "sense": 0.86,
+            "thrift": 0.78,
+            "lineage": 0,
+            "count": 4,
+            "speedSum": 5.380992642892524,
+            "thriftSum": 3.024080154206604,
+            "generation": 4
+          },
+          {
+            "name": "Çiy",
+            "color": "#8ed7c6",
+            "speed": 0.78,
+            "sense": 1.12,
+            "thrift": 1.35,
+            "lineage": 1,
+            "count": 36,
+            "speedSum": 30.034707770161326,
+            "thriftSum": 49.72993263760582,
+            "generation": 6
+          },
+          {
+            "name": "Köz",
+            "color": "#f4b582",
+            "speed": 1.12,
+            "sense": 1.25,
+            "thrift": 0.92,
+            "lineage": 2,
+            "count": 11,
+            "speedSum": 12.792213289421053,
+            "thriftSum": 10.217952249767258,
+            "generation": 4
+          },
+          {
+            "name": "Sis",
+            "color": "#a6c9f5",
+            "speed": 0.9,
+            "sense": 1.45,
+            "thrift": 1.08,
+            "lineage": 3,
+            "count": 15,
+            "speedSum": 14.27161368029192,
+            "thriftSum": 16.823784211222083,
+            "generation": 4
+          },
+          {
+            "name": "Yankı",
+            "color": "#e6a7c6",
+            "speed": 1.24,
+            "sense": 0.7,
+            "thrift": 1.15,
+            "lineage": 4,
+            "count": 45,
+            "speedSum": 56.41869851780123,
+            "thriftSum": 53.466269301353016,
+            "generation": 7
+          },
+          {
+            "name": "Filiz",
+            "color": "#d4d995",
+            "speed": 0.95,
+            "sense": 0.92,
+            "thrift": 1.2,
+            "lineage": 5,
+            "count": 45,
+            "speedSum": 41.470722095491375,
+            "thriftSum": 54.45238750957883,
+            "generation": 5
+          }
+        ]
+      },
+      "drought": {
+        "population": 10,
+        "food": 27,
+        "births": 236,
+        "deaths": 256,
+        "generation": 4,
+        "day": 16,
+        "speed": 1.0428517790297047,
+        "thrift": 1.2068815106227995,
+        "lineages": [
+          {
+            "name": "Akım",
+            "color": "#b6a6ec",
+            "speed": 1.42,
+            "sense": 0.86,
+            "thrift": 0.78,
+            "lineage": 0,
+            "count": 0,
+            "speedSum": 0,
+            "thriftSum": 0,
+            "generation": 0
+          },
+          {
+            "name": "Çiy",
+            "color": "#8ed7c6",
+            "speed": 0.78,
+            "sense": 1.12,
+            "thrift": 1.35,
+            "lineage": 1,
+            "count": 3,
+            "speedSum": 2.77974811848253,
+            "thriftSum": 4.273442309265956,
+            "generation": 4
+          },
+          {
+            "name": "Köz",
+            "color": "#f4b582",
+            "speed": 1.12,
+            "sense": 1.25,
+            "thrift": 0.92,
+            "lineage": 2,
+            "count": 2,
+            "speedSum": 2.2893621610384436,
+            "thriftSum": 1.9049516857322306,
+            "generation": 3
+          },
+          {
+            "name": "Sis",
+            "color": "#a6c9f5",
+            "speed": 0.9,
+            "sense": 1.45,
+            "thrift": 1.08,
+            "lineage": 3,
+            "count": 1,
+            "speedSum": 1.0158253565058113,
+            "thriftSum": 1.0989255499653519,
+            "generation": 2
+          },
+          {
+            "name": "Yankı",
+            "color": "#e6a7c6",
+            "speed": 1.24,
+            "sense": 0.7,
+            "thrift": 1.15,
+            "lineage": 4,
+            "count": 2,
+            "speedSum": 2.5361720752343535,
+            "thriftSum": 2.41594240244478,
+            "generation": 4
+          },
+          {
+            "name": "Filiz",
+            "color": "#d4d995",
+            "speed": 0.95,
+            "sense": 0.92,
+            "thrift": 1.2,
+            "lineage": 5,
+            "count": 2,
+            "speedSum": 1.8074100790359076,
+            "thriftSum": 2.3755531588196757,
+            "generation": 4
+          }
+        ]
+      },
+      "leaders": [
+        4
+      ],
+      "droughtLeaders": [
+        1
+      ],
+      "retainedLead": false,
+      "limitations": [
+        "A rule-based toy model, not a biological prediction.",
+        "Lineage success is measured by living descendants, not individuals or universal fitness.",
+        "Population ties are retained; extinction makes leadership undefined.",
+        "The branches start identically but their random draws diverge as behavior diverges.",
+        "One seed is one run; it does not establish a general result.",
+        "Food already present at the checkpoint remains in both branches."
+      ]
+    },
+    {
+      "version": 1,
+      "model": "morrow-0.1",
+      "seed": 4227,
+      "protocol": {
+        "warmupDays": 8,
+        "branchDays": 8,
+        "controlResources": 1,
+        "droughtResources": 0.15,
+        "mutation": 0.08,
+        "seasons": false
+      },
+      "complete": true,
+      "baseline": {
+        "population": 155,
+        "food": 20,
+        "births": 223,
+        "deaths": 98,
+        "generation": 5,
+        "day": 8,
+        "speed": 1.0786059153680239,
+        "thrift": 1.0894283814856245,
+        "lineages": [
+          {
+            "name": "Akım",
+            "color": "#b6a6ec",
+            "speed": 1.42,
+            "sense": 0.86,
+            "thrift": 0.78,
+            "lineage": 0,
+            "count": 19,
+            "speedSum": 26.29748656446113,
+            "thriftSum": 14.823251543259248,
+            "generation": 5
+          },
+          {
+            "name": "Çiy",
+            "color": "#8ed7c6",
+            "speed": 0.78,
+            "sense": 1.12,
+            "thrift": 1.35,
+            "lineage": 1,
+            "count": 19,
+            "speedSum": 14.112493380783127,
+            "thriftSum": 25.514472101666037,
+            "generation": 3
+          },
+          {
+            "name": "Köz",
+            "color": "#f4b582",
+            "speed": 1.12,
+            "sense": 1.25,
+            "thrift": 0.92,
+            "lineage": 2,
+            "count": 30,
+            "speedSum": 33.79532976157033,
+            "thriftSum": 28.26824197710492,
+            "generation": 4
+          },
+          {
+            "name": "Sis",
+            "color": "#a6c9f5",
+            "speed": 0.9,
+            "sense": 1.45,
+            "thrift": 1.08,
+            "lineage": 3,
+            "count": 25,
+            "speedSum": 23.31760613964871,
+            "thriftSum": 27.174487501038243,
+            "generation": 3
+          },
+          {
+            "name": "Yankı",
+            "color": "#e6a7c6",
+            "speed": 1.24,
+            "sense": 0.7,
+            "thrift": 1.15,
+            "lineage": 4,
+            "count": 34,
+            "speedSum": 42.447891777483754,
+            "thriftSum": 39.86513435339555,
+            "generation": 3
+          },
+          {
+            "name": "Filiz",
+            "color": "#d4d995",
+            "speed": 0.95,
+            "sense": 0.92,
+            "thrift": 1.2,
+            "lineage": 5,
+            "count": 28,
+            "speedSum": 27.21310925809667,
+            "thriftSum": 33.21581165380776,
+            "generation": 3
+          }
+        ]
+      },
+      "control": {
+        "population": 132,
+        "food": 15,
+        "births": 372,
+        "deaths": 270,
+        "generation": 7,
+        "day": 16,
+        "speed": 1.0766219659460088,
+        "thrift": 1.1208736578763157,
+        "lineages": [
+          {
+            "name": "Akım",
+            "color": "#b6a6ec",
+            "speed": 1.42,
+            "sense": 0.86,
+            "thrift": 0.78,
+            "lineage": 0,
+            "count": 12,
+            "speedSum": 16.31704221580177,
+            "thriftSum": 10.123805014826358,
+            "generation": 5
+          },
+          {
+            "name": "Çiy",
+            "color": "#8ed7c6",
+            "speed": 0.78,
+            "sense": 1.12,
+            "thrift": 1.35,
+            "lineage": 1,
+            "count": 19,
+            "speedSum": 13.854786106552929,
+            "thriftSum": 25.70689628285356,
+            "generation": 3
+          },
+          {
+            "name": "Köz",
+            "color": "#f4b582",
+            "speed": 1.12,
+            "sense": 1.25,
+            "thrift": 0.92,
+            "lineage": 2,
+            "count": 28,
+            "speedSum": 32.51233778811059,
+            "thriftSum": 26.560830949964007,
+            "generation": 7
+          },
+          {
+            "name": "Sis",
+            "color": "#a6c9f5",
+            "speed": 0.9,
+            "sense": 1.45,
+            "thrift": 1.08,
+            "lineage": 3,
+            "count": 12,
+            "speedSum": 10.904286006530748,
+            "thriftSum": 12.800458106724546,
+            "generation": 4
+          },
+          {
+            "name": "Yankı",
+            "color": "#e6a7c6",
+            "speed": 1.24,
+            "sense": 0.7,
+            "thrift": 1.15,
+            "lineage": 4,
+            "count": 34,
+            "speedSum": 42.12193897730672,
+            "thriftSum": 40.375406365524974,
+            "generation": 5
+          },
+          {
+            "name": "Filiz",
+            "color": "#d4d995",
+            "speed": 0.95,
+            "sense": 0.92,
+            "thrift": 1.2,
+            "lineage": 5,
+            "count": 27,
+            "speedSum": 26.403708410570395,
+            "thriftSum": 32.387926119780175,
+            "generation": 4
+          }
+        ]
+      },
+      "drought": {
+        "population": 13,
+        "food": 30,
+        "births": 233,
+        "deaths": 250,
+        "generation": 5,
+        "day": 16,
+        "speed": 0.895650098611099,
+        "thrift": 1.2681742993369698,
+        "lineages": [
+          {
+            "name": "Akım",
+            "color": "#b6a6ec",
+            "speed": 1.42,
+            "sense": 0.86,
+            "thrift": 0.78,
+            "lineage": 0,
+            "count": 0,
+            "speedSum": 0,
+            "thriftSum": 0,
+            "generation": 0
+          },
+          {
+            "name": "Çiy",
+            "color": "#8ed7c6",
+            "speed": 0.78,
+            "sense": 1.12,
+            "thrift": 1.35,
+            "lineage": 1,
+            "count": 5,
+            "speedSum": 3.462517373319715,
+            "thriftSum": 6.748652402972803,
+            "generation": 4
+          },
+          {
+            "name": "Köz",
+            "color": "#f4b582",
+            "speed": 1.12,
+            "sense": 1.25,
+            "thrift": 0.92,
+            "lineage": 2,
+            "count": 0,
+            "speedSum": 0,
+            "thriftSum": 0,
+            "generation": 0
+          },
+          {
+            "name": "Sis",
+            "color": "#a6c9f5",
+            "speed": 0.9,
+            "sense": 1.45,
+            "thrift": 1.08,
+            "lineage": 3,
+            "count": 0,
+            "speedSum": 0,
+            "thriftSum": 0,
+            "generation": 0
+          },
+          {
+            "name": "Yankı",
+            "color": "#e6a7c6",
+            "speed": 1.24,
+            "sense": 0.7,
+            "thrift": 1.15,
+            "lineage": 4,
+            "count": 2,
+            "speedSum": 2.335811248011887,
+            "thriftSum": 2.45038718143478,
+            "generation": 3
+          },
+          {
+            "name": "Filiz",
+            "color": "#d4d995",
+            "speed": 0.95,
+            "sense": 0.92,
+            "thrift": 1.2,
+            "lineage": 5,
+            "count": 6,
+            "speedSum": 5.845122660612687,
+            "thriftSum": 7.287226306973025,
+            "generation": 5
+          }
+        ]
+      },
+      "leaders": [
+        4
+      ],
+      "droughtLeaders": [
+        5
+      ],
+      "retainedLead": false,
+      "limitations": [
+        "A rule-based toy model, not a biological prediction.",
+        "Lineage success is measured by living descendants, not individuals or universal fitness.",
+        "Population ties are retained; extinction makes leadership undefined.",
+        "The branches start identically but their random draws diverge as behavior diverges.",
+        "One seed is one run; it does not establish a general result.",
+        "Food already present at the checkpoint remains in both branches."
+      ]
+    },
+    {
+      "version": 1,
+      "model": "morrow-0.1",
+      "seed": 4228,
+      "protocol": {
+        "warmupDays": 8,
+        "branchDays": 8,
+        "controlResources": 1,
+        "droughtResources": 0.15,
+        "mutation": 0.08,
+        "seasons": false
+      },
+      "complete": true,
+      "baseline": {
+        "population": 156,
+        "food": 17,
+        "births": 217,
+        "deaths": 91,
+        "generation": 4,
+        "day": 8,
+        "speed": 1.0876376806772674,
+        "thrift": 1.1294375371199867,
+        "lineages": [
+          {
+            "name": "Akım",
+            "color": "#b6a6ec",
+            "speed": 1.42,
+            "sense": 0.86,
+            "thrift": 0.78,
+            "lineage": 0,
+            "count": 9,
+            "speedSum": 12.656967260232195,
+            "thriftSum": 7.104996732734145,
+            "generation": 2
+          },
+          {
+            "name": "Çiy",
+            "color": "#8ed7c6",
+            "speed": 0.78,
+            "sense": 1.12,
+            "thrift": 1.35,
+            "lineage": 1,
+            "count": 23,
+            "speedSum": 18.987425375403834,
+            "thriftSum": 31.35439847815782,
+            "generation": 3
+          },
+          {
+            "name": "Köz",
+            "color": "#f4b582",
+            "speed": 1.12,
+            "sense": 1.25,
+            "thrift": 0.92,
+            "lineage": 2,
+            "count": 24,
+            "speedSum": 26.409972116006546,
+            "thriftSum": 22.168012472465634,
+            "generation": 3
+          },
+          {
+            "name": "Sis",
+            "color": "#a6c9f5",
+            "speed": 0.9,
+            "sense": 1.45,
+            "thrift": 1.08,
+            "lineage": 3,
+            "count": 12,
+            "speedSum": 10.294589626360684,
+            "thriftSum": 12.707923448095098,
+            "generation": 2
+          },
+          {
+            "name": "Yankı",
+            "color": "#e6a7c6",
+            "speed": 1.24,
+            "sense": 0.7,
+            "thrift": 1.15,
+            "lineage": 4,
+            "count": 56,
+            "speedSum": 70.74708298306912,
+            "thriftSum": 64.46173459804615,
+            "generation": 4
+          },
+          {
+            "name": "Filiz",
+            "color": "#d4d995",
+            "speed": 0.95,
+            "sense": 0.92,
+            "thrift": 1.2,
+            "lineage": 5,
+            "count": 32,
+            "speedSum": 30.57544082458131,
+            "thriftSum": 38.39519006121904,
+            "generation": 3
+          }
+        ]
+      },
+      "control": {
+        "population": 152,
+        "food": 22,
+        "births": 365,
+        "deaths": 243,
+        "generation": 5,
+        "day": 16,
+        "speed": 1.0390886854248027,
+        "thrift": 1.1759531643641126,
+        "lineages": [
+          {
+            "name": "Akım",
+            "color": "#b6a6ec",
+            "speed": 1.42,
+            "sense": 0.86,
+            "thrift": 0.78,
+            "lineage": 0,
+            "count": 2,
+            "speedSum": 2.8788924217037852,
+            "thriftSum": 1.5234813026245684,
+            "generation": 2
+          },
+          {
+            "name": "Çiy",
+            "color": "#8ed7c6",
+            "speed": 0.78,
+            "sense": 1.12,
+            "thrift": 1.35,
+            "lineage": 1,
+            "count": 31,
+            "speedSum": 25.340755418688055,
+            "thriftSum": 42.32295098152011,
+            "generation": 4
+          },
+          {
+            "name": "Köz",
+            "color": "#f4b582",
+            "speed": 1.12,
+            "sense": 1.25,
+            "thrift": 0.92,
+            "lineage": 2,
+            "count": 14,
+            "speedSum": 15.478018340207637,
+            "thriftSum": 13.280031989533457,
+            "generation": 4
+          },
+          {
+            "name": "Sis",
+            "color": "#a6c9f5",
+            "speed": 0.9,
+            "sense": 1.45,
+            "thrift": 1.08,
+            "lineage": 3,
+            "count": 7,
+            "speedSum": 5.754641895452515,
+            "thriftSum": 7.3807546220626685,
+            "generation": 3
+          },
+          {
+            "name": "Yankı",
+            "color": "#e6a7c6",
+            "speed": 1.24,
+            "sense": 0.7,
+            "thrift": 1.15,
+            "lineage": 4,
+            "count": 49,
+            "speedSum": 60.888528979877016,
+            "thriftSum": 56.49002035356127,
+            "generation": 5
+          },
+          {
+            "name": "Filiz",
+            "color": "#d4d995",
+            "speed": 0.95,
+            "sense": 0.92,
+            "thrift": 1.2,
+            "lineage": 5,
+            "count": 49,
+            "speedSum": 47.600643128640954,
+            "thriftSum": 57.747641734043135,
+            "generation": 5
+          }
+        ]
+      },
+      "drought": {
+        "population": 15,
+        "food": 23,
+        "births": 230,
+        "deaths": 245,
+        "generation": 3,
+        "day": 16,
+        "speed": 0.9203215686778226,
+        "thrift": 1.2818420226822298,
+        "lineages": [
+          {
+            "name": "Akım",
+            "color": "#b6a6ec",
+            "speed": 1.42,
+            "sense": 0.86,
+            "thrift": 0.78,
+            "lineage": 0,
+            "count": 0,
+            "speedSum": 0,
+            "thriftSum": 0,
+            "generation": 0
+          },
+          {
+            "name": "Çiy",
+            "color": "#8ed7c6",
+            "speed": 0.78,
+            "sense": 1.12,
+            "thrift": 1.35,
+            "lineage": 1,
+            "count": 6,
+            "speedSum": 4.9526318821031605,
+            "thriftSum": 8.189723061854021,
+            "generation": 3
+          },
+          {
+            "name": "Köz",
+            "color": "#f4b582",
+            "speed": 1.12,
+            "sense": 1.25,
+            "thrift": 0.92,
+            "lineage": 2,
+            "count": 0,
+            "speedSum": 0,
+            "thriftSum": 0,
+            "generation": 0
+          },
+          {
+            "name": "Sis",
+            "color": "#a6c9f5",
+            "speed": 0.9,
+            "sense": 1.45,
+            "thrift": 1.08,
+            "lineage": 3,
+            "count": 0,
+            "speedSum": 0,
+            "thriftSum": 0,
+            "generation": 0
+          },
+          {
+            "name": "Yankı",
+            "color": "#e6a7c6",
+            "speed": 1.24,
+            "sense": 0.7,
+            "thrift": 1.15,
+            "lineage": 4,
+            "count": 1,
+            "speedSum": 1.097960251001641,
+            "thriftSum": 1.079551634294912,
+            "generation": 2
+          },
+          {
+            "name": "Filiz",
+            "color": "#d4d995",
+            "speed": 0.95,
+            "sense": 0.92,
+            "thrift": 1.2,
+            "lineage": 5,
+            "count": 8,
+            "speedSum": 7.75423139706254,
+            "thriftSum": 9.958355644084513,
+            "generation": 3
+          }
+        ]
+      },
+      "leaders": [
+        4
+      ],
+      "droughtLeaders": [
+        5
+      ],
+      "retainedLead": false,
+      "limitations": [
+        "A rule-based toy model, not a biological prediction.",
+        "Lineage success is measured by living descendants, not individuals or universal fitness.",
+        "Population ties are retained; extinction makes leadership undefined.",
+        "The branches start identically but their random draws diverge as behavior diverges.",
+        "One seed is one run; it does not establish a general result.",
+        "Food already present at the checkpoint remains in both branches."
+      ]
+    }
+  ]
+}
