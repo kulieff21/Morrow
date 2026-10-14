@@ -14,6 +14,8 @@
     "experiment": "node scripts/experiment.mjs",
     "analyze": "node scripts/analyze-batch.mjs",
     "experiment:thrift": "node scripts/thrift-experiment.mjs",
-    "analyze:thrift": "node scripts/analyze-thrift.mjs"
+    "analyze:thrift": "node scripts/analyze-thrift.mjs",
+    "experiment:replication": "node scripts/replication.mjs",
+    "analyze:replication": "node scripts/replication.mjs --analyze"
   }
 }
