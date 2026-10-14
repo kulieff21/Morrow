@@ -13,3 +13,5 @@ jobs:
       - run: npm test
       - run: npm run check
       - run: npm run experiment:thrift -- --replay
+      - run: python scripts/check-replication.py
+      - run: npm run experiment:replication -- --replay

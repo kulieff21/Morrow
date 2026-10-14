@@ -22,6 +22,8 @@ jobs:
       - run: npm test
       - run: npm run check
       - run: npm run experiment:thrift -- --replay
+      - run: python scripts/check-replication.py
+      - run: npm run experiment:replication -- --replay
       - run: npm run build:pages
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v4
