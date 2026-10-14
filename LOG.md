@@ -1,24 +1,13 @@
 # Morrow session log
 
-## October 15, 2026 — complete Turkish article translation
+## October 15, 2026 — keep the personal Turkish reading edition local
 
-Elmar requested an unabridged Turkish reading edition while explicitly preserving
-the current English article. Added separate Markdown and DOCX files, translating
-every prose section, table label, figure label and caption without new scientific
-claims. Kept all four study stages, appendices A–D, 28 tables, ten native equations,
-three figures, exact numeric cells, source paths, code, URLs, hashes and lineage
-names. Published reference titles and author names retain their original form.
-
-The translated Word edition has 41 A4 pages. Its builder copies the retained
-English package and patches only translated document content, metadata and three
-media PNGs; every other package part remains byte-for-byte identical. Separate
-audits verify all 1,233 aligned Markdown lines, table cells, technical literals,
-native equations and frozen English/scientific hashes. All 41 final pages were
-rendered through read-only Word export and packaged render_docx.py with bundled
-PDFium, then inspected. Added independent translation provenance, build instructions
-and navigation. English article, DOCX, figures and publication manifest unchanged.
-No new experiment, model change or website interaction change. Project outputs,
-temporary figures, renders and npm cache stay on D; runtime use may still touch C.
+Elmar requested that the Turkish article not remain in the repository. Removed
+the twelve translation-specific artifacts and helpers from tracking, preserved
+their D-drive working files unchanged, added exact ignore paths and restored
+public article navigation to the English edition. The English article, evidence
+and bilingual app/site are unchanged. Earlier commits are retained in history;
+this removes the personal edition from the current published tree.
 
 ## October 14, 2026 — prospective replication on 100 unseen seeds
 

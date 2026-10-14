@@ -13,6 +13,10 @@ An interactive, deterministic artificial-life sandbox created with Elmar.
 - Keep exports user-initiated. No analytics, external services or credentials.
 - Git operations are authorized for this project, including private repository creation.
 - Commit completed, coherent units frequently; Elmar explicitly requested shorter commit intervals.
+- The Turkish article reading edition is personal and local-only. Keep its
+  Markdown, DOCX, translated figures and authoring helpers outside Git tracking;
+  do not publish them or add public download links. This does not affect the
+  bilingual application and case study.
 - Do not change repository visibility or publish hosting without a user request.
 - Elmar explicitly authorized public visibility and GitHub Pages publication on
   October 14, 2026. Keep the simulation engine and frozen scientific evidence

@@ -7,3 +7,17 @@ node_modules/
 coverage/
 .DS_Store
 Thumbs.db
+
+# Personal Turkish reading edition stays local and is never published.
+/docs/article/morrow-article.tr.md
+/docs/article/morrow-article.tr.docx
+/docs/article/figures/population.tr.svg
+/docs/article/figures/population.tr.png
+/docs/article/figures/share-interaction.tr.svg
+/docs/article/figures/share-interaction.tr.png
+/docs/article/figures/replication-interactions.tr.svg
+/docs/article/figures/replication-interactions.tr.png
+/scripts/build-turkish-article.py
+/scripts/check-turkish-article.py
+/docs/article/requirements-tr.txt
+/docs/article/turkish-translation-manifest.json
