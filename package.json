@@ -11,6 +11,7 @@
     "test": "node --test",
     "check": "node scripts/check.mjs",
     "experiment": "node scripts/experiment.mjs",
-    "analyze": "node scripts/analyze-batch.mjs"
+    "analyze": "node scripts/analyze-batch.mjs",
+    "experiment:thrift": "node scripts/thrift-experiment.mjs"
   }
 }
