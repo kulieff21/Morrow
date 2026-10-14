@@ -101,6 +101,9 @@ function drawReplay() {
 function renderReplication() {
   if (!replication) return;
   const select = $('replication-seed');
+  select.disabled = false;
+  $('replication-negative').disabled = false;
+  $('replication-positive').disabled = false;
   if (!select.options.length) for (const run of replication.runs) {
     const option = document.createElement('option'); option.value = run.seed; option.textContent = run.seed;
     select.append(option);
