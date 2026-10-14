@@ -3,9 +3,10 @@ import assert from 'node:assert/strict';
 import { readFile } from 'node:fs/promises';
 import { World } from '../src/engine.js';
 import { createThriftCheckpoint, forkThriftWorlds, runThriftSeed, stateHash, ARMS } from '../scripts/thrift-experiment.mjs';
-import { factorialEffects, summarizeEffects } from '../scripts/analyze-thrift.mjs';
+import { factorialEffects, summarizeEffects, analyzeThriftBatch, readThriftReport, renderThriftMarkdown } from '../scripts/analyze-thrift.mjs';
 
 const reference = JSON.parse(await readFile(new URL('../docs/initial-batch.json', import.meta.url), 'utf8'));
+const raw = JSON.parse(await readFile(new URL('../docs/thrift-raw.json', import.meta.url), 'utf8'));
 
 test('four clones differ only in declared resource setting and existing Ciy thrift', () => {
   const checkpoint = createThriftCheckpoint(4217), original = structuredClone(checkpoint);
@@ -74,4 +75,47 @@ test('intervention refuses a different time or environment and supports no remai
   const { worlds, edits } = forkThriftWorlds(checkpoint);
   assert.equal(edits.length, 0);
   assert.deepEqual(worlds.naturalAbundance.snapshot(), worlds.normalizedAbundance.snapshot());
+});
+
+test('saved evidence retains all twelve units and both outcome scales', async () => {
+  const report = await readThriftReport();
+  assert.equal(report.sampleSize, 12); assert.equal(report.branchRuns, 48);
+  assert.equal(report.effects.share.interaction.n, 12);
+  assert.equal(report.effects.share.interaction.negative, 8);
+  assert.equal(report.effects.share.interaction.positive, 4);
+  assert.ok(Math.abs(report.effects.share.interaction.mean - (-12.40245970431607)) < 1e-10);
+  assert.equal(report.effects.count.interaction.mean, 6.5);
+  assert.equal(report.arms.normalizedDrought.targetExtinctions, 4);
+  const markdown = renderThriftMarkdown(report);
+  assert.match(markdown, /\*\*12\*\*, not 48 independent units/);
+  assert.match(markdown, /\*\*\+6\.50 organisms\*\*/);
+});
+
+test('raw analysis rejects altered checkpoints, gene edits, replay outcomes and seed order', () => {
+  for (const mutate of [
+    (batch) => { batch.runs[0].checkpoint.agents[0].energy++; },
+    (batch) => { batch.runs[0].edits[0].after = 1.1; },
+    (batch) => { batch.runs[0].startSha256.naturalDrought = '0'.repeat(64); },
+    (batch) => { batch.runs[0].final.naturalAbundance.stats.population++; },
+    (batch) => { batch.runs[0].final.normalizedAbundance.stats.population++; },
+    (batch) => { batch.runs[1].seed = batch.runs[0].seed; },
+    (batch) => { batch.protocol.normalizedThrift = 0.9; },
+  ]) {
+    const batch = structuredClone(raw); mutate(batch);
+    assert.throws(() => analyzeThriftBatch(batch, reference));
+  }
+});
+
+test('extinct treated world produces undefined share interaction but defined count contrast', () => {
+  const batch = structuredClone(raw);
+  const stats = batch.runs[0].final.normalizedDrought.stats;
+  stats.population = 0;
+  stats.lineages.forEach((row) => { row.count = 0; row.thriftSum = 0; });
+  const report = analyzeThriftBatch(batch, reference);
+  assert.equal(report.runs[0].share.interaction, null);
+  assert.notEqual(report.runs[0].count.interaction, null);
+  assert.equal(report.effects.share.interaction.n, 11);
+  assert.equal(report.effects.share.interaction.undefined, 1);
+  assert.equal(report.effects.count.interaction.n, 12);
+  assert.equal(report.arms.normalizedDrought.wholeWorldExtinctions, 1);
 });

@@ -1,0 +1,646 @@
+{
+  "source": {
+    "path": "docs/thrift-raw.json",
+    "sha256": "88a55655488c95447dc283a4af58b42151578e7062441a5b19cb152ad473d9c8"
+  },
+  "analysisVersion": 1,
+  "model": "morrow-0.1",
+  "protocolCommit": "4352cde6c77044e0fc1242ae66757940c1421403",
+  "protocol": {
+    "warmupDays": 8,
+    "branchDays": 8,
+    "mutation": 0.08,
+    "seasons": false,
+    "abundanceResources": 1,
+    "droughtResources": 0.15,
+    "targetLineage": 1,
+    "targetName": "Çiy",
+    "normalizedThrift": 1,
+    "timing": "Once at the day-8 checkpoint; descendants mutate normally."
+  },
+  "executionRevision": "eceb3c6166f798688bde2cef23472f219861de7a",
+  "sampleSize": 12,
+  "branchRuns": 48,
+  "definition": "Normalization effect = normalized - natural; interaction = effect_drought - effect_abundance. Negative share interaction is the predicted direction.",
+  "arms": {
+    "naturalAbundance": {
+      "meanPopulation": 147.33333333333334,
+      "meanCount": 26.666666666666668,
+      "meanSharePercent": 17.913139663304065,
+      "comparableShares": 12,
+      "targetExtinctions": 0,
+      "wholeWorldExtinctions": 0
+    },
+    "naturalDrought": {
+      "meanPopulation": 13.5,
+      "meanCount": 4.666666666666667,
+      "meanSharePercent": 33.41966695585116,
+      "comparableShares": 12,
+      "targetExtinctions": 0,
+      "wholeWorldExtinctions": 0
+    },
+    "normalizedAbundance": {
+      "meanPopulation": 141.83333333333334,
+      "meanCount": 17.75,
+      "meanSharePercent": 12.456695178414089,
+      "comparableShares": 12,
+      "targetExtinctions": 0,
+      "wholeWorldExtinctions": 0
+    },
+    "normalizedDrought": {
+      "meanPopulation": 13,
+      "meanCount": 2.25,
+      "meanSharePercent": 15.560762766645114,
+      "comparableShares": 12,
+      "targetExtinctions": 4,
+      "wholeWorldExtinctions": 0
+    }
+  },
+  "effects": {
+    "count": {
+      "abundance": {
+        "n": 12,
+        "undefined": 0,
+        "mean": -8.916666666666666,
+        "median": -10,
+        "range": [
+          -23,
+          2
+        ],
+        "negative": 10,
+        "zero": 0,
+        "positive": 2
+      },
+      "drought": {
+        "n": 12,
+        "undefined": 0,
+        "mean": -2.4166666666666665,
+        "median": -2.5,
+        "range": [
+          -8,
+          0
+        ],
+        "negative": 7,
+        "zero": 5,
+        "positive": 0
+      },
+      "interaction": {
+        "n": 12,
+        "undefined": 0,
+        "mean": 6.5,
+        "median": 8,
+        "range": [
+          -7,
+          23
+        ],
+        "negative": 3,
+        "zero": 0,
+        "positive": 9
+      }
+    },
+    "share": {
+      "abundance": {
+        "n": 12,
+        "undefined": 0,
+        "mean": -5.456444484889976,
+        "median": -5.49674548382611,
+        "range": [
+          -13.85706492089471,
+          1.1616161616161609
+        ],
+        "negative": 10,
+        "zero": 0,
+        "positive": 2
+      },
+      "drought": {
+        "n": 12,
+        "undefined": 0,
+        "mean": -17.85890418920605,
+        "median": -13.001508295625944,
+        "range": [
+          -61.53846153846154,
+          6.666666666666661
+        ],
+        "negative": 11,
+        "zero": 0,
+        "positive": 1
+      },
+      "interaction": {
+        "n": 12,
+        "undefined": 0,
+        "mean": -12.40245970431607,
+        "median": -6.899815934382165,
+        "range": [
+          -57.73238594679782,
+          12.473118279569887
+        ],
+        "negative": 8,
+        "zero": 0,
+        "positive": 4
+      }
+    }
+  },
+  "runs": [
+    {
+      "seed": 4217,
+      "editedOrganisms": 17,
+      "checkpointMeanThrift": 1.3482318830879072,
+      "arms": {
+        "naturalAbundance": {
+          "population": 139,
+          "count": 8,
+          "sharePercent": 5.755395683453238,
+          "meanThrift": 1.3251398741174492
+        },
+        "naturalDrought": {
+          "population": 14,
+          "count": 4,
+          "sharePercent": 28.57142857142857,
+          "meanThrift": 1.4251687010796743
+        },
+        "normalizedAbundance": {
+          "population": 141,
+          "count": 9,
+          "sharePercent": 6.382978723404255,
+          "meanThrift": 1.0022430061383383
+        },
+        "normalizedDrought": {
+          "population": 16,
+          "count": 0,
+          "sharePercent": 0,
+          "meanThrift": null
+        }
+      },
+      "count": {
+        "abundance": 1,
+        "drought": -4,
+        "interaction": -5
+      },
+      "share": {
+        "abundance": 0.6275830399510172,
+        "drought": -28.57142857142857,
+        "interaction": -29.199011611379586
+      }
+    },
+    {
+      "seed": 4218,
+      "editedOrganisms": 16,
+      "checkpointMeanThrift": 1.3108224073325982,
+      "arms": {
+        "naturalAbundance": {
+          "population": 149,
+          "count": 15,
+          "sharePercent": 10.06711409395973,
+          "meanThrift": 1.2832169995363805
+        },
+        "naturalDrought": {
+          "population": 13,
+          "count": 7,
+          "sharePercent": 53.84615384615385,
+          "meanThrift": 1.3259362640803947
+        },
+        "normalizedAbundance": {
+          "population": 140,
+          "count": 13,
+          "sharePercent": 9.285714285714286,
+          "meanThrift": 0.9890504984786876
+        },
+        "normalizedDrought": {
+          "population": 17,
+          "count": 7,
+          "sharePercent": 41.17647058823529,
+          "meanThrift": 1.0218219698805895
+        }
+      },
+      "count": {
+        "abundance": -2,
+        "drought": 0,
+        "interaction": 2
+      },
+      "share": {
+        "abundance": -0.7813998082454443,
+        "drought": -12.669683257918557,
+        "interaction": -11.888283449673112
+      }
+    },
+    {
+      "seed": 4219,
+      "editedOrganisms": 43,
+      "checkpointMeanThrift": 1.3441342797613336,
+      "arms": {
+        "naturalAbundance": {
+          "population": 153,
+          "count": 47,
+          "sharePercent": 30.718954248366014,
+          "meanThrift": 1.3591020911563425
+        },
+        "naturalDrought": {
+          "population": 19,
+          "count": 9,
+          "sharePercent": 47.368421052631575,
+          "meanThrift": 1.3525320528395888
+        },
+        "normalizedAbundance": {
+          "population": 141,
+          "count": 36,
+          "sharePercent": 25.53191489361702,
+          "meanThrift": 1.003203591235603
+        },
+        "normalizedDrought": {
+          "population": 14,
+          "count": 5,
+          "sharePercent": 35.714285714285715,
+          "meanThrift": 1.0428577077016234
+        }
+      },
+      "count": {
+        "abundance": -11,
+        "drought": -4,
+        "interaction": 7
+      },
+      "share": {
+        "abundance": -5.187039354748993,
+        "drought": -11.65413533834586,
+        "interaction": -6.467095983596867
+      }
+    },
+    {
+      "seed": 4220,
+      "editedOrganisms": 29,
+      "checkpointMeanThrift": 1.3116119603459437,
+      "arms": {
+        "naturalAbundance": {
+          "population": 155,
+          "count": 32,
+          "sharePercent": 20.64516129032258,
+          "meanThrift": 1.3260201612475795
+        },
+        "naturalDrought": {
+          "population": 15,
+          "count": 4,
+          "sharePercent": 26.666666666666668,
+          "meanThrift": 1.3134999752696606
+        },
+        "normalizedAbundance": {
+          "population": 155,
+          "count": 23,
+          "sharePercent": 14.838709677419354,
+          "meanThrift": 1.0163976418745257
+        },
+        "normalizedDrought": {
+          "population": 12,
+          "count": 4,
+          "sharePercent": 33.33333333333333,
+          "meanThrift": 0.9910616368055345
+        }
+      },
+      "count": {
+        "abundance": -9,
+        "drought": 0,
+        "interaction": 9
+      },
+      "share": {
+        "abundance": -5.806451612903226,
+        "drought": 6.666666666666661,
+        "interaction": 12.473118279569887
+      }
+    },
+    {
+      "seed": 4221,
+      "editedOrganisms": 22,
+      "checkpointMeanThrift": 1.3269539933994583,
+      "arms": {
+        "naturalAbundance": {
+          "population": 136,
+          "count": 20,
+          "sharePercent": 14.705882352941178,
+          "meanThrift": 1.3289808088638824
+        },
+        "naturalDrought": {
+          "population": 12,
+          "count": 1,
+          "sharePercent": 8.333333333333332,
+          "meanThrift": 1.300601982176304
+        },
+        "normalizedAbundance": {
+          "population": 142,
+          "count": 7,
+          "sharePercent": 4.929577464788732,
+          "meanThrift": 1.0065604329428504
+        },
+        "normalizedDrought": {
+          "population": 17,
+          "count": 1,
+          "sharePercent": 5.88235294117647,
+          "meanThrift": 1
+        }
+      },
+      "count": {
+        "abundance": -13,
+        "drought": 0,
+        "interaction": 13
+      },
+      "share": {
+        "abundance": -9.776304888152445,
+        "drought": -2.450980392156862,
+        "interaction": 7.325324495995583
+      }
+    },
+    {
+      "seed": 4222,
+      "editedOrganisms": 39,
+      "checkpointMeanThrift": 1.380305130029193,
+      "arms": {
+        "naturalAbundance": {
+          "population": 149,
+          "count": 39,
+          "sharePercent": 26.174496644295303,
+          "meanThrift": 1.401518304712163
+        },
+        "naturalDrought": {
+          "population": 13,
+          "count": 8,
+          "sharePercent": 61.53846153846154,
+          "meanThrift": 1.3331654881301802
+        },
+        "normalizedAbundance": {
+          "population": 152,
+          "count": 34,
+          "sharePercent": 22.36842105263158,
+          "meanThrift": 0.9936958547341914
+        },
+        "normalizedDrought": {
+          "population": 7,
+          "count": 0,
+          "sharePercent": 0,
+          "meanThrift": null
+        }
+      },
+      "count": {
+        "abundance": -5,
+        "drought": -8,
+        "interaction": -3
+      },
+      "share": {
+        "abundance": -3.806075591663724,
+        "drought": -61.53846153846154,
+        "interaction": -57.73238594679782
+      }
+    },
+    {
+      "seed": 4223,
+      "editedOrganisms": 16,
+      "checkpointMeanThrift": 1.3586275188747097,
+      "arms": {
+        "naturalAbundance": {
+          "population": 147,
+          "count": 20,
+          "sharePercent": 13.60544217687075,
+          "meanThrift": 1.3504018212258817
+        },
+        "naturalDrought": {
+          "population": 10,
+          "count": 1,
+          "sharePercent": 10,
+          "meanThrift": 1.484789305413142
+        },
+        "normalizedAbundance": {
+          "population": 137,
+          "count": 14,
+          "sharePercent": 10.218978102189782,
+          "meanThrift": 0.975809560686882
+        },
+        "normalizedDrought": {
+          "population": 14,
+          "count": 1,
+          "sharePercent": 7.142857142857142,
+          "meanThrift": 0.9204576503112912
+        }
+      },
+      "count": {
+        "abundance": -6,
+        "drought": 0,
+        "interaction": 6
+      },
+      "share": {
+        "abundance": -3.3864640746809673,
+        "drought": -2.8571428571428577,
+        "interaction": 0.5293212175381097
+      }
+    },
+    {
+      "seed": 4224,
+      "editedOrganisms": 22,
+      "checkpointMeanThrift": 1.3637389126051727,
+      "arms": {
+        "naturalAbundance": {
+          "population": 148,
+          "count": 31,
+          "sharePercent": 20.945945945945947,
+          "meanThrift": 1.3672399639461432
+        },
+        "naturalDrought": {
+          "population": 16,
+          "count": 5,
+          "sharePercent": 31.25,
+          "meanThrift": 1.3480357704404742
+        },
+        "normalizedAbundance": {
+          "population": 144,
+          "count": 15,
+          "sharePercent": 10.416666666666668,
+          "meanThrift": 0.9983301539868117
+        },
+        "normalizedDrought": {
+          "population": 13,
+          "count": 2,
+          "sharePercent": 15.384615384615385,
+          "meanThrift": 0.9919284330308438
+        }
+      },
+      "count": {
+        "abundance": -16,
+        "drought": -3,
+        "interaction": 13
+      },
+      "share": {
+        "abundance": -10.52927927927928,
+        "drought": -15.865384615384615,
+        "interaction": -5.336105336105335
+      }
+    },
+    {
+      "seed": 4225,
+      "editedOrganisms": 19,
+      "checkpointMeanThrift": 1.3321845642491983,
+      "arms": {
+        "naturalAbundance": {
+          "population": 152,
+          "count": 22,
+          "sharePercent": 14.473684210526317,
+          "meanThrift": 1.3704489277751952
+        },
+        "naturalDrought": {
+          "population": 12,
+          "count": 3,
+          "sharePercent": 25,
+          "meanThrift": 1.3405664060854665
+        },
+        "normalizedAbundance": {
+          "population": 142,
+          "count": 9,
+          "sharePercent": 6.338028169014084,
+          "meanThrift": 1.000768311470747
+        },
+        "normalizedDrought": {
+          "population": 13,
+          "count": 0,
+          "sharePercent": 0,
+          "meanThrift": null
+        }
+      },
+      "count": {
+        "abundance": -13,
+        "drought": -3,
+        "interaction": 10
+      },
+      "share": {
+        "abundance": -8.135656041512233,
+        "drought": -25,
+        "interaction": -16.864343958487765
+      }
+    },
+    {
+      "seed": 4226,
+      "editedOrganisms": 30,
+      "checkpointMeanThrift": 1.385420276389768,
+      "arms": {
+        "naturalAbundance": {
+          "population": 156,
+          "count": 36,
+          "sharePercent": 23.076923076923077,
+          "meanThrift": 1.3813870177112728
+        },
+        "naturalDrought": {
+          "population": 10,
+          "count": 3,
+          "sharePercent": 30,
+          "meanThrift": 1.4244807697553188
+        },
+        "normalizedAbundance": {
+          "population": 141,
+          "count": 13,
+          "sharePercent": 9.219858156028367,
+          "meanThrift": 1.0159468304451844
+        },
+        "normalizedDrought": {
+          "population": 14,
+          "count": 3,
+          "sharePercent": 21.428571428571427,
+          "meanThrift": 1.010650304282705
+        }
+      },
+      "count": {
+        "abundance": -23,
+        "drought": 0,
+        "interaction": 23
+      },
+      "share": {
+        "abundance": -13.85706492089471,
+        "drought": -8.571428571428573,
+        "interaction": 5.285636349466136
+      }
+    },
+    {
+      "seed": 4227,
+      "editedOrganisms": 19,
+      "checkpointMeanThrift": 1.3428669527192652,
+      "arms": {
+        "naturalAbundance": {
+          "population": 132,
+          "count": 19,
+          "sharePercent": 14.393939393939394,
+          "meanThrift": 1.352994541202819
+        },
+        "naturalDrought": {
+          "population": 13,
+          "count": 5,
+          "sharePercent": 38.46153846153847,
+          "meanThrift": 1.3497304805945607
+        },
+        "normalizedAbundance": {
+          "population": 135,
+          "count": 21,
+          "sharePercent": 15.555555555555555,
+          "meanThrift": 0.9981734405404755
+        },
+        "normalizedDrought": {
+          "population": 4,
+          "count": 0,
+          "sharePercent": 0,
+          "meanThrift": null
+        }
+      },
+      "count": {
+        "abundance": 2,
+        "drought": -5,
+        "interaction": -7
+      },
+      "share": {
+        "abundance": 1.1616161616161609,
+        "drought": -38.46153846153847,
+        "interaction": -39.623154623154626
+      }
+    },
+    {
+      "seed": 4228,
+      "editedOrganisms": 23,
+      "checkpointMeanThrift": 1.3632347164416443,
+      "arms": {
+        "naturalAbundance": {
+          "population": 152,
+          "count": 31,
+          "sharePercent": 20.394736842105264,
+          "meanThrift": 1.3652564832748422
+        },
+        "naturalDrought": {
+          "population": 15,
+          "count": 6,
+          "sharePercent": 40,
+          "meanThrift": 1.364953843642337
+        },
+        "normalizedAbundance": {
+          "population": 132,
+          "count": 19,
+          "sharePercent": 14.393939393939394,
+          "meanThrift": 0.9899624965594785
+        },
+        "normalizedDrought": {
+          "population": 15,
+          "count": 4,
+          "sharePercent": 26.666666666666668,
+          "meanThrift": 1.0090049224998803
+        }
+      },
+      "count": {
+        "abundance": -12,
+        "drought": -2,
+        "interaction": 10
+      },
+      "share": {
+        "abundance": -6.000797448165869,
+        "drought": -13.333333333333332,
+        "interaction": -7.332535885167463
+      }
+    }
+  ],
+  "limitations": [
+    "Twelve reused seeds and a hypothesis chosen from their earlier outcomes; no held-out replication or biological inference.",
+    "Thrift is changed once at day 8; descendant mutation remains active.",
+    "Changing thrift affects energy, movement, reproduction and lifespan, and removes checkpoint thrift variation within the treated lineage.",
+    "Branch random draws diverge; these are full modeled intervention effects, not coupled environmental random sequences.",
+    "A share effect is relative to the other lineages and is reported beside absolute counts.",
+    "Final-state hashes are provenance; confirming their contents requires the full replay command.",
+    "The one fixed follow-up horizon and trait target do not establish universal necessity, sufficiency or a general gene effect."
+  ]
+}

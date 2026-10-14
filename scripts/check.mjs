@@ -3,6 +3,7 @@ import { spawnSync } from 'node:child_process';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { readAnalysis, renderMarkdown } from './analyze-batch.mjs';
+import { checkThriftArtifacts } from './analyze-thrift.mjs';
 
 const root = path.dirname(path.dirname(fileURLToPath(import.meta.url)));
 const files = ['server.mjs'];
@@ -38,3 +39,5 @@ for (const [filename, expected] of [
   }
 }
 console.log('Paired analysis artifacts match the frozen input.');
+await checkThriftArtifacts();
+console.log('Four-arm thrift artifacts match raw evidence and frozen inputs.');
