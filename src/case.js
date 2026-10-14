@@ -80,6 +80,9 @@ function drawReplay() {
   const control = warmup ? replay.warmup : replay.control;
   const drought = warmup ? replay.warmup : replay.drought;
   const ticks = warmup ? replay.elapsedTicks : 960 + replay.elapsedTicks;
+  $('replay-drought-label').textContent = warmup
+    ? tr('Future drought · full renewal until day 8', 'Kıtlık kolu · 8. güne kadar tam yenilenme')
+    : tr('Drought · 15% renewal', 'Kıtlık · %15 yenilenme');
   drawWorld($('replay-control'), control);
   drawWorld($('replay-drought'), drought, { drought: !warmup });
   $('hero-experiment').classList.toggle('forked', !warmup);

@@ -1,5 +1,30 @@
 # Morrow session log
 
+## October 14, 2026 — bilingual website and public Pages release
+
+Elmar authorized an English-default app, Turkish language switching, an animated
+case study, public repository visibility and GitHub Pages. The case study uses
+actual seed-4217 engine replay, paired count/share charts, the twelve-seed
+four-arm evidence explorer and article downloads. The pond is now `pond.html`;
+`index.html` is the case study. Language changes preserve world/experiment state.
+Canonical engine events and lineage identifiers remain unchanged in exports.
+
+Implementation committed as d1f3cee; explicit public build, nested-path tests
+and checked Pages deployment as e6111c2. Final documentation explains current
+public access and the preserved article's historical private status. Original
+lossless README image retained and labeled as the earlier Turkish revision.
+
+Local verification: 35 tests, both-page source/asset checks, complete 48-arm
+replay and seven original article manifest hashes passed. Four scientific source
+and raw-evidence hashes unchanged. Desktop/mobile and both languages inspected
+in the in-app browser; actual endpoints and state-preserving translation checked.
+See docs/web-release.md for precise scope and limitations. Public visibility,
+Pages deployment and live-site delivery are checked after pushing this revision.
+
+No dependency installation, model change or new recorded study. Build/npm cache
+stay under ignored D-drive .local. Runtime writes on C remain possible. The
+user's pre-existing observation server is untouched.
+
 ## October 14, 2026 — complete English research article
 
 Elmar requested a very detailed article, research on modern article writing,

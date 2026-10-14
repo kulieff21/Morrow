@@ -64,5 +64,10 @@ Independent PDF text extraction confirmed those characters remained in the PDF;
 PDFium rendered them correctly. Internal PDFs and page PNGs remain ignored in
 `.local/`. No packaged renderer files were modified.
 
-The article and evidence are in a private repository. This task does not change
-visibility, confer an open-source license or submit the manuscript to a journal.
+The manuscript was finalized while the repository was private. Later on
+14 October 2026, Elmar authorized public visibility and GitHub Pages publication.
+The source and evidence are now at [the public repository](https://github.com/kulieff21/Morrow),
+with the [case study and Word download](https://kulieff21.github.io/Morrow/#article)
+on Pages. The original manuscript and its manifest are preserved byte-for-byte;
+its private-access wording describes the earlier revision. Publication does not
+confer an open-source license or represent peer review or journal acceptance.
