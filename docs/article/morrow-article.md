@@ -447,9 +447,9 @@ Elmar Quliyev authorized the project, its private repository and successive inve
 
 AI assistance is disclosed because substantial software and writing work was AI generated. The assistant is not listed as an accountable scientific author. Consistent with general authorship guidance [6], human review of the final claims, attribution and submission decisions remains necessary before any external submission. This document does not assert that such a submission review has already occurred. Primary evidence is the recorded model computation and cited sources, not the assistant's conversational descriptions.
 
-### 7.2 Ethics funding and interests
+### 7.2 Ethical scope
 
-The experiment uses simulated entities and does not include human participants, animals, clinical data or an external biological dataset. No institutional affiliation, ethics approval, grant support, funding declaration or conflict-of-interest statement has been supplied by the project owner. None is invented here. Any journal submission would require the human author to complete the relevant declarations for that venue.
+The experiment uses simulated entities and does not include human participants, animals, clinical data or an external biological dataset. The private evidence package contains generated world states rather than observations about identifiable people. The scientific claims are restricted to the implemented rules and recorded computational outcomes. Repository access and any external release of the code, data or manuscript remain under the project owner's control.
 
 ## References
 

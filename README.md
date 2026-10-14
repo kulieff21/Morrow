@@ -125,6 +125,15 @@ Analysis reads saved evidence. Replay reruns all four arms and checks the comple
 recorded evidence without replacing it. The browser's original two-arm experiment
 is unchanged; this follow-up runs through the CLI.
 
+## Research article
+
+The complete English [research article](docs/article/morrow-article.md) describes
+the model, all three study stages, equations, every seed endpoint, both outcome
+scales, limitations, references and reproducibility. A formatted
+[Word version](docs/article/morrow-article.docx) accompanies the Markdown.
+See [article tools and build instructions](docs/article/README.md) for the Python
+converter, generated tables and figures, and numerical/document audits.
+
 ## Verify
 
 ```powershell

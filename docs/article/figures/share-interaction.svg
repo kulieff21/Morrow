@@ -3,15 +3,15 @@
   PUBLIC '-//W3C//DTD SVG 1.0//EN'
   'http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd'>
 <svg width="540" height="292" preserveAspectRatio="xMinYMin meet" viewBox="0 0 540 292" xmlns="http://www.w3.org/2000/svg" version="1.0" fill-rule="evenodd" xmlns:xlink="http://www.w3.org/1999/xlink">
-	<title>...</title>
-	<desc>...</desc>
+	<title>Effect of thrift normalization on Ciy share</title>
+	<desc>Interaction = effect in drought minus effect in abundance</desc>
 	<clipPath id="clip">
 		<rect x="0" y="0" width="540" height="292"/>
 	</clipPath>
 	<g id="group" transform="scale(1,-1) translate(0,-292)" style="clip-path: url(#clip)">
 		<g transform="">
-			<text x="12" y="274" style="font-family: Helvetica-Bold; font-size: 13px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,548) scale(1,-1)">Effect of thrift normalization on Ciy share</text>
-			<text x="12" y="255" style="font-family: Helvetica; font-size: 9px;fill: rgb(26%,26%,26%); stroke:none;" transform="translate(0,510) scale(1,-1)">Interaction = effect in drought minus effect in abundance</text>
+			<text x="12" y="274" style="font-family: Arial, sans-serif; font-weight: bold; font-size: 13px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,548) scale(1,-1)">Effect of thrift normalization on Ciy share</text>
+			<text x="12" y="255" style="font-family: Arial, sans-serif; font-size: 9px;fill: rgb(26%,26%,26%); stroke:none;" transform="translate(0,510) scale(1,-1)">Interaction = effect in drought minus effect in abundance</text>
 			<g transform="">
 				<g transform="">
 					<g transform="">
@@ -33,40 +33,40 @@
 					</g>
 					<g transform="">
 						<g transform=" matrix(1,0,0,1,56,52)">
-							<text x="-8.896" y="-8.0" style="font-family: Helvetica; font-size: 8px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,-16) scale(1,-1)">4217</text>
+							<text x="-8.896" y="-8.0" style="font-family: Arial, sans-serif; font-size: 8px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,-16) scale(1,-1)">4217</text>
 						</g>
 						<g transform=" matrix(1,0,0,1,98.272727,52)">
-							<text x="-8.896" y="-8.0" style="font-family: Helvetica; font-size: 8px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,-16) scale(1,-1)">4218</text>
+							<text x="-8.896" y="-8.0" style="font-family: Arial, sans-serif; font-size: 8px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,-16) scale(1,-1)">4218</text>
 						</g>
 						<g transform=" matrix(1,0,0,1,140.545455,52)">
-							<text x="-8.896" y="-8.0" style="font-family: Helvetica; font-size: 8px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,-16) scale(1,-1)">4219</text>
+							<text x="-8.896" y="-8.0" style="font-family: Arial, sans-serif; font-size: 8px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,-16) scale(1,-1)">4219</text>
 						</g>
 						<g transform=" matrix(1,0,0,1,182.818182,52)">
-							<text x="-8.896" y="-8.0" style="font-family: Helvetica; font-size: 8px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,-16) scale(1,-1)">4220</text>
+							<text x="-8.896" y="-8.0" style="font-family: Arial, sans-serif; font-size: 8px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,-16) scale(1,-1)">4220</text>
 						</g>
 						<g transform=" matrix(1,0,0,1,225.090909,52)">
-							<text x="-8.896" y="-8.0" style="font-family: Helvetica; font-size: 8px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,-16) scale(1,-1)">4221</text>
+							<text x="-8.896" y="-8.0" style="font-family: Arial, sans-serif; font-size: 8px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,-16) scale(1,-1)">4221</text>
 						</g>
 						<g transform=" matrix(1,0,0,1,267.363636,52)">
-							<text x="-8.896" y="-8.0" style="font-family: Helvetica; font-size: 8px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,-16) scale(1,-1)">4222</text>
+							<text x="-8.896" y="-8.0" style="font-family: Arial, sans-serif; font-size: 8px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,-16) scale(1,-1)">4222</text>
 						</g>
 						<g transform=" matrix(1,0,0,1,309.636364,52)">
-							<text x="-8.896" y="-8.0" style="font-family: Helvetica; font-size: 8px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,-16) scale(1,-1)">4223</text>
+							<text x="-8.896" y="-8.0" style="font-family: Arial, sans-serif; font-size: 8px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,-16) scale(1,-1)">4223</text>
 						</g>
 						<g transform=" matrix(1,0,0,1,351.909091,52)">
-							<text x="-8.896" y="-8.0" style="font-family: Helvetica; font-size: 8px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,-16) scale(1,-1)">4224</text>
+							<text x="-8.896" y="-8.0" style="font-family: Arial, sans-serif; font-size: 8px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,-16) scale(1,-1)">4224</text>
 						</g>
 						<g transform=" matrix(1,0,0,1,394.181818,52)">
-							<text x="-8.896" y="-8.0" style="font-family: Helvetica; font-size: 8px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,-16) scale(1,-1)">4225</text>
+							<text x="-8.896" y="-8.0" style="font-family: Arial, sans-serif; font-size: 8px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,-16) scale(1,-1)">4225</text>
 						</g>
 						<g transform=" matrix(1,0,0,1,436.454545,52)">
-							<text x="-8.896" y="-8.0" style="font-family: Helvetica; font-size: 8px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,-16) scale(1,-1)">4226</text>
+							<text x="-8.896" y="-8.0" style="font-family: Arial, sans-serif; font-size: 8px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,-16) scale(1,-1)">4226</text>
 						</g>
 						<g transform=" matrix(1,0,0,1,478.727273,52)">
-							<text x="-8.896" y="-8.0" style="font-family: Helvetica; font-size: 8px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,-16) scale(1,-1)">4227</text>
+							<text x="-8.896" y="-8.0" style="font-family: Arial, sans-serif; font-size: 8px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,-16) scale(1,-1)">4227</text>
 						</g>
 						<g transform=" matrix(1,0,0,1,521,52)">
-							<text x="-8.896" y="-8.0" style="font-family: Helvetica; font-size: 8px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,-16) scale(1,-1)">4228</text>
+							<text x="-8.896" y="-8.0" style="font-family: Arial, sans-serif; font-size: 8px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,-16) scale(1,-1)">4228</text>
 						</g>
 					</g>
 				</g>
@@ -83,19 +83,19 @@
 					</g>
 					<g transform="">
 						<g transform=" matrix(1,0,0,1,51,57)">
-							<text x="-11.56" y="-3.2" style="font-family: Helvetica; font-size: 8px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,-6) scale(1,-1)">-60</text>
+							<text x="-11.56" y="-3.2" style="font-family: Arial, sans-serif; font-size: 8px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,-6) scale(1,-1)">-60</text>
 						</g>
 						<g transform=" matrix(1,0,0,1,51,101.25)">
-							<text x="-11.56" y="-3.2" style="font-family: Helvetica; font-size: 8px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,-6) scale(1,-1)">-40</text>
+							<text x="-11.56" y="-3.2" style="font-family: Arial, sans-serif; font-size: 8px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,-6) scale(1,-1)">-40</text>
 						</g>
 						<g transform=" matrix(1,0,0,1,51,145.5)">
-							<text x="-11.56" y="-3.2" style="font-family: Helvetica; font-size: 8px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,-6) scale(1,-1)">-20</text>
+							<text x="-11.56" y="-3.2" style="font-family: Arial, sans-serif; font-size: 8px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,-6) scale(1,-1)">-20</text>
 						</g>
 						<g transform=" matrix(1,0,0,1,51,189.75)">
-							<text x="-4.448" y="-3.2" style="font-family: Helvetica; font-size: 8px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,-6) scale(1,-1)">0</text>
+							<text x="-4.448" y="-3.2" style="font-family: Arial, sans-serif; font-size: 8px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,-6) scale(1,-1)">0</text>
 						</g>
 						<g transform=" matrix(1,0,0,1,51,234)">
-							<text x="-8.896" y="-3.2" style="font-family: Helvetica; font-size: 8px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,-6) scale(1,-1)">20</text>
+							<text x="-8.896" y="-3.2" style="font-family: Arial, sans-serif; font-size: 8px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,-6) scale(1,-1)">20</text>
 						</g>
 					</g>
 				</g>
@@ -142,11 +142,11 @@
 					<circle cx="521.0" cy="162.3095579042007" r="2.2" style="stroke: rgb(64%,29%,9%); stroke-linecap: butt; stroke-width: 0.1; fill: rgb(64%,29%,9%); fill-rule: evenodd;"/>
 				</g>
 			</g>
-			<text x="274.4925" y="30" style="font-family: Helvetica; font-size: 9px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,60) scale(1,-1)">Seed</text>
-			<text x="56" y="240" style="font-family: Helvetica; font-size: 9px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,480) scale(1,-1)">Percentage points</text>
-			<text x="56" y="10" style="font-family: Helvetica; font-size: 8px;fill: rgb(9%,29%,43%); stroke:none;" transform="translate(0,20) scale(1,-1)">Individual seed interaction</text>
-			<text x="228" y="10" style="font-family: Helvetica; font-size: 8px;fill: rgb(46%,46%,46%); stroke:none;" transform="translate(0,20) scale(1,-1)">Zero interaction</text>
-			<text x="400" y="10" style="font-family: Helvetica; font-size: 8px;fill: rgb(64%,29%,9%); stroke:none;" transform="translate(0,20) scale(1,-1)">Mean interaction</text>
+			<text x="274.4925" y="30" style="font-family: Arial, sans-serif; font-size: 9px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,60) scale(1,-1)">Seed</text>
+			<text x="56" y="240" style="font-family: Arial, sans-serif; font-size: 9px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,480) scale(1,-1)">Percentage points</text>
+			<text x="56" y="10" style="font-family: Arial, sans-serif; font-size: 8px;fill: rgb(9%,29%,43%); stroke:none;" transform="translate(0,20) scale(1,-1)">Individual seed interaction</text>
+			<text x="228" y="10" style="font-family: Arial, sans-serif; font-size: 8px;fill: rgb(46%,46%,46%); stroke:none;" transform="translate(0,20) scale(1,-1)">Zero interaction</text>
+			<text x="400" y="10" style="font-family: Arial, sans-serif; font-size: 8px;fill: rgb(64%,29%,9%); stroke:none;" transform="translate(0,20) scale(1,-1)">Mean interaction</text>
 		</g>
 	</g>
 </svg>

@@ -13,6 +13,7 @@ import argparse
 from pathlib import Path
 import re
 import sys
+from datetime import datetime, timezone
 from docx import Document
 from docx.enum.text import WD_ALIGN_PARAGRAPH
 from docx.oxml import OxmlElement
@@ -225,6 +226,9 @@ def convert(source, output):
     document.core_properties.author = 'Prepared for Elmar Quliyev'
     document.core_properties.subject = 'Paired artificial life experiments and targeted thrift intervention'
     document.core_properties.keywords = 'Morrow, simulation, reproducibility, artificial life'
+    document.core_properties.created = datetime.now(timezone.utc)
+    document.core_properties.modified = document.core_properties.created
+    document.core_properties.last_modified_by = 'Codex'
     i = 0
     introductory = 0
     stats = {'tables': 0, 'figures': 0, 'equations': 0, 'paragraphs': 0}

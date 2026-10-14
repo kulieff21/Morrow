@@ -1,5 +1,33 @@
 # Morrow session log
 
+## October 14, 2026 — complete English research article
+
+Elmar requested a very detailed article, research on modern article writing,
+Markdown, a Python converter and Word output, then explicitly chose English for
+the entire article. Researched primary ICMJE, ODD, simulation reporting,
+reproducibility and FAIR sources before drafting. Preserved the distinction
+between original exploratory results, post hoc analysis and the fixed follow-up.
+
+Created the complete manuscript with all model rules, equations, protocol timing,
+estimands, both outcome scales, every seed endpoint, mechanism limits, private
+access and AI-assistance disclosure. Final Word output has 24 pages, 21 tables,
+two data-derived figures and ten native editable equations. Added the reusable
+Markdown converter, evidence builder, article audit and authoring requirements.
+No additional scientific experiment or model/UI change was made.
+
+Published research as 8772fb2, manuscript/evidence as b9cc5be and converter/audit as
+7f4c860; each passed CI. This final delivery commit adds the reviewed DOCX,
+navigation, artifact manifest and verification notes. All 21 Word/Markdown
+tables and hand-written summary values pass the independent article audit.
+All 24 final pages visually reviewed. Used bundled authoring dependencies and
+read-only Word PDF export because the Windows bundle has no LibreOffice;
+bundled PDFium resolved a Poppler QA glyph-rendering defect. See article README
+and verification notes for exact reproduction and renderer limitations.
+
+No installs or external publication; repository remains private. New artifact
+and ignored QA files are on D; Windows runtime/session/Word activity can still
+touch C. npm cache remains project-local. No cleanup or app server change.
+
 ## October 14, 2026 — four-arm Çiy thrift experiment
 
 Elmar authorized the proposed targeted intervention. Fixed the protocol before

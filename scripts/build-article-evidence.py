@@ -12,6 +12,7 @@ import argparse
 import os
 import subprocess
 import tempfile
+from html import escape
 from reportlab.graphics.shapes import Drawing, String
 from reportlab.graphics.charts.lineplots import LinePlot
 from reportlab.graphics.widgets.markers import makeMarker
@@ -68,12 +69,20 @@ def plot(name, title, subtitle, data, x_min, x_max, x_step, y_min, y_max,
     for i, (label, color) in enumerate(zip(labels, colors)):
         drawing.add(String(56 + i * 172, 10, label, fontName='Helvetica', fontSize=8,
                            fillColor=HexColor(color)))
-    renderSVG.drawToFile(drawing, str(FIG / f'{name}.svg'))
+    svg_path = FIG / f'{name}.svg'
+    renderSVG.drawToFile(drawing, str(svg_path))
+    svg = svg_path.read_text(encoding='utf-8')
+    svg = svg.replace('<title>...</title>', f'<title>{escape(title)}</title>')
+    svg = svg.replace('<desc>...</desc>', f'<desc>{escape(subtitle)}</desc>')
+    svg = svg.replace('font-family: Helvetica-Bold;', 'font-family: Arial, sans-serif; font-weight: bold;')
+    svg = svg.replace('font-family: Helvetica;', 'font-family: Arial, sans-serif;')
+    svg_path.write_text(svg, encoding='utf-8', newline='\n')
     if POPPLER:
         local = ROOT / '.local/article-figures'
         local.mkdir(parents=True, exist_ok=True)
         with tempfile.TemporaryDirectory(dir=local, prefix='plot-') as temp:
             folder = Path(temp)
+            assert folder.resolve().is_relative_to(ROOT)
             renderPDF.drawToFile(drawing, str(folder / 'figure.pdf'))
             # Relative ASCII paths accommodate Windows Poppler's output encoding.
             subprocess.run([str(POPPLER), '-png', '-singlefile', '-r', '360',

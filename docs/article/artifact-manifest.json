@@ -1,0 +1,45 @@
+{
+  "date": "2026-10-14",
+  "language": "English",
+  "wordPages": 24,
+  "tables": 21,
+  "figures": 2,
+  "nativeMathExpressions": 10,
+  "files": [
+    {
+      "path": "docs/article/morrow-article.md",
+      "bytes": 67084,
+      "sha256": "c7da73b22601b66b60aa3573c0c867d267b54ede309c81a3619ea24f06dad631"
+    },
+    {
+      "path": "docs/article/morrow-article.docx",
+      "bytes": 222433,
+      "sha256": "4d85ec459bbeaa88037146345336ad0cd87ae2ae67b0f2a422c7c09956a7961d"
+    },
+    {
+      "path": "docs/article/figures/population.png",
+      "bytes": 90883,
+      "sha256": "b656b0977a3df0243545c534d25073edc06fb27c3bd1683ce59257de1792aad9"
+    },
+    {
+      "path": "docs/article/figures/share-interaction.png",
+      "bytes": 94410,
+      "sha256": "c10ea778ae6db5e57865208ff25fc0dd742f9eb8490b2e9ea3a9799bab56ab0f"
+    },
+    {
+      "path": "scripts/md-to-docx.py",
+      "bytes": 14443,
+      "sha256": "8c9267dd3963a445b115d26ef2e794968de0f0a24ae573a1b840baff15b4fc57"
+    },
+    {
+      "path": "scripts/build-article-evidence.py",
+      "bytes": 10172,
+      "sha256": "33e1bc290a6d08931e77839f4e3492365dd0f65fc8d9392212a5d535e8c61a63"
+    },
+    {
+      "path": "scripts/check-article.py",
+      "bytes": 4116,
+      "sha256": "503605cfb76bd74c50b69694c6c65be08df9f52ab5a3517dd01aa8fdfd01622d"
+    }
+  ]
+}
