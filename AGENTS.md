@@ -29,3 +29,14 @@ An interactive, deterministic artificial-life sandbox created with Elmar.
 
 Read `LOG.md` and `README.md` before changes. Keep the model documentation in
 `docs/model.md` aligned with actual mechanics.
+
+
+## Frozen unseen seed replication
+
+Elmar authorized the new 100-seed study and updates to all publication outputs.
+Read `docs/replication-protocol.md` and `docs/replication-results.md` before related
+work. Preserve `scripts/replication.mjs`, its frozen helper inputs and raw evidence;
+new scientific designs require separate identities. `npm run check` verifies
+replication report freshness, and CI replays all 400 new arms plus the 48 old arms.
+Rebuild and numerically audit the DOCX after manuscript edits, then render and
+inspect every page before publication. See article README for tools.

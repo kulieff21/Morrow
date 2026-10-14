@@ -143,12 +143,51 @@ Analysis reads saved evidence. Replay reruns all four arms and checks the comple
 recorded evidence without replacing it. The browser's original two-arm experiment
 is unchanged; this follow-up runs through the CLI.
 
+## Replication on 100 unseen seeds
+
+A [separate protocol](docs/replication-protocol.md) fixed seeds 10000–10099,
+100 paired units, 400 branches and the decision rule before execution. The engine,
+checkpoint/fork helpers, intervention and day-16 endpoint remained unchanged.
+The earlier twelve worlds are not pooled into the primary replication estimate.
+
+The prespecified criterion was met: all 100 share interactions were defined,
+the mean was **−14.73 percentage points**, and the central 95% paired-seed
+percentile-bootstrap interval was **[−18.69, −10.75]**. There were **81 negative
+and 19 positive** interactions. The count interaction was **+4.78 organisms**,
+with interval **[+3.01, +6.56]**. A relative-share effect and an absolute-count
+effect remain different outcomes.
+
+Natural abundance/drought Çiy means were 28.28/6.34 organisms and 19.25%/42.25%
+share. Normalized drought lost Çiy in 10/100 worlds; no whole world became extinct.
+Seed 10058 reverses the prediction (+47.61 pp); it remains in every summary.
+
+The bootstrap uses 20,000 paired-seed resamples and a separate fixed analysis
+RNG. It describes resampling of this chosen consecutive ensemble; representative
+sampling and confidence coverage across all possible seeds are not established.
+This is replication within one toy model, with coupled thrift mechanisms and a
+fixed horizon, rather than biological validation or a universal gene effect.
+
+See [every result](docs/replication-results.md), [analysis JSON](docs/replication-analysis.json)
+and [full raw evidence](docs/replication-raw.json). The [live replication explorer](https://kulieff21.github.io/Morrow/#replication)
+shows all 100 worlds and both extreme outcomes. Read-only analysis and replay:
+
+```powershell
+node scripts/replication.mjs --check
+python scripts/check-replication.py
+npm run experiment:replication -- --replay
+```
+
+The Python audit independently recomputes endpoints, means, signs and both
+20,000-resample intervals using the standard library. Raw generation refuses
+replacement. Original scientific evidence remains byte-for-byte unchanged.
+
 ## Research article
 
 The complete English [research article](docs/article/morrow-article.md) describes
-the model, all three study stages, equations, every seed endpoint, both outcome
+the model, all four study stages, equations, all 100 replication endpoints, both outcome
 scales, limitations, references and reproducibility. A formatted
 [Word version](docs/article/morrow-article.docx) accompanies the Markdown.
+Revision 2 has 40 A4 pages, 28 tables, three data figures and ten native equations.
 See [article tools and build instructions](docs/article/README.md) for the Python
 converter, generated tables and figures, and numerical/document audits.
 
@@ -165,7 +204,8 @@ ties/extinction, and loopback HTTP behavior. `check` verifies JavaScript syntax,
 DOM targets, Pages-compatible asset references and frozen artifact freshness.
 Tests also verify translations, the public build allowlist and nested preview
 routes. GitHub Actions runs checks on push and PR; Pages deploys only checked
-main-branch builds after the full 48-arm evidence replay.
+main-branch builds after the original 48-arm and new 400-arm evidence replays plus an independent
+Python audit.
 
 See [verification](docs/verification.md), [design direction](docs/design.md),
 and [session log](LOG.md).
@@ -187,6 +227,9 @@ and [session log](LOG.md).
 | `scripts/analyze-batch.mjs` | Read-only paired analysis and reproducible reports |
 | `scripts/thrift-experiment.mjs` | Four-arm gene intervention and full evidence replay |
 | `scripts/analyze-thrift.mjs` | Prespecified factorial contrasts and generated report |
+| `scripts/replication.mjs` | Frozen 100-seed runner, paired bootstrap, saved-data analysis and replay |
+| `scripts/check-replication.py` | Independent standard-library endpoint and bootstrap audit |
+| `scripts/build-replication-article.py` | New article figure and complete 100-seed ledgers |
 | `tests/` | Node built-in tests; no external test runner |
 
 ## Limits
@@ -199,5 +242,6 @@ Population is capped at 240, food at 420, and the chart retains 600 samples.
 Playback under heavy load slows down rather than skipping ecological steps.
 
 Built October 14, 2026. Public source; no open-source license granted.
-The article preserves its pre-publication access statement; the repository and
-recorded evidence were subsequently made public at Elmar's request.
+The original article revision predates public access. Revision 2 updates access
+and reports the prospective unseen-seed replication; original records remain
+separately preserved in the repository history and evidence files.

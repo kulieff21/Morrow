@@ -48,3 +48,15 @@ for speed, a larger feeler ring for sensing, and body fullness for energy. Depth
 contours, feeding flashes and lineage colors explain the simulation rather than
 adding unrelated decoration. The experiment presents two actual populations and
 the recorded checkpoint, not a prewritten winner.
+
+
+## Unseen seed replication presentation
+
+The case study keeps the original twelve-world narrative and follows it with a
+separate dark-water section for the new 100-seed experiment. Large mean and
+interval values sit beside a 10-by-10 sign map. Color encodes sign only, not
+magnitude. A native seed selector exposes every four-arm endpoint; shortcuts
+show the most negative and most positive observed interactions. Selection
+survives language changes. A plain-language limitations paragraph accompanies
+the result, including deterministic seed selection and bootstrap interpretation.
+The map adds no animation loop; the existing engine replay remains the main motion.

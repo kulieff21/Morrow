@@ -106,3 +106,27 @@ No persistence across page reloads, import UI, production hosting, or cross-brow
 matrix was tested or promised. The project has no external service integration.
 Model snapshots are in memory; downloads are user-initiated. See README for startup
 and `docs/model.md` for assumptions.
+
+## Unseen seed replication and publication update
+
+The preceding version-0.1 notes are historical. The project is now publicly
+hosted on Pages with an English-default/Turkish case study and pond. The new
+replication protocol was committed and pushed as 2158e08 before implementation
+execution; tested implementation 274454f generated 100 new checkpoints and 400
+arms without changing the engine or original scientific evidence. Evidence and
+independent numerical audit were committed as 545ad5f; that revision passed both
+remote workflows, including complete replay.
+
+Forty-one Node tests pass. Source checks verify report freshness against the
+frozen runner and the 100-seed raw record. The independent standard-library
+Python audit reproduces all target endpoints, interactions, mean/median/range/
+signs and both 20000-resample intervals. Full local replay matches all 400 new
+branches including checkpoint and final-state hashes. All primary shares are
+defined. No seed replacement, early stop or post-outcome protocol change occurred.
+
+The outcome is recorded in replication-results.md rather than replacing earlier
+results. The new article and DOCX contain all 100 endpoints in four appendix
+ledgers; current document audits check all 28 tables against Markdown and JSON.
+Browser verification covers desktop/mobile, EN/TR and the new seed explorer.
+The app model itself is unchanged. No dependencies installed or unrelated data
+modified; QA/build/cache outputs remain D-local and ignored.

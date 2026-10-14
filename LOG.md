@@ -1,5 +1,37 @@
 # Morrow session log
 
+## October 14, 2026 — prospective replication on 100 unseen seeds
+
+Elmar authorized the proposed new 100-seed study and updates to every publication
+output. Fixed the design, seed range 10000–10099, primary interaction, resampling
+method and strict decision rule before execution (protocol 2158e08). Tested and
+froze implementation 274454f, then saved all 100 checkpoints and 400 branch outcomes
+as separate immutable evidence. Published records/audit as 545ad5f. No original
+engine, evidence, protocol, trait rule, horizon or helper changed.
+
+The primary criterion was met: mean share interaction −14.72784pp, central 95%
+paired-percentile interval [−18.68820,−10.74969], median −14.67229, negative 81 and
+positive 19. Count interaction +4.78 organisms, interval [+3.01,+6.56], negative 30,
+zero 3 and positive 67. Natural Çiy count/share means 28.28/19.25% in abundance and
+6.34/42.25% in drought. Normalized drought lost Çiy in 10 worlds; no whole-world
+extinction or missing primary share. Seed 10058 reverses the average direction.
+The fixed consecutive range does not establish representative sampling; bootstrap
+intervals describe ensemble resampling. No biological or energy-only inference.
+
+Independent Python endpoint/summary/bootstrap audit and full 400-arm replay pass.
+Forty-one Node tests pass; freshness checks and CI include the new analysis.
+Both evidence-revision remote workflows passed, including replay. New manuscript
+revision 2 contains 40 A4 pages, 28 tables, 3 data figures and 10 native equations,
+with all 100 endpoints in Appendix D. Updated article audit and manifest, current
+public-access statements, README, project instructions, design and verification.
+Bilingual case study adds all 100 worlds, mean/interval, criterion, seed selector,
+sign map, extreme-seed shortcuts and limitations while retaining original stages.
+Desktop/mobile and language-selection preservation checked in the browser.
+
+All new files/QA/build/npm cache remain D-local; no dependencies installed or
+unrelated project changes. Word/Codex/browser runtime activity may still touch C.
+Only the owned QA preview is used; the user's pre-existing pond remains untouched.
+
 ## October 14, 2026 — bilingual website and public Pages release
 
 Elmar authorized an English-default app, Turkish language switching, an animated

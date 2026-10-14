@@ -4,6 +4,7 @@ export const SITE_FILES = [
   'src/app.js', 'src/case.js', 'src/engine.js', 'src/render.js',
   'src/i18n.js', 'src/translations.js',
   'docs/paired-analysis.json', 'docs/thrift-analysis.json',
+  'docs/replication-analysis.json',
   'docs/screenshots/pond.png', 'docs/article/morrow-article.docx',
 ];
 export const MIME_TYPES = {

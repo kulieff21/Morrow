@@ -6,6 +6,7 @@ const $ = (id) => document.getElementById(id);
 const reduced = window.matchMedia('(prefers-reduced-motion: reduce)');
 let paired;
 let thrift;
+let replication;
 let metric = 'count';
 let replay = startExperiment(4217);
 let stopped = reduced.matches;
@@ -97,21 +98,76 @@ function drawReplay() {
   $('replay-toggle').disabled = replay.phase === 'complete';
 }
 
+function renderReplication() {
+  if (!replication) return;
+  const select = $('replication-seed');
+  if (!select.options.length) for (const run of replication.runs) {
+    const option = document.createElement('option'); option.value = run.seed; option.textContent = run.seed;
+    select.append(option);
+  }
+  const effect = replication.effects.share.interaction;
+  const interval = replication.bootstrap.share.interval;
+  $('replication-status').textContent = replication.decision === 'criterion-met'
+    ? tr('Prespecified criterion met', 'Önceden belirlenen ölçüt karşılandı')
+    : tr('Prespecified criterion inconclusive', 'Önceden belirlenen ölçüt belirsiz');
+  $('replication-mean').textContent = signed(effect.mean);
+  $('replication-interval').textContent = tr(`95% paired-bootstrap interval: [${interval.map(signed).join(', ')}] pp`,
+    `%95 eşleştirilmiş bootstrap aralığı: [${interval.map(signed).join(', ')}] yüzde puanı`);
+  $('replication-signs').textContent = tr(`${effect.negative} negative · ${effect.positive} positive · ${effect.zero} zero`,
+    `${effect.negative} negatif · ${effect.positive} pozitif · ${effect.zero} sıfır`);
+  const count = replication.effects.count.interaction;
+  const countInterval = replication.bootstrap.count.interval.map(signed).join(', ');
+  $('replication-count').textContent = tr(`Count interaction: ${signed(count.mean)} organisms; 95% interval [${countInterval}].`,
+    `Canlı sayısı etkileşimi: ${signed(count.mean)} canlı; %95 aralık [${countInterval}].`);
+  const map = $('replication-worlds');
+  if (!map.children.length) for (const run of replication.runs) {
+    const dot = document.createElement('span'); dot.className = run.share.interaction < 0 ? 'negative' : run.share.interaction > 0 ? 'positive' : 'zero';
+    map.append(dot);
+  }
+  map.setAttribute('aria-label', tr(`All 100 share interactions: ${effect.negative} negative, ${effect.positive} positive, ${effect.zero} zero. Use the seed selector to inspect every outcome.`,
+    `100 pay etkileşimi: ${effect.negative} negatif, ${effect.positive} pozitif, ${effect.zero} sıfır. Her sonucu incelemek için seed seçiciyi kullan.`));
+  replication.runs.forEach((run, index) => {
+    map.children[index].classList.toggle('selected', run.seed === Number(select.value));
+    map.children[index].title = `Seed ${run.seed}: ${signed(run.share.interaction)} pp`;
+  });
+  const run = replication.runs.find((value) => value.seed === Number(select.value));
+  const keys = ['naturalAbundance', 'naturalDrought', 'normalizedAbundance', 'normalizedDrought'];
+  const labels = [tr('Natural abundance', 'Doğal bolluk'), tr('Natural drought', 'Doğal kıtlık'),
+    tr('Normalized abundance', 'Normalize bolluk'), tr('Normalized drought', 'Normalize kıtlık')];
+  $('replication-arm-results').replaceChildren(...keys.map((key, i) => {
+    const arm = run.arms[key], row = document.createElement('tr');
+    for (const value of [labels[i], arm.population, arm.count, `${number(arm.sharePercent)}%`]) {
+      const cell = document.createElement('td'); cell.textContent = value; row.append(cell);
+    }
+    return row;
+  }));
+  $('replication-seed-details').textContent = tr(
+    `Seed ${run.seed}: share interaction ${signed(run.share.interaction)} pp; count interaction ${signed(run.count.interaction)} organisms.`,
+    `Seed ${run.seed}: pay etkileşimi ${signed(run.share.interaction)} yüzde puanı; sayı etkileşimi ${signed(run.count.interaction)} canlı.`);
+}
+
 initLanguage(() => {
   document.title = tr('Morrow — one pond, two futures', 'Morrow — bir havuz, iki gelecek');
   for (const [id, english, turkish] of [
     ['recorded-seed', 'Recorded seed', 'Kayıtlı seed'],
     ['replay-control', 'Abundance replay', 'Bolluk tekrarı'],
     ['replay-drought', 'Drought replay', 'Kıtlık tekrarı'],
+    ['replication-seed', 'Unseen seed', 'Yeni seed'],
   ]) $(id).setAttribute('aria-label', tr(english, turkish));
   document.querySelector('.metric-switch').setAttribute('aria-label', tr('Outcome scale', 'Sonuç ölçüsü'));
   document.querySelector('.site-header nav').setAttribute('aria-label', tr('Sections', 'Bölümler'));
-  document.querySelector('meta[name="description"]').content = tr('Morrow is a reproducible artificial-life experiment with a living pond, twelve paired worlds and a complete research article.', 'Morrow: yaşayan havuz, on iki eşleştirilmiş dünya ve ayrıntılı araştırma makalesiyle tekrar üretilebilir bir yapay yaşam deneyi.');
-  renderLineages(); renderSeed(); drawReplay();
+  document.querySelector('meta[name="description"]').content = tr('Morrow: a living pond, twelve original worlds, a prospective replication on 100 unseen seeds and a complete research article.', 'Morrow: yaşayan havuz, ilk on iki dünya, 100 yeni seed üzerinde önceden planlanmış tekrar ve ayrıntılı araştırma makalesi.');
+  renderLineages(); renderSeed(); renderReplication(); drawReplay();
 });
 
 for (const value of ['count', 'share']) $(`metric-${value}`).addEventListener('click', () => { metric = value; renderLineages(); });
 $('recorded-seed').addEventListener('change', renderSeed);
+$('replication-seed').addEventListener('change', renderReplication);
+for (const [id, direction] of [['replication-negative', -1], ['replication-positive', 1]]) $(id).addEventListener('click', () => {
+  if (!replication) return;
+  const extremes = [...replication.runs].sort((a, b) => direction * (b.share.interaction - a.share.interaction));
+  $('replication-seed').value = extremes[0].seed; renderReplication();
+});
 $('replay-toggle').addEventListener('click', () => { stopped = !stopped; credit = 0; drawReplay(); });
 $('replay').addEventListener('click', () => {
   replay = startExperiment(4217); credit = 0;
@@ -139,12 +195,12 @@ function animate(now) {
 requestAnimationFrame(animate);
 
 try {
-  [paired, thrift] = await Promise.all(['paired-analysis.json', 'thrift-analysis.json'].map(async (file) => {
+  [paired, thrift, replication] = await Promise.all(['paired-analysis.json', 'thrift-analysis.json', 'replication-analysis.json'].map(async (file) => {
     const response = await fetch(new URL(`../docs/${file}`, import.meta.url));
     if (!response.ok) throw new Error('Evidence request failed');
     return response.json();
   }));
-  renderLineages(); renderSeed();
+  renderLineages(); renderSeed(); renderReplication();
 } catch {
   $('data-error').hidden = false;
   $('data-error').textContent = tr('The interactive evidence could not load. Reload the page or open the linked JSON records.', 'Etkileşimli kanıtlar yüklenemedi. Sayfayı yenile veya bağlantılı JSON kayıtlarını aç.');

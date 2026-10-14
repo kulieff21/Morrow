@@ -108,3 +108,28 @@ The preview remains bound to loopback and serves only the public allowlist.
 Project changes and build/cache output stay under the D-drive project. Existing
 browser/Codex/Windows runtime activity can still touch C; no zero-C-write claim
 is made. The user's existing observation server is not stopped or replaced.
+
+## Subsequent unseen seed replication update
+
+A separately authorized study now adds 100 previously unexamined initial
+conditions (10000–10099) and 400 branches. The engine and original evidence are
+unchanged. See the [fixed protocol](replication-protocol.md) and
+[complete results](replication-results.md). The case study keeps the original
+12-world analysis and adds a separate bilingual replication section: mean,
+paired-bootstrap interval, criterion, 100-dot sign map, every seed's four-arm
+endpoints, both extreme outcomes and explicit sampling/mechanism limitations.
+
+The public artifact now contains **16 files plus .nojekyll**. The added file is
+`docs/replication-analysis.json`; large raw checkpoints remain linked through
+the public source repository. The Word download is revision 2: 40 A 4 pages,
+28 tables, three figures and ten native equations. The original article remains
+available in Git history. Current access wording is updated in revision 2.
+
+All 41 tests, current source/artifact checks, independent Python recalculation,
+the original 48-arm replay and new 400-arm replay pass. Both Actions workflows
+now run the independent audit and new replay; Pages deploys only after those
+checks. Frozen raw generation refuses replacement. Desktop and 390-pixel mobile
+inspection covered both languages, selection retention, all 100 select options,
+100 displayed signs and shortcuts to seeds 10046/10058. No horizontal overflow
+or browser warning/error log entries were observed. Reduced-motion and native
+file-saving verification retain the limitations described above.
