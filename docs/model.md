@@ -112,3 +112,16 @@ modeled consequence of changing renewal, including these diverging event paths.
 The eight-day endpoint, founder traits, spatial patches and caps are modeling
 choices. No parameters were tuned against an external data set. Reports describe
 this model and these seeds; they do not establish general biological claims.
+
+## Targeted thrift follow-up
+
+The [fixed four-arm protocol](thrift-protocol.md) uses the unchanged engine to
+intervene once at day 8. The two normalized arms set only living Çiy organisms'
+`genes.thrift` to 1.00; descendants subsequently mutate normally. Cross this
+intervention with abundance/drought to measure an environment-by-normalization
+interaction in final population share and, separately, absolute count.
+
+This changes every coupled effect of thrift and removes thrift variation from the
+treated checkpoint cohort. It does not isolate metabolism from movement,
+reproduction or lifespan. Source/data hashes, all twelve checkpoints and every
+branch endpoint are preserved. See [results and limits](thrift-results.md).

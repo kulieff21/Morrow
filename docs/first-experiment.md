@@ -47,3 +47,8 @@ at the same day-16 endpoint. Baseline leadership changes in 3 control branches a
 Final leader sets are disjoint in nine pairs. This follow-up uses the original
 batch unchanged and adds no new experiment trials. The duration and gene-mechanism
 questions above remain unanswered.
+
+A later [targeted thrift intervention](thrift-results.md) examines the Çiy
+parameter with four branches per checkpoint. It addresses one coupled gene
+intervention; it does not isolate individual physiological pathways or answer
+the drought-duration question.

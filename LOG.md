@@ -1,5 +1,37 @@
 # Morrow session log
 
+## October 14, 2026 — four-arm Çiy thrift experiment
+
+Elmar authorized the proposed targeted intervention. Fixed the protocol before
+examining the batch and pushed it as 4352cde. Implementation/tests pushed as
+eceb3c6; all twelve checkpoints/four-arm results and generated report pushed as
+b8741aa. This entry and explanatory navigation form the fourth small commit.
+
+At day 8, only the existing Çiy cohort's thrift is set once to 1.00 in the two
+treated arms. Abundance/drought and natural/normalized form a 2×2 experiment.
+Normal mutation continues; no repeated clamping. Preserve all other checkpoint
+state and RNG; all four branches end on day 16. Coupled energy, movement,
+reproduction and lifespan effects and loss of initial thrift variation are
+explicit limits. This is twelve reused paired units, not 48 independent samples.
+
+Mean Çiy count/share: natural abundance 26.67/17.91%, natural drought 4.67/33.42%,
+normalized abundance 17.75/12.46%, normalized drought 2.25/15.56%. Share effects
+(normalized minus natural): −5.46 pp in abundance, −17.86 in drought. Primary
+interaction −12.40 pp, median −6.90, range [−57.73,+12.47], negative in 8/12 and
+positive in 4/12. Secondary count interaction +6.50 organisms: absolute losses
+are larger in abundance. Four normalized-drought Çiy extinctions, zero natural-
+drought Çiy extinctions. No whole-world extinction. This supports the predicted
+relative-share direction on average in these worlds, not universality or a
+pure energy mechanism.
+
+30 tests and source/artifact checks passed. All natural arms replay the original
+complete statistics. Raw evidence includes full checkpoints, edits and state
+hashes; CI now also performs full four-arm replay. Prior source/batch/paired
+analysis preserved. npm cache remains on D: in ignored .local; no dependency,
+browser/service change, agent delegation or cleanup. Read docs/thrift-results.md
+and its fixed protocol before further experiments. No additional experiment
+or UI extension was started.
+
 ## October 14, 2026 — paired control-versus-drought analysis
 
 Elmar authorized the proposed follow-up and requested more frequent commits.

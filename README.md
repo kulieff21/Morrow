@@ -97,6 +97,34 @@ npm run analyze
 npm run analyze -- --check
 ```
 
+## Testing Çiy's thrift parameter
+
+The next experiment forks each of the same twelve day-8 checkpoints into four
+branches: abundance/drought crossed with natural thrift/thrift set once to 1.00
+for the living Çiy cohort. Normal inheritance and mutation continue afterward.
+The [protocol](docs/thrift-protocol.md) was committed before examining this batch.
+
+Normalization reduces mean Çiy share by 5.46 percentage points in abundance and
+17.86 in drought. The prespecified share interaction is −12.40 points on average,
+with a median of −6.90; 8 seeds have the predicted sign and 4 the opposite sign.
+Mean absolute-count losses are larger in abundance, so the relative-share result
+must not be interpreted as a larger absolute loss under drought. Thrift also
+changes movement, reproduction and lifespan; this is not an energy-only test.
+
+These are twelve reused initial conditions, not 48 independent observations.
+See the [four-arm results](docs/thrift-results.md) for every seed, both outcome
+scales, complete raw checkpoints, fixed source hashes and interpretation limits.
+
+```powershell
+npm run analyze:thrift
+npm run analyze:thrift -- --check
+npm run experiment:thrift -- --replay
+```
+
+Analysis reads saved evidence. Replay reruns all four arms and checks the complete
+recorded evidence without replacing it. The browser's original two-arm experiment
+is unchanged; this follow-up runs through the CLI.
+
 ## Verify
 
 ```powershell
@@ -123,6 +151,8 @@ and [session log](LOG.md).
 | `server.mjs` | Loopback-only static preview with explicit route allowlist |
 | `scripts/experiment.mjs` | Repeatable multi-seed CLI |
 | `scripts/analyze-batch.mjs` | Read-only paired analysis and reproducible reports |
+| `scripts/thrift-experiment.mjs` | Four-arm gene intervention and full evidence replay |
+| `scripts/analyze-thrift.mjs` | Prespecified factorial contrasts and generated report |
 | `tests/` | Node built-in tests; no external test runner |
 
 ## Limits

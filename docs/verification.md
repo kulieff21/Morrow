@@ -77,6 +77,29 @@ capture process and the separately started port-4328 preview are stopped at hand
   was not repeated for this CLI/document-only work. npm cache stayed under D:-drive
   project `.local/`; no package installation or cleanup was performed.
 
+## Four-arm thrift intervention
+
+- Fixed protocol committed before the four-arm batch: `4352cde`; implementation
+  frozen at execution revision `eceb3c6166f798688bde2cef23472f219861de7a`.
+- Full suite: 30 passing tests, with nine thrift intervention/analysis tests.
+- All thirteen JavaScript modules, original app targets/assets and both sets of
+  generated analysis artifacts passed source/freshness checks.
+- Fork tests compare whole snapshots: only the declared resource multiplier and
+  living Çiy thrift genes change; RNG, age, energy, position, food and other genes
+  remain unchanged. Tests verify separate state and normal descendant mutation.
+- Both unmodified endpoints reproduce the original complete statistics for all
+  twelve seeds. All 48 branches end at exactly day 16.
+- Full day-8 states, edited IDs/values, starting/final hashes and complete final
+  stats are retained in thrift-raw.json. Its source hash is
+  `88a55655488c95447dc283a4af58b42151578e7062441a5b19cb152ad473d9c8`.
+- Tests cover both contrast directions, medians/ranges/sign counts, undefined
+  shares versus valid zero shares, and rejection of corrupted evidence.
+- CI additionally runs `npm run experiment:thrift -- --replay`, verifying all
+  recorded simulation evidence rather than just report arithmetic. Recorded
+  execution revision is provenance and is excluded from replay equality.
+- The prior engine, initial batch, paired analysis and protocol hashes are
+  unchanged. No UI change, package install or service operation was required.
+
 ## Boundaries
 
 No persistence across page reloads, import UI, production hosting, or cross-browser
